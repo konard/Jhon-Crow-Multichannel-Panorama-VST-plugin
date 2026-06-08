@@ -1,0 +1,11 @@
+build/
+ci-logs/
+cmake-build-*/
+dist/
+logs/
+out/
+
+.DS_Store
+*.user
+*.suo
+*.vcxproj.user

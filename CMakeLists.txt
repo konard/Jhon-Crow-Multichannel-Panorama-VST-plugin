@@ -1,11 +1,11 @@
 cmake_minimum_required(VERSION 3.24)
 
 project(MultichannelPanoramaVST
-    VERSION 0.1.0
-    DESCRIPTION "Preparation scaffold for a multichannel 3D panorama VST plugin"
+    VERSION 0.2.0
+    DESCRIPTION "Multichannel 3D panorama VST3 plugin"
     LANGUAGES CXX)
 
-option(MULTICHANNEL_PANORAMA_BUILD_PLUGIN "Build the JUCE VST3 plugin scaffold" ON)
+option(MULTICHANNEL_PANORAMA_BUILD_PLUGIN "Build the JUCE VST3 plugin" ON)
 set(MULTICHANNEL_PANORAMA_JUCE_TAG "8.0.13" CACHE STRING "JUCE release tag used by FetchContent")
 
 set(CMAKE_CXX_STANDARD 17)
@@ -44,7 +44,8 @@ juce_add_plugin(MultichannelPanorama
 
 target_sources(MultichannelPanorama
     PRIVATE
-        source/PluginProcessor.cpp)
+        source/PluginProcessor.cpp
+        source/PluginEditor.cpp)
 
 target_include_directories(MultichannelPanorama
     PRIVATE
@@ -60,6 +61,7 @@ target_link_libraries(MultichannelPanorama
     PRIVATE
         juce::juce_audio_processors
         juce::juce_dsp
+        juce::juce_gui_basics
     PUBLIC
         juce::juce_recommended_config_flags
         juce::juce_recommended_lto_flags

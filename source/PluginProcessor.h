@@ -1,16 +1,24 @@
 #pragma once
 
 #include <juce_audio_processors/juce_audio_processors.h>
+#include "SceneState.h"
 
 namespace ParameterIDs
 {
+// Listener
 constexpr auto listenerX = "listenerX";
 constexpr auto listenerY = "listenerY";
 constexpr auto listenerZ = "listenerZ";
-constexpr auto source1X = "source1X";
-constexpr auto source1Y = "source1Y";
-constexpr auto source1Z = "source1Z";
-constexpr auto source1GainDb = "source1GainDb";
+
+// Sources (8 sources, each with X/Y/Z and gain)
+constexpr int numSources = Panorama::maxSources;
+
+inline juce::String sourceX (int i)    { return "source" + juce::String (i) + "X"; }
+inline juce::String sourceY (int i)    { return "source" + juce::String (i) + "Y"; }
+inline juce::String sourceZ (int i)    { return "source" + juce::String (i) + "Z"; }
+inline juce::String sourceGain (int i) { return "source" + juce::String (i) + "GainDb"; }
+inline juce::String sourceActive (int i) { return "source" + juce::String (i) + "Active"; }
+
 constexpr auto bypass = "bypass";
 }
 
@@ -51,10 +59,25 @@ public:
     ParameterTree& getParameterTree() noexcept { return parameters; }
     const ParameterTree& getParameterTree() const noexcept { return parameters; }
 
+    // Scene state for UI access
+    Panorama::SceneAtomics& getSceneAtomics() noexcept { return sceneAtomics; }
+
     static ParameterTree::ParameterLayout createParameterLayout();
 
 private:
+    void syncSceneFromParameters();
+
     ParameterTree parameters;
+    Panorama::SceneAtomics sceneAtomics;
+
+    // Smoothed gains for each source (left/right) to avoid zipper noise
+    struct SourceSmoothing
+    {
+        juce::SmoothedValue<float> leftGain;
+        juce::SmoothedValue<float> rightGain;
+        juce::SmoothedValue<float> distGain;
+    };
+    std::array<SourceSmoothing, Panorama::maxSources> smoothing;
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (MultichannelPanoramaAudioProcessor)
 };

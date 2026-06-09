@@ -5,11 +5,19 @@ on:
     branches:
       - main
       - issue-1-b5e8eaf41aa4
+      - issue-3-ee68a7f3af5a
   pull_request:
   workflow_dispatch:
 
 permissions:
   contents: read
+
+# Public mirror of the legacy VST2 SDK headers (pluginterfaces/vst2.x/aeffect.h, ...).
+# Steinberg no longer distributes the VST2 SDK, and its licence forbids redistributing
+# it inside this repository, so CI fetches the headers at build time instead. Override
+# with a repository/organisation variable named VST2_SDK_REPO if this mirror disappears.
+env:
+  VST2_SDK_REPO: https://github.com/R-Tur/VST_SDK_2.4.git
 
 jobs:
   validate-preparation:
@@ -26,8 +34,8 @@ jobs:
       - name: Configure CMake without plugin dependency fetch
         run: cmake -S . -B build/prepare-smoke -DMULTICHANNEL_PANORAMA_BUILD_PLUGIN=OFF
 
-  build-windows-vst3:
-    name: Build Windows VST3 (${{ matrix.label }})
+  build-windows:
+    name: Build Windows (${{ matrix.label }})
     runs-on: windows-latest
     needs: validate-preparation
 
@@ -38,15 +46,26 @@ jobs:
           - label: win32
             cmake_arch: Win32
             build_dir: D:/b/win32
-            artifact_name: MultichannelPanorama-vst3-win32
+            artifact_name: MultichannelPanorama-win32
           - label: win64
             cmake_arch: x64
             build_dir: D:/b/win64
-            artifact_name: MultichannelPanorama-vst3-win64
+            artifact_name: MultichannelPanorama-win64
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v6
+
+      - name: Fetch VST2 SDK headers
+        shell: pwsh
+        run: |
+          $repo = if ("${{ vars.VST2_SDK_REPO }}") { "${{ vars.VST2_SDK_REPO }}" } else { "${{ env.VST2_SDK_REPO }}" }
+          $sdk = "D:/vst2sdk"
+          git clone --depth 1 $repo $sdk
+          if (-not (Test-Path "$sdk/pluginterfaces/vst2.x/aeffect.h")) {
+            throw "VST2 SDK header pluginterfaces/vst2.x/aeffect.h not found after cloning $repo"
+          }
+          "VST2_SDK_PATH=$sdk" | Out-File -FilePath $env:GITHUB_ENV -Append -Encoding utf8
 
       - name: Configure CMake
         shell: pwsh
@@ -55,20 +74,30 @@ jobs:
           -G "Visual Studio 17 2022"
           -A "${{ matrix.cmake_arch }}"
           -DCMAKE_BUILD_TYPE=Release
+          -DMULTICHANNEL_PANORAMA_VST2_SDK_PATH="$env:VST2_SDK_PATH"
 
       - name: Build VST3
         shell: pwsh
         run: cmake --build "${{ matrix.build_dir }}" --config Release --target MultichannelPanorama_VST3
 
-      - name: Stage VST3 artifact
+      - name: Build VST2 (.dll)
+        shell: pwsh
+        run: cmake --build "${{ matrix.build_dir }}" --config Release --target MultichannelPanorama_VST
+
+      - name: Stage artifacts
         shell: pwsh
         run: |
           $stage = "dist/${{ matrix.artifact_name }}"
-          New-Item -ItemType Directory -Force -Path $stage | Out-Null
-          Copy-Item -Path "${{ matrix.build_dir }}/artifacts/vst3/*" -Destination $stage -Recurse -Force
+          New-Item -ItemType Directory -Force -Path "$stage/VST2" | Out-Null
+          New-Item -ItemType Directory -Force -Path "$stage/VST3" | Out-Null
+          Copy-Item -Path "${{ matrix.build_dir }}/artifacts/vst2/*" -Destination "$stage/VST2" -Recurse -Force
+          Copy-Item -Path "${{ matrix.build_dir }}/artifacts/vst3/*" -Destination "$stage/VST3" -Recurse -Force
+          if (-not (Get-ChildItem -Path "$stage/VST2" -Recurse -Filter *.dll)) {
+            throw "No .dll produced for the VST2 build"
+          }
           Get-ChildItem -Path $stage -Recurse
 
-      - name: Upload VST3 artifact
+      - name: Upload artifacts
         uses: actions/upload-artifact@v7
         with:
           name: ${{ matrix.artifact_name }}

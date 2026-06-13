@@ -48,6 +48,7 @@ struct AtomicSourceData
     std::atomic<float> z { 0.0f };
     std::atomic<float> gainDb { 0.0f };
     std::atomic<bool> active { false };
+    std::atomic<bool> bypass { false };
 };
 
 struct AtomicListenerData

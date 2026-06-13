@@ -31,6 +31,7 @@ private:
         juce::Colour colour;
         juce::String label;
         bool isListener = false;
+        bool isBypassed = false;
         int sourceIndex = -1;
     };
 
@@ -70,8 +71,12 @@ private:
     juce::Label xLabel, yLabel, zLabel, gainLabel;
     juce::Slider xSlider, ySlider, zSlider, gainSlider;
 
-    using Attachment = juce::AudioProcessorValueTreeState::SliderAttachment;
-    std::unique_ptr<Attachment> xAtt, yAtt, zAtt, gainAtt;
+    juce::ToggleButton bypassButton { "Bypass" };
+
+    using SliderAttachment = juce::AudioProcessorValueTreeState::SliderAttachment;
+    using ButtonAttachment = juce::AudioProcessorValueTreeState::ButtonAttachment;
+    std::unique_ptr<SliderAttachment> xAtt, yAtt, zAtt, gainAtt;
+    std::unique_ptr<ButtonAttachment> bypassAtt;
 };
 
 // ============================================================
@@ -97,9 +102,13 @@ private:
     juce::TextButton viewXZButton { "Top (X/Z)" };
     juce::TextButton viewXYButton { "Front (X/Y)" };
 
-    // Source selector buttons
+    // Source selector buttons and per-source bypass toggles
     std::array<juce::TextButton, Panorama::maxSources> sourceButtons;
+    std::array<juce::ToggleButton, Panorama::maxSources> bypassButtons;
     juce::TextButton listenerButton { "Listener" };
+
+    using ButtonAttachment = juce::AudioProcessorValueTreeState::ButtonAttachment;
+    std::array<std::unique_ptr<ButtonAttachment>, Panorama::maxSources> bypassAtts;
 
     juce::Label titleLabel;
 

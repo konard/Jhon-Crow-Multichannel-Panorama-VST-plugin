@@ -17,7 +17,8 @@ inline juce::String sourceX (int i)    { return "source" + juce::String (i) + "X
 inline juce::String sourceY (int i)    { return "source" + juce::String (i) + "Y"; }
 inline juce::String sourceZ (int i)    { return "source" + juce::String (i) + "Z"; }
 inline juce::String sourceGain (int i) { return "source" + juce::String (i) + "GainDb"; }
-inline juce::String sourceActive (int i) { return "source" + juce::String (i) + "Active"; }
+inline juce::String sourceActive (int i)  { return "source" + juce::String (i) + "Active"; }
+inline juce::String sourceBypass (int i)  { return "source" + juce::String (i) + "Bypass"; }
 
 constexpr auto bypass = "bypass";
 }
@@ -66,6 +67,7 @@ public:
 
 private:
     void syncSceneFromParameters();
+    void autoActivateSources();
 
     ParameterTree parameters;
     Panorama::SceneAtomics sceneAtomics;

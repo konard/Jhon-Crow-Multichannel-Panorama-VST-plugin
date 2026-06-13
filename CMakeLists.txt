@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.24)
 
 project(MultichannelPanoramaVST
-    VERSION 0.3.0
+    VERSION 0.4.0
     DESCRIPTION "Multichannel 3D panorama VST plugin (VST3 + optional VST2 .dll)"
     LANGUAGES C CXX)
 

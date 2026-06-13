@@ -7,13 +7,69 @@ static constexpr float smoothingTimeSec = 0.05f;
 
 MultichannelPanoramaAudioProcessor::MultichannelPanoramaAudioProcessor()
     : AudioProcessor (BusesProperties()
-                          .withInput  ("Input",  juce::AudioChannelSet::stereo(), true)
+                          .withInput  ("Input",  juce::AudioChannelSet::discreteChannels (Panorama::maxSources), true)
                           .withOutput ("Output", juce::AudioChannelSet::stereo(), true)),
       parameters (*this, nullptr, juce::Identifier ("MultichannelPanoramaState"), createParameterLayout())
 {
     // Activate source 0 by default so the plugin has a visible source out-of-the-box
     if (auto* p = parameters.getParameter (ParameterIDs::sourceActive (0)))
         p->setValueNotifyingHost (1.0f);
+}
+
+// Place source i on a semicircle in front of the listener (XZ plane, positive Z).
+// Sources are spread evenly across a 120° arc centred on +Z at radius 5 m.
+static std::pair<float, float> defaultSourceXZ (int i, int total) noexcept
+{
+    if (total <= 0)
+        return { 0.0f, 5.0f };
+
+    // Arc from -60° to +60° around +Z
+    const float arcDeg  = 120.0f;
+    const float startDeg = -arcDeg * 0.5f;
+    const float stepDeg  = (total > 1) ? arcDeg / float (total - 1) : 0.0f;
+    const float angleDeg = startDeg + float (i) * stepDeg;
+    const float angleRad = juce::degreesToRadians (angleDeg);
+    constexpr float radius = 5.0f;
+    return { radius * std::sin (angleRad), radius * std::cos (angleRad) };
+}
+
+void MultichannelPanoramaAudioProcessor::autoActivateSources()
+{
+    const int numInputCh = getTotalNumInputChannels();
+    const int numToActivate = juce::jlimit (0, Panorama::maxSources, numInputCh);
+
+    for (int i = 0; i < Panorama::maxSources; ++i)
+    {
+        const bool shouldBeActive = (i < numToActivate);
+
+        if (auto* activeParam = parameters.getParameter (ParameterIDs::sourceActive (i)))
+        {
+            const float currentVal = activeParam->getValue();
+            const bool currentlyActive = (currentVal >= 0.5f);
+
+            if (shouldBeActive && !currentlyActive)
+            {
+                activeParam->setValueNotifyingHost (1.0f);
+
+                // Place newly activated source at a default spread position
+                const auto [defX, defZ] = defaultSourceXZ (i, numToActivate);
+                if (auto* px = parameters.getParameter (ParameterIDs::sourceX (i)))
+                {
+                    const auto range = parameters.getParameterRange (ParameterIDs::sourceX (i));
+                    px->setValueNotifyingHost (range.convertTo0to1 (defX));
+                }
+                if (auto* pz = parameters.getParameter (ParameterIDs::sourceZ (i)))
+                {
+                    const auto range = parameters.getParameterRange (ParameterIDs::sourceZ (i));
+                    pz->setValueNotifyingHost (range.convertTo0to1 (defZ));
+                }
+            }
+            else if (!shouldBeActive && currentlyActive)
+            {
+                activeParam->setValueNotifyingHost (0.0f);
+            }
+        }
+    }
 }
 
 void MultichannelPanoramaAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBlock)
@@ -25,6 +81,7 @@ void MultichannelPanoramaAudioProcessor::prepareToPlay (double sampleRate, int s
         s.rightGain.reset (sampleRate, smoothingTimeSec);
         s.distGain.reset (sampleRate, smoothingTimeSec);
     }
+    autoActivateSources();
     syncSceneFromParameters();
 }
 
@@ -38,11 +95,12 @@ bool MultichannelPanoramaAudioProcessor::isBusesLayoutSupported (const BusesLayo
     // Require stereo output (binaural/panning mix-down)
     if (out != juce::AudioChannelSet::stereo())
         return false;
-    // Input can be mono or stereo (sources pass through individually)
+    // Input can be any channel count from 1 up to maxSupportedChannels
     const auto& in = layouts.getMainInputChannelSet();
     if (in.isDisabled())
         return false;
-    return in.size() <= maxSupportedChannels;
+    const int numIn = in.size();
+    return numIn >= 1 && numIn <= maxSupportedChannels;
 }
 
 void MultichannelPanoramaAudioProcessor::syncSceneFromParameters()
@@ -65,6 +123,7 @@ void MultichannelPanoramaAudioProcessor::syncSceneFromParameters()
         sceneAtomics.sources[i].z.store      (load (ParameterIDs::sourceZ (i)));
         sceneAtomics.sources[i].gainDb.store (load (ParameterIDs::sourceGain (i)));
         sceneAtomics.sources[i].active.store (load (ParameterIDs::sourceActive (i)) >= 0.5f);
+        sceneAtomics.sources[i].bypass.store (load (ParameterIDs::sourceBypass (i)) >= 0.5f);
     }
 }
 
@@ -94,11 +153,27 @@ void MultichannelPanoramaAudioProcessor::processBlock (juce::AudioBuffer<float>&
         sceneAtomics.listener.z.load()
     };
 
-    // Each active source picks one input channel (channel index = source index)
+    // Each active (non-bypassed) source picks one input channel (channel index = source index)
     for (int i = 0; i < Panorama::maxSources; ++i)
     {
         if (!sceneAtomics.sources[i].active.load())
             continue;
+
+        // Per-source bypass: pass this channel straight through to output L/R equally
+        if (sceneAtomics.sources[i].bypass.load())
+        {
+            const int inputCh = i < numInputChannels ? i : 0;
+            const float* src = buffer.getReadPointer (inputCh);
+            float* outL = mixBuf.getWritePointer (0);
+            float* outR = mixBuf.getWritePointer (1);
+            constexpr float bypassGain = 0.5f;
+            for (int s = 0; s < numSamples; ++s)
+            {
+                outL[s] += src[s] * bypassGain;
+                outR[s] += src[s] * bypassGain;
+            }
+            continue;
+        }
 
         const int inputCh = i < numInputChannels ? i : 0;
 
@@ -233,6 +308,9 @@ MultichannelPanoramaAudioProcessor::createParameterLayout()
         layout.push_back (std::make_unique<juce::AudioParameterBool> (
             juce::ParameterID (ParameterIDs::sourceActive (i), 1),
             "Source " + juce::String (i + 1) + " Active", i == 0));
+        layout.push_back (std::make_unique<juce::AudioParameterBool> (
+            juce::ParameterID (ParameterIDs::sourceBypass (i), 1),
+            "Source " + juce::String (i + 1) + " Bypass", false));
     }
 
     layout.push_back (std::make_unique<juce::AudioParameterBool> (

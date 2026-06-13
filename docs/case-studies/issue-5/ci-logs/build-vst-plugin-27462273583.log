@@ -1,0 +1,552 @@
+Validate repository preparation	Set up job	﻿2026-06-13T08:58:26.4984321Z Current runner version: '2.335.1'
+Validate repository preparation	Set up job	2026-06-13T08:58:26.5010421Z ##[group]Runner Image Provisioner
+Validate repository preparation	Set up job	2026-06-13T08:58:26.5011307Z Hosted Compute Agent
+Validate repository preparation	Set up job	2026-06-13T08:58:26.5011939Z Version: 20260527.539
+Validate repository preparation	Set up job	2026-06-13T08:58:26.5012670Z Commit: a891dd388383b896fa6ac04a82c0b75cec981078
+Validate repository preparation	Set up job	2026-06-13T08:58:26.5013420Z Build Date: 2026-05-27T21:39:57Z
+Validate repository preparation	Set up job	2026-06-13T08:58:26.5014147Z Worker ID: {2c05ce4d-82d3-4141-91e8-cda3fd0a962b}
+Validate repository preparation	Set up job	2026-06-13T08:58:26.5014899Z Azure Region: eastus
+Validate repository preparation	Set up job	2026-06-13T08:58:26.5015851Z ##[endgroup]
+Validate repository preparation	Set up job	2026-06-13T08:58:26.5017272Z ##[group]Operating System
+Validate repository preparation	Set up job	2026-06-13T08:58:26.5017922Z Ubuntu
+Validate repository preparation	Set up job	2026-06-13T08:58:26.5018446Z 24.04.4
+Validate repository preparation	Set up job	2026-06-13T08:58:26.5019126Z LTS
+Validate repository preparation	Set up job	2026-06-13T08:58:26.5019665Z ##[endgroup]
+Validate repository preparation	Set up job	2026-06-13T08:58:26.5020363Z ##[group]Runner Image
+Validate repository preparation	Set up job	2026-06-13T08:58:26.5020989Z Image: ubuntu-24.04
+Validate repository preparation	Set up job	2026-06-13T08:58:26.5021560Z Version: 20260607.184.1
+Validate repository preparation	Set up job	2026-06-13T08:58:26.5022723Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260607.184/images/ubuntu/Ubuntu2404-Readme.md
+Validate repository preparation	Set up job	2026-06-13T08:58:26.5024534Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260607.184
+Validate repository preparation	Set up job	2026-06-13T08:58:26.5025677Z ##[endgroup]
+Validate repository preparation	Set up job	2026-06-13T08:58:26.5026851Z ##[group]GITHUB_TOKEN Permissions
+Validate repository preparation	Set up job	2026-06-13T08:58:26.5028828Z Contents: read
+Validate repository preparation	Set up job	2026-06-13T08:58:26.5029596Z Metadata: read
+Validate repository preparation	Set up job	2026-06-13T08:58:26.5030200Z ##[endgroup]
+Validate repository preparation	Set up job	2026-06-13T08:58:26.5032391Z Secret source: None
+Validate repository preparation	Set up job	2026-06-13T08:58:26.5033208Z Prepare workflow directory
+Validate repository preparation	Set up job	2026-06-13T08:58:26.5411767Z Prepare all required actions
+Validate repository preparation	Set up job	2026-06-13T08:58:26.5451199Z Getting action download info
+Validate repository preparation	Set up job	2026-06-13T08:58:26.7693160Z Download action repository 'actions/checkout@v6' (SHA:df4cb1c069e1874edd31b4311f1884172cec0e10)
+Validate repository preparation	Set up job	2026-06-13T08:58:27.0197416Z Complete job name: Validate repository preparation
+Validate repository preparation	Checkout repository	﻿2026-06-13T08:58:27.0917957Z ##[group]Run actions/checkout@v6
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.0918832Z with:
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.0919396Z   repository: Jhon-Crow/Multichannel-Panorama-VST-plugin
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.0924367Z   token: ***
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.0924848Z   ssh-strict: true
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.0925520Z   ssh-user: git
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.0925988Z   persist-credentials: true
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.0926492Z   clean: true
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.0926947Z   sparse-checkout-cone-mode: true
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.0927478Z   fetch-depth: 1
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.0927920Z   fetch-tags: false
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.0928371Z   show-progress: true
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.0928826Z   lfs: false
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.0929246Z   submodules: false
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.0929700Z   set-safe-directory: true
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.0930400Z env:
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.0930917Z   VST2_SDK_REPO: https://github.com/R-Tur/VST_SDK_2.4.git
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.0931558Z ##[endgroup]
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.1921407Z Syncing repository: Jhon-Crow/Multichannel-Panorama-VST-plugin
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.1923539Z ##[group]Getting Git version info
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.1924582Z Working directory is '/home/runner/work/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin'
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.1926286Z [command]/usr/bin/git version
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.1966544Z git version 2.54.0
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.2020466Z ##[endgroup]
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.2034790Z Temporarily overriding HOME='/home/runner/work/_temp/05dbf9b5-b7dc-4197-af7b-1ee26a334c45' before making global git config changes
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.2036513Z Adding repository directory to the temporary git global config as a safe directory
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.2040616Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.2089115Z Deleting the contents of '/home/runner/work/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin'
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.2093115Z ##[group]Determining repository object format
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.2095844Z ##[endgroup]
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.2097215Z ##[group]Initializing the repository
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.2101967Z [command]/usr/bin/git init /home/runner/work/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.2172576Z hint: Using 'master' as the name for the initial branch. This default branch name
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.2173964Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.2176145Z hint: to use in all of your new repositories, which will suppress this warning,
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.2177236Z hint: call:
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.2177875Z hint:
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.2178685Z hint: 	git config --global init.defaultBranch <name>
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.2179693Z hint:
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.2180625Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.2182185Z hint: 'development'. The just-created branch can be renamed via this command:
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.2183418Z hint:
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.2184083Z hint: 	git branch -m <name>
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.2184869Z hint:
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.2186096Z hint: Disable this message with "git config set advice.defaultBranchName false"
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.2188374Z Initialized empty Git repository in /home/runner/work/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/.git/
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.2191779Z [command]/usr/bin/git remote add origin https://github.com/Jhon-Crow/Multichannel-Panorama-VST-plugin
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.2226528Z ##[endgroup]
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.2230197Z ##[group]Disabling automatic garbage collection
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.2230946Z [command]/usr/bin/git config --local gc.auto 0
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.2261652Z ##[endgroup]
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.2262861Z ##[group]Setting up auth
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.2263704Z Removing SSH command configuration
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.2268052Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.2301859Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.2598796Z Removing HTTP extra header
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.2604041Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.2634633Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.2859606Z Removing includeIf entries pointing to credentials config files
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.2865284Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.2896380Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.3129742Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-4838efee-f1a4-40af-8761-d8e852d2862e.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.3167584Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/.git.path /home/runner/work/_temp/git-credentials-4838efee-f1a4-40af-8761-d8e852d2862e.config
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.3199503Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-4838efee-f1a4-40af-8761-d8e852d2862e.config
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.3231945Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-4838efee-f1a4-40af-8761-d8e852d2862e.config
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.3344111Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-4838efee-f1a4-40af-8761-d8e852d2862e.config
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.3347526Z ##[endgroup]
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.3348652Z ##[group]Fetching the repository
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.3350945Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +51f6d9b5014e36c7a31b4abe036e49bccf169cbd:refs/remotes/pull/6/merge
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.5126632Z From https://github.com/Jhon-Crow/Multichannel-Panorama-VST-plugin
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.5129601Z  * [new ref]         51f6d9b5014e36c7a31b4abe036e49bccf169cbd -> pull/6/merge
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.5163078Z ##[endgroup]
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.5165549Z ##[group]Determining the checkout info
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.5167915Z ##[endgroup]
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.5171138Z [command]/usr/bin/git sparse-checkout disable
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.5220792Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.5254982Z ##[group]Checking out the ref
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.5258663Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/6/merge
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.5313604Z Note: switching to 'refs/remotes/pull/6/merge'.
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.5315544Z 
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.5316992Z You are in 'detached HEAD' state. You can look around, make experimental
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.5320176Z changes and commit them, and you can discard any commits you make in this
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.5323222Z state without impacting any branches by switching back to a branch.
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.5325377Z 
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.5326583Z If you want to create a new branch to retain commits you create, you may
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.5329832Z do so (now or later) by using -c with the switch command. Example:
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.5332292Z 
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.5333256Z   git switch -c <new-branch-name>
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.5334722Z 
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.5335788Z Or undo this operation with:
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.5337098Z 
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.5337928Z   git switch -
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.5339058Z 
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.5340686Z Turn off this advice by setting config variable advice.detachedHead to false
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.5343138Z 
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.5346607Z HEAD is now at 51f6d9b Merge 97bdc6b013da7ceb28f13a8bee93f17d159bbd68 into 118b3055310eb27220d1496816a3eeb2dfac9781
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.5354304Z ##[endgroup]
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.5363441Z [command]/usr/bin/git log -1 --format=%H
+Validate repository preparation	Checkout repository	2026-06-13T08:58:27.5397718Z 51f6d9b5014e36c7a31b4abe036e49bccf169cbd
+Validate repository preparation	Check required preparation files	﻿2026-06-13T08:58:27.5690977Z ##[group]Run bash scripts/validate-preparation.sh
+Validate repository preparation	Check required preparation files	2026-06-13T08:58:27.5692595Z ^[[36;1mbash scripts/validate-preparation.sh^[[0m
+Validate repository preparation	Check required preparation files	2026-06-13T08:58:27.5833995Z shell: /usr/bin/bash -e {0}
+Validate repository preparation	Check required preparation files	2026-06-13T08:58:27.5835391Z env:
+Validate repository preparation	Check required preparation files	2026-06-13T08:58:27.5836446Z   VST2_SDK_REPO: https://github.com/R-Tur/VST_SDK_2.4.git
+Validate repository preparation	Check required preparation files	2026-06-13T08:58:27.5837809Z ##[endgroup]
+Validate repository preparation	Check required preparation files	2026-06-13T08:58:27.6044651Z Preparation files and workflow markers are present.
+Validate repository preparation	Configure CMake without plugin dependency fetch	﻿2026-06-13T08:58:27.6121634Z ##[group]Run cmake -S . -B build/prepare-smoke -DMULTICHANNEL_PANORAMA_BUILD_PLUGIN=OFF
+Validate repository preparation	Configure CMake without plugin dependency fetch	2026-06-13T08:58:27.6124300Z ^[[36;1mcmake -S . -B build/prepare-smoke -DMULTICHANNEL_PANORAMA_BUILD_PLUGIN=OFF^[[0m
+Validate repository preparation	Configure CMake without plugin dependency fetch	2026-06-13T08:58:27.6159186Z shell: /usr/bin/bash -e {0}
+Validate repository preparation	Configure CMake without plugin dependency fetch	2026-06-13T08:58:27.6160441Z env:
+Validate repository preparation	Configure CMake without plugin dependency fetch	2026-06-13T08:58:27.6161736Z   VST2_SDK_REPO: https://github.com/R-Tur/VST_SDK_2.4.git
+Validate repository preparation	Configure CMake without plugin dependency fetch	2026-06-13T08:58:27.6163314Z ##[endgroup]
+Validate repository preparation	Configure CMake without plugin dependency fetch	2026-06-13T08:58:30.2709705Z -- The C compiler identification is GNU 13.3.0
+Validate repository preparation	Configure CMake without plugin dependency fetch	2026-06-13T08:58:31.4998074Z -- The CXX compiler identification is GNU 13.3.0
+Validate repository preparation	Configure CMake without plugin dependency fetch	2026-06-13T08:58:31.6104017Z -- Detecting C compiler ABI info
+Validate repository preparation	Configure CMake without plugin dependency fetch	2026-06-13T08:58:31.8968054Z -- Detecting C compiler ABI info - done
+Validate repository preparation	Configure CMake without plugin dependency fetch	2026-06-13T08:58:31.9149748Z -- Check for working C compiler: /usr/bin/cc - skipped
+Validate repository preparation	Configure CMake without plugin dependency fetch	2026-06-13T08:58:31.9202834Z -- Detecting C compile features
+Validate repository preparation	Configure CMake without plugin dependency fetch	2026-06-13T08:58:31.9263536Z -- Detecting C compile features - done
+Validate repository preparation	Configure CMake without plugin dependency fetch	2026-06-13T08:58:31.9605901Z -- Detecting CXX compiler ABI info
+Validate repository preparation	Configure CMake without plugin dependency fetch	2026-06-13T08:58:32.0758511Z -- Detecting CXX compiler ABI info - done
+Validate repository preparation	Configure CMake without plugin dependency fetch	2026-06-13T08:58:32.0937470Z -- Check for working CXX compiler: /usr/bin/c++ - skipped
+Validate repository preparation	Configure CMake without plugin dependency fetch	2026-06-13T08:58:32.0942036Z -- Detecting CXX compile features
+Validate repository preparation	Configure CMake without plugin dependency fetch	2026-06-13T08:58:32.0963546Z -- Detecting CXX compile features - done
+Validate repository preparation	Configure CMake without plugin dependency fetch	2026-06-13T08:58:32.1063984Z -- Configuring done (3.7s)
+Validate repository preparation	Configure CMake without plugin dependency fetch	2026-06-13T08:58:32.1080476Z -- Generating done (0.0s)
+Validate repository preparation	Configure CMake without plugin dependency fetch	2026-06-13T08:58:32.1083957Z -- Build files have been written to: /home/runner/work/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/build/prepare-smoke
+Validate repository preparation	Post Checkout repository	﻿2026-06-13T08:58:32.1375891Z Post job cleanup.
+Validate repository preparation	Post Checkout repository	2026-06-13T08:58:32.2218462Z [command]/usr/bin/git version
+Validate repository preparation	Post Checkout repository	2026-06-13T08:58:32.2260262Z git version 2.54.0
+Validate repository preparation	Post Checkout repository	2026-06-13T08:58:32.2298081Z Temporarily overriding HOME='/home/runner/work/_temp/92d77c4c-4114-44a9-ad12-4229d79942a8' before making global git config changes
+Validate repository preparation	Post Checkout repository	2026-06-13T08:58:32.2299184Z Adding repository directory to the temporary git global config as a safe directory
+Validate repository preparation	Post Checkout repository	2026-06-13T08:58:32.2303255Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin
+Validate repository preparation	Post Checkout repository	2026-06-13T08:58:32.2338002Z Removing SSH command configuration
+Validate repository preparation	Post Checkout repository	2026-06-13T08:58:32.2344483Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Validate repository preparation	Post Checkout repository	2026-06-13T08:58:32.2403793Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Validate repository preparation	Post Checkout repository	2026-06-13T08:58:32.2638889Z Removing HTTP extra header
+Validate repository preparation	Post Checkout repository	2026-06-13T08:58:32.2645083Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Validate repository preparation	Post Checkout repository	2026-06-13T08:58:32.2679707Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Validate repository preparation	Post Checkout repository	2026-06-13T08:58:32.2906189Z Removing includeIf entries pointing to credentials config files
+Validate repository preparation	Post Checkout repository	2026-06-13T08:58:32.2912474Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Validate repository preparation	Post Checkout repository	2026-06-13T08:58:32.2938116Z includeif.gitdir:/home/runner/work/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/.git.path
+Validate repository preparation	Post Checkout repository	2026-06-13T08:58:32.2939159Z includeif.gitdir:/home/runner/work/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/.git/worktrees/*.path
+Validate repository preparation	Post Checkout repository	2026-06-13T08:58:32.2939841Z includeif.gitdir:/github/workspace/.git.path
+Validate repository preparation	Post Checkout repository	2026-06-13T08:58:32.2940235Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+Validate repository preparation	Post Checkout repository	2026-06-13T08:58:32.2948842Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/.git.path
+Validate repository preparation	Post Checkout repository	2026-06-13T08:58:32.2971968Z /home/runner/work/_temp/git-credentials-4838efee-f1a4-40af-8761-d8e852d2862e.config
+Validate repository preparation	Post Checkout repository	2026-06-13T08:58:32.2983631Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/.git.path /home/runner/work/_temp/git-credentials-4838efee-f1a4-40af-8761-d8e852d2862e.config
+Validate repository preparation	Post Checkout repository	2026-06-13T08:58:32.3019164Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/.git/worktrees/*.path
+Validate repository preparation	Post Checkout repository	2026-06-13T08:58:32.3040965Z /home/runner/work/_temp/git-credentials-4838efee-f1a4-40af-8761-d8e852d2862e.config
+Validate repository preparation	Post Checkout repository	2026-06-13T08:58:32.3050245Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-4838efee-f1a4-40af-8761-d8e852d2862e.config
+Validate repository preparation	Post Checkout repository	2026-06-13T08:58:32.3094566Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+Validate repository preparation	Post Checkout repository	2026-06-13T08:58:32.3112963Z /github/runner_temp/git-credentials-4838efee-f1a4-40af-8761-d8e852d2862e.config
+Validate repository preparation	Post Checkout repository	2026-06-13T08:58:32.3124296Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-4838efee-f1a4-40af-8761-d8e852d2862e.config
+Validate repository preparation	Post Checkout repository	2026-06-13T08:58:32.3156851Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+Validate repository preparation	Post Checkout repository	2026-06-13T08:58:32.3181300Z /github/runner_temp/git-credentials-4838efee-f1a4-40af-8761-d8e852d2862e.config
+Validate repository preparation	Post Checkout repository	2026-06-13T08:58:32.3188129Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-4838efee-f1a4-40af-8761-d8e852d2862e.config
+Validate repository preparation	Post Checkout repository	2026-06-13T08:58:32.3222056Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Validate repository preparation	Post Checkout repository	2026-06-13T08:58:32.3469024Z Removing credentials config '/home/runner/work/_temp/git-credentials-4838efee-f1a4-40af-8761-d8e852d2862e.config'
+Validate repository preparation	Complete job	﻿2026-06-13T08:58:32.3623188Z Cleaning up orphan processes
+Build Windows (win64)	Set up job	﻿2026-06-13T08:58:54.6872502Z Current runner version: '2.335.1'
+Build Windows (win64)	Set up job	2026-06-13T08:58:54.6923072Z ##[group]Runner Image Provisioner
+Build Windows (win64)	Set up job	2026-06-13T08:58:54.6923914Z Hosted Compute Agent
+Build Windows (win64)	Set up job	2026-06-13T08:58:54.6924461Z Version: 20260527.539
+Build Windows (win64)	Set up job	2026-06-13T08:58:54.6925035Z Commit: a891dd388383b896fa6ac04a82c0b75cec981078
+Build Windows (win64)	Set up job	2026-06-13T08:58:54.6925754Z Build Date: 2026-05-27T21:39:57Z
+Build Windows (win64)	Set up job	2026-06-13T08:58:54.6926405Z Worker ID: {1d9b79bd-0db0-4325-a795-49923a46a195}
+Build Windows (win64)	Set up job	2026-06-13T08:58:54.6927089Z Azure Region: eastus2
+Build Windows (win64)	Set up job	2026-06-13T08:58:54.6927620Z ##[endgroup]
+Build Windows (win64)	Set up job	2026-06-13T08:58:54.6928775Z ##[group]Operating System
+Build Windows (win64)	Set up job	2026-06-13T08:58:54.6929398Z Microsoft Windows Server 2025
+Build Windows (win64)	Set up job	2026-06-13T08:58:54.6929960Z 10.0.26100
+Build Windows (win64)	Set up job	2026-06-13T08:58:54.6930444Z Datacenter
+Build Windows (win64)	Set up job	2026-06-13T08:58:54.6930933Z ##[endgroup]
+Build Windows (win64)	Set up job	2026-06-13T08:58:54.6931421Z ##[group]Runner Image
+Build Windows (win64)	Set up job	2026-06-13T08:58:54.6931984Z Image: windows-2025-vs2026
+Build Windows (win64)	Set up job	2026-06-13T08:58:54.6932540Z Version: 20260608.135.2
+Build Windows (win64)	Set up job	2026-06-13T08:58:54.6933614Z Included Software: https://github.com/actions/runner-images/blob/win25-vs2026/20260608.135/images/windows/Windows2025-VS2026-Readme.md
+Build Windows (win64)	Set up job	2026-06-13T08:58:54.6935523Z Image Release: https://github.com/actions/runner-images/releases/tag/win25-vs2026%2F20260608.135
+Build Windows (win64)	Set up job	2026-06-13T08:58:54.6936469Z ##[endgroup]
+Build Windows (win64)	Set up job	2026-06-13T08:58:54.6937987Z ##[group]GITHUB_TOKEN Permissions
+Build Windows (win64)	Set up job	2026-06-13T08:58:54.6939854Z Contents: read
+Build Windows (win64)	Set up job	2026-06-13T08:58:54.6940396Z Metadata: read
+Build Windows (win64)	Set up job	2026-06-13T08:58:54.6940873Z ##[endgroup]
+Build Windows (win64)	Set up job	2026-06-13T08:58:54.6942837Z Secret source: None
+Build Windows (win64)	Set up job	2026-06-13T08:58:54.6943481Z Prepare workflow directory
+Build Windows (win64)	Set up job	2026-06-13T08:58:54.7409909Z Prepare all required actions
+Build Windows (win64)	Set up job	2026-06-13T08:58:54.7463654Z Getting action download info
+Build Windows (win64)	Set up job	2026-06-13T08:58:54.8932937Z Download action repository 'actions/checkout@v6' (SHA:df4cb1c069e1874edd31b4311f1884172cec0e10)
+Build Windows (win64)	Set up job	2026-06-13T08:58:55.1562438Z Download action repository 'actions/upload-artifact@v7' (SHA:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a)
+Build Windows (win64)	Set up job	2026-06-13T08:58:55.4123817Z Complete job name: Build Windows (win64)
+Build Windows (win64)	Checkout repository	﻿2026-06-13T08:58:55.5416753Z ##[group]Run actions/checkout@v6
+Build Windows (win64)	Checkout repository	2026-06-13T08:58:55.5417883Z with:
+Build Windows (win64)	Checkout repository	2026-06-13T08:58:55.5418403Z   repository: Jhon-Crow/Multichannel-Panorama-VST-plugin
+Build Windows (win64)	Checkout repository	2026-06-13T08:58:55.5423343Z   token: ***
+Build Windows (win64)	Checkout repository	2026-06-13T08:58:55.5423735Z   ssh-strict: true
+Build Windows (win64)	Checkout repository	2026-06-13T08:58:55.5424135Z   ssh-user: git
+Build Windows (win64)	Checkout repository	2026-06-13T08:58:55.5424543Z   persist-credentials: true
+Build Windows (win64)	Checkout repository	2026-06-13T08:58:55.5424984Z   clean: true
+Build Windows (win64)	Checkout repository	2026-06-13T08:58:55.5425381Z   sparse-checkout-cone-mode: true
+Build Windows (win64)	Checkout repository	2026-06-13T08:58:55.5425850Z   fetch-depth: 1
+Build Windows (win64)	Checkout repository	2026-06-13T08:58:55.5426236Z   fetch-tags: false
+Build Windows (win64)	Checkout repository	2026-06-13T08:58:55.5426628Z   show-progress: true
+Build Windows (win64)	Checkout repository	2026-06-13T08:58:55.5427019Z   lfs: false
+Build Windows (win64)	Checkout repository	2026-06-13T08:58:55.5427387Z   submodules: false
+Build Windows (win64)	Checkout repository	2026-06-13T08:58:55.5427784Z   set-safe-directory: true
+Build Windows (win64)	Checkout repository	2026-06-13T08:58:55.5428399Z env:
+Build Windows (win64)	Checkout repository	2026-06-13T08:58:55.5428851Z   VST2_SDK_REPO: https://github.com/R-Tur/VST_SDK_2.4.git
+Build Windows (win64)	Checkout repository	2026-06-13T08:58:55.5429434Z ##[endgroup]
+Build Windows (win64)	Checkout repository	2026-06-13T08:58:55.6851807Z Syncing repository: Jhon-Crow/Multichannel-Panorama-VST-plugin
+Build Windows (win64)	Checkout repository	2026-06-13T08:58:55.6854464Z ##[group]Getting Git version info
+Build Windows (win64)	Checkout repository	2026-06-13T08:58:55.6855890Z Working directory is 'D:\a\Multichannel-Panorama-VST-plugin\Multichannel-Panorama-VST-plugin'
+Build Windows (win64)	Checkout repository	2026-06-13T08:58:55.7882980Z [command]"C:\Program Files\Git\bin\git.exe" version
+Build Windows (win64)	Checkout repository	2026-06-13T08:58:56.1697012Z git version 2.54.0.windows.1
+Build Windows (win64)	Checkout repository	2026-06-13T08:58:56.1753422Z ##[endgroup]
+Build Windows (win64)	Checkout repository	2026-06-13T08:58:56.1774446Z Temporarily overriding HOME='D:\a\_temp\26d67568-28a0-40ea-905a-896d540ba20c' before making global git config changes
+Build Windows (win64)	Checkout repository	2026-06-13T08:58:56.1777000Z Adding repository directory to the temporary git global config as a safe directory
+Build Windows (win64)	Checkout repository	2026-06-13T08:58:56.1785415Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\Multichannel-Panorama-VST-plugin\Multichannel-Panorama-VST-plugin
+Build Windows (win64)	Checkout repository	2026-06-13T08:58:56.2387485Z Deleting the contents of 'D:\a\Multichannel-Panorama-VST-plugin\Multichannel-Panorama-VST-plugin'
+Build Windows (win64)	Checkout repository	2026-06-13T08:58:56.2393088Z ##[group]Determining repository object format
+Build Windows (win64)	Checkout repository	2026-06-13T08:58:56.2397153Z ##[endgroup]
+Build Windows (win64)	Checkout repository	2026-06-13T08:58:56.2398407Z ##[group]Initializing the repository
+Build Windows (win64)	Checkout repository	2026-06-13T08:58:56.2407016Z [command]"C:\Program Files\Git\bin\git.exe" init D:\a\Multichannel-Panorama-VST-plugin\Multichannel-Panorama-VST-plugin
+Build Windows (win64)	Checkout repository	2026-06-13T08:58:56.3549844Z Initialized empty Git repository in D:/a/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/.git/
+Build Windows (win64)	Checkout repository	2026-06-13T08:58:56.3597512Z [command]"C:\Program Files\Git\bin\git.exe" remote add origin https://github.com/Jhon-Crow/Multichannel-Panorama-VST-plugin
+Build Windows (win64)	Checkout repository	2026-06-13T08:58:56.4138304Z ##[endgroup]
+Build Windows (win64)	Checkout repository	2026-06-13T08:58:56.4140133Z ##[group]Disabling automatic garbage collection
+Build Windows (win64)	Checkout repository	2026-06-13T08:58:56.4147348Z [command]"C:\Program Files\Git\bin\git.exe" config --local gc.auto 0
+Build Windows (win64)	Checkout repository	2026-06-13T08:58:56.4458470Z ##[endgroup]
+Build Windows (win64)	Checkout repository	2026-06-13T08:58:56.4460137Z ##[group]Setting up auth
+Build Windows (win64)	Checkout repository	2026-06-13T08:58:56.4461208Z Removing SSH command configuration
+Build Windows (win64)	Checkout repository	2026-06-13T08:58:56.4471531Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+Build Windows (win64)	Checkout repository	2026-06-13T08:58:56.4772178Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+Build Windows (win64)	Checkout repository	2026-06-13T08:58:58.0297737Z Removing HTTP extra header
+Build Windows (win64)	Checkout repository	2026-06-13T08:58:58.0308168Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Build Windows (win64)	Checkout repository	2026-06-13T08:58:58.0645363Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+Build Windows (win64)	Checkout repository	2026-06-13T08:58:58.5947893Z Removing includeIf entries pointing to credentials config files
+Build Windows (win64)	Checkout repository	2026-06-13T08:58:58.5961765Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+Build Windows (win64)	Checkout repository	2026-06-13T08:58:58.6285996Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+Build Windows (win64)	Checkout repository	2026-06-13T08:58:59.1913551Z [command]"C:\Program Files\Git\bin\git.exe" config --file D:\a\_temp\git-credentials-c83b4614-19ac-4cf0-9aa4-e78e5e4dd42f.config http.https://github.com/.extraheader "AUTHORIZATION: basic ***"
+Build Windows (win64)	Checkout repository	2026-06-13T08:58:59.2240403Z [command]"C:\Program Files\Git\bin\git.exe" config --local includeIf.gitdir:D:/a/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/.git.path D:\a\_temp\git-credentials-c83b4614-19ac-4cf0-9aa4-e78e5e4dd42f.config
+Build Windows (win64)	Checkout repository	2026-06-13T08:58:59.2543535Z [command]"C:\Program Files\Git\bin\git.exe" config --local includeIf.gitdir:D:/a/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/.git/worktrees/*.path D:\a\_temp\git-credentials-c83b4614-19ac-4cf0-9aa4-e78e5e4dd42f.config
+Build Windows (win64)	Checkout repository	2026-06-13T08:58:59.2883617Z [command]"C:\Program Files\Git\bin\git.exe" config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-c83b4614-19ac-4cf0-9aa4-e78e5e4dd42f.config
+Build Windows (win64)	Checkout repository	2026-06-13T08:58:59.3190165Z [command]"C:\Program Files\Git\bin\git.exe" config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-c83b4614-19ac-4cf0-9aa4-e78e5e4dd42f.config
+Build Windows (win64)	Checkout repository	2026-06-13T08:58:59.3497948Z ##[endgroup]
+Build Windows (win64)	Checkout repository	2026-06-13T08:58:59.3498478Z ##[group]Fetching the repository
+Build Windows (win64)	Checkout repository	2026-06-13T08:58:59.3513308Z [command]"C:\Program Files\Git\bin\git.exe" -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +51f6d9b5014e36c7a31b4abe036e49bccf169cbd:refs/remotes/pull/6/merge
+Build Windows (win64)	Checkout repository	2026-06-13T08:59:00.1814924Z From https://github.com/Jhon-Crow/Multichannel-Panorama-VST-plugin
+Build Windows (win64)	Checkout repository	2026-06-13T08:59:00.1816134Z  * [new ref]         51f6d9b5014e36c7a31b4abe036e49bccf169cbd -> pull/6/merge
+Build Windows (win64)	Checkout repository	2026-06-13T08:59:00.2211415Z ##[endgroup]
+Build Windows (win64)	Checkout repository	2026-06-13T08:59:00.2212791Z ##[group]Determining the checkout info
+Build Windows (win64)	Checkout repository	2026-06-13T08:59:00.2213481Z ##[endgroup]
+Build Windows (win64)	Checkout repository	2026-06-13T08:59:00.2222300Z [command]"C:\Program Files\Git\bin\git.exe" sparse-checkout disable
+Build Windows (win64)	Checkout repository	2026-06-13T08:59:00.2692891Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset-all extensions.worktreeConfig
+Build Windows (win64)	Checkout repository	2026-06-13T08:59:00.3018624Z ##[group]Checking out the ref
+Build Windows (win64)	Checkout repository	2026-06-13T08:59:00.3027200Z [command]"C:\Program Files\Git\bin\git.exe" checkout --progress --force refs/remotes/pull/6/merge
+Build Windows (win64)	Checkout repository	2026-06-13T08:59:00.3934677Z Note: switching to 'refs/remotes/pull/6/merge'.
+Build Windows (win64)	Checkout repository	2026-06-13T08:59:00.3935031Z 
+Build Windows (win64)	Checkout repository	2026-06-13T08:59:00.3935298Z You are in 'detached HEAD' state. You can look around, make experimental
+Build Windows (win64)	Checkout repository	2026-06-13T08:59:00.3935821Z changes and commit them, and you can discard any commits you make in this
+Build Windows (win64)	Checkout repository	2026-06-13T08:59:00.3936259Z state without impacting any branches by switching back to a branch.
+Build Windows (win64)	Checkout repository	2026-06-13T08:59:00.3936518Z 
+Build Windows (win64)	Checkout repository	2026-06-13T08:59:00.3936691Z If you want to create a new branch to retain commits you create, you may
+Build Windows (win64)	Checkout repository	2026-06-13T08:59:00.3937103Z do so (now or later) by using -c with the switch command. Example:
+Build Windows (win64)	Checkout repository	2026-06-13T08:59:00.3937456Z 
+Build Windows (win64)	Checkout repository	2026-06-13T08:59:00.3937591Z   git switch -c <new-branch-name>
+Build Windows (win64)	Checkout repository	2026-06-13T08:59:00.3937767Z 
+Build Windows (win64)	Checkout repository	2026-06-13T08:59:00.3937858Z Or undo this operation with:
+Build Windows (win64)	Checkout repository	2026-06-13T08:59:00.3938027Z 
+Build Windows (win64)	Checkout repository	2026-06-13T08:59:00.3938107Z   git switch -
+Build Windows (win64)	Checkout repository	2026-06-13T08:59:00.3938237Z 
+Build Windows (win64)	Checkout repository	2026-06-13T08:59:00.3938439Z Turn off this advice by setting config variable advice.detachedHead to false
+Build Windows (win64)	Checkout repository	2026-06-13T08:59:00.3938740Z 
+Build Windows (win64)	Checkout repository	2026-06-13T08:59:00.3945612Z HEAD is now at 51f6d9b Merge 97bdc6b013da7ceb28f13a8bee93f17d159bbd68 into 118b3055310eb27220d1496816a3eeb2dfac9781
+Build Windows (win64)	Checkout repository	2026-06-13T08:59:00.4053185Z ##[endgroup]
+Build Windows (win64)	Checkout repository	2026-06-13T08:59:00.4468984Z [command]"C:\Program Files\Git\bin\git.exe" log -1 --format=%H
+Build Windows (win64)	Checkout repository	2026-06-13T08:59:00.4733603Z 51f6d9b5014e36c7a31b4abe036e49bccf169cbd
+Build Windows (win64)	Fetch VST2 SDK headers	﻿2026-06-13T08:59:00.5194374Z ##[group]Run $repo = if ("") { "" } else { "https://github.com/R-Tur/VST_SDK_2.4.git" }
+Build Windows (win64)	Fetch VST2 SDK headers	2026-06-13T08:59:00.5195098Z ^[[36;1m$repo = if ("") { "" } else { "https://github.com/R-Tur/VST_SDK_2.4.git" }^[[0m
+Build Windows (win64)	Fetch VST2 SDK headers	2026-06-13T08:59:00.5195539Z ^[[36;1m$sdk = "D:/vst2sdk"^[[0m
+Build Windows (win64)	Fetch VST2 SDK headers	2026-06-13T08:59:00.5195841Z ^[[36;1mgit clone --depth 1 $repo $sdk^[[0m
+Build Windows (win64)	Fetch VST2 SDK headers	2026-06-13T08:59:00.5196198Z ^[[36;1mif (-not (Test-Path "$sdk/pluginterfaces/vst2.x/aeffect.h")) {^[[0m
+Build Windows (win64)	Fetch VST2 SDK headers	2026-06-13T08:59:00.5196723Z ^[[36;1m  throw "VST2 SDK header pluginterfaces/vst2.x/aeffect.h not found after cloning $repo"^[[0m
+Build Windows (win64)	Fetch VST2 SDK headers	2026-06-13T08:59:00.5197128Z ^[[36;1m}^[[0m
+Build Windows (win64)	Fetch VST2 SDK headers	2026-06-13T08:59:00.5197454Z ^[[36;1m"VST2_SDK_PATH=$sdk" | Out-File -FilePath $env:GITHUB_ENV -Append -Encoding utf8^[[0m
+Build Windows (win64)	Fetch VST2 SDK headers	2026-06-13T08:59:00.5887179Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+Build Windows (win64)	Fetch VST2 SDK headers	2026-06-13T08:59:00.5887580Z env:
+Build Windows (win64)	Fetch VST2 SDK headers	2026-06-13T08:59:00.5887865Z   VST2_SDK_REPO: https://github.com/R-Tur/VST_SDK_2.4.git
+Build Windows (win64)	Fetch VST2 SDK headers	2026-06-13T08:59:00.5888168Z ##[endgroup]
+Build Windows (win64)	Fetch VST2 SDK headers	2026-06-13T08:59:05.8179167Z Cloning into 'D:/vst2sdk'...
+Build Windows (win64)	Configure CMake	﻿2026-06-13T08:59:06.7438930Z ##[group]Run cmake -S . -B "D:/b/win64" -G "Visual Studio 17 2022" -A "x64" -DCMAKE_BUILD_TYPE=Release -DMULTICHANNEL_PANORAMA_VST2_SDK_PATH="$env:VST2_SDK_PATH"
+Build Windows (win64)	Configure CMake	2026-06-13T08:59:06.7440095Z ^[[36;1mcmake -S . -B "D:/b/win64" -G "Visual Studio 17 2022" -A "x64" -DCMAKE_BUILD_TYPE=Release -DMULTICHANNEL_PANORAMA_VST2_SDK_PATH="$env:VST2_SDK_PATH"^[[0m
+Build Windows (win64)	Configure CMake	2026-06-13T08:59:06.7510727Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+Build Windows (win64)	Configure CMake	2026-06-13T08:59:06.7511072Z env:
+Build Windows (win64)	Configure CMake	2026-06-13T08:59:06.7511343Z   VST2_SDK_REPO: https://github.com/R-Tur/VST_SDK_2.4.git
+Build Windows (win64)	Configure CMake	2026-06-13T08:59:06.7511667Z   VST2_SDK_PATH: D:/vst2sdk
+Build Windows (win64)	Configure CMake	2026-06-13T08:59:06.7511891Z ##[endgroup]
+Build Windows (win64)	Configure CMake	2026-06-13T08:59:09.5985944Z CMake Error at CMakeLists.txt:3 (project):
+Build Windows (win64)	Configure CMake	2026-06-13T08:59:09.5986322Z   Generator
+Build Windows (win64)	Configure CMake	2026-06-13T08:59:09.5986440Z 
+Build Windows (win64)	Configure CMake	2026-06-13T08:59:09.5986534Z     Visual Studio 17 2022
+Build Windows (win64)	Configure CMake	2026-06-13T08:59:09.5986682Z 
+Build Windows (win64)	Configure CMake	2026-06-13T08:59:09.5986803Z   could not find any instance of Visual Studio.
+Build Windows (win64)	Configure CMake	2026-06-13T08:59:09.5987000Z 
+Build Windows (win64)	Configure CMake	2026-06-13T08:59:09.5987117Z 
+Build Windows (win64)	Configure CMake	2026-06-13T08:59:09.5987126Z 
+Build Windows (win64)	Configure CMake	2026-06-13T08:59:09.5993234Z -- Configuring incomplete, errors occurred!
+Build Windows (win64)	Configure CMake	2026-06-13T08:59:09.8138242Z ##[error]Process completed with exit code 1.
+Build Windows (win64)	Post Checkout repository	﻿2026-06-13T08:59:09.8389377Z Post job cleanup.
+Build Windows (win64)	Post Checkout repository	2026-06-13T08:59:10.0047093Z [command]"C:\Program Files\Git\bin\git.exe" version
+Build Windows (win64)	Post Checkout repository	2026-06-13T08:59:10.0322810Z git version 2.54.0.windows.1
+Build Windows (win64)	Post Checkout repository	2026-06-13T08:59:10.0393258Z Temporarily overriding HOME='D:\a\_temp\697683b7-f854-4321-9120-7bf3adf5bd8b' before making global git config changes
+Build Windows (win64)	Post Checkout repository	2026-06-13T08:59:10.0394591Z Adding repository directory to the temporary git global config as a safe directory
+Build Windows (win64)	Post Checkout repository	2026-06-13T08:59:10.0404445Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\Multichannel-Panorama-VST-plugin\Multichannel-Panorama-VST-plugin
+Build Windows (win64)	Post Checkout repository	2026-06-13T08:59:10.0698233Z Removing SSH command configuration
+Build Windows (win64)	Post Checkout repository	2026-06-13T08:59:10.0708833Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+Build Windows (win64)	Post Checkout repository	2026-06-13T08:59:10.1013075Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+Build Windows (win64)	Post Checkout repository	2026-06-13T08:59:10.7141931Z Removing HTTP extra header
+Build Windows (win64)	Post Checkout repository	2026-06-13T08:59:10.7158771Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Build Windows (win64)	Post Checkout repository	2026-06-13T08:59:10.7608429Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+Build Windows (win64)	Post Checkout repository	2026-06-13T08:59:11.3393961Z Removing includeIf entries pointing to credentials config files
+Build Windows (win64)	Post Checkout repository	2026-06-13T08:59:11.3406314Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+Build Windows (win64)	Post Checkout repository	2026-06-13T08:59:11.3665432Z includeif.gitdir:D:/a/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/.git.path
+Build Windows (win64)	Post Checkout repository	2026-06-13T08:59:11.3666614Z includeif.gitdir:D:/a/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/.git/worktrees/*.path
+Build Windows (win64)	Post Checkout repository	2026-06-13T08:59:11.3667548Z includeif.gitdir:/github/workspace/.git.path
+Build Windows (win64)	Post Checkout repository	2026-06-13T08:59:11.3668067Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+Build Windows (win64)	Post Checkout repository	2026-06-13T08:59:11.3709834Z [command]"C:\Program Files\Git\bin\git.exe" config --local --get-all includeif.gitdir:D:/a/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/.git.path
+Build Windows (win64)	Post Checkout repository	2026-06-13T08:59:11.3963337Z D:\a\_temp\git-credentials-c83b4614-19ac-4cf0-9aa4-e78e5e4dd42f.config
+Build Windows (win64)	Post Checkout repository	2026-06-13T08:59:11.4009056Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset includeif.gitdir:D:/a/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/.git.path D:\a\_temp\git-credentials-c83b4614-19ac-4cf0-9aa4-e78e5e4dd42f.config
+Build Windows (win64)	Post Checkout repository	2026-06-13T08:59:11.4306652Z [command]"C:\Program Files\Git\bin\git.exe" config --local --get-all includeif.gitdir:D:/a/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/.git/worktrees/*.path
+Build Windows (win64)	Post Checkout repository	2026-06-13T08:59:11.4568891Z D:\a\_temp\git-credentials-c83b4614-19ac-4cf0-9aa4-e78e5e4dd42f.config
+Build Windows (win64)	Post Checkout repository	2026-06-13T08:59:11.4614105Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset includeif.gitdir:D:/a/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/.git/worktrees/*.path D:\a\_temp\git-credentials-c83b4614-19ac-4cf0-9aa4-e78e5e4dd42f.config
+Build Windows (win64)	Post Checkout repository	2026-06-13T08:59:11.4916009Z [command]"C:\Program Files\Git\bin\git.exe" config --local --get-all includeif.gitdir:/github/workspace/.git.path
+Build Windows (win64)	Post Checkout repository	2026-06-13T08:59:11.5171848Z /github/runner_temp/git-credentials-c83b4614-19ac-4cf0-9aa4-e78e5e4dd42f.config
+Build Windows (win64)	Post Checkout repository	2026-06-13T08:59:11.5214902Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset includeif.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-c83b4614-19ac-4cf0-9aa4-e78e5e4dd42f.config
+Build Windows (win64)	Post Checkout repository	2026-06-13T08:59:11.5512094Z [command]"C:\Program Files\Git\bin\git.exe" config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+Build Windows (win64)	Post Checkout repository	2026-06-13T08:59:11.5761210Z /github/runner_temp/git-credentials-c83b4614-19ac-4cf0-9aa4-e78e5e4dd42f.config
+Build Windows (win64)	Post Checkout repository	2026-06-13T08:59:11.5806576Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-c83b4614-19ac-4cf0-9aa4-e78e5e4dd42f.config
+Build Windows (win64)	Post Checkout repository	2026-06-13T08:59:11.6108010Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+Build Windows (win64)	Post Checkout repository	2026-06-13T08:59:12.1188202Z Removing credentials config 'D:\a\_temp\git-credentials-c83b4614-19ac-4cf0-9aa4-e78e5e4dd42f.config'
+Build Windows (win64)	Complete job	﻿2026-06-13T08:59:12.1385693Z Cleaning up orphan processes
+Build Windows (win32)	Set up job	﻿2026-06-13T08:58:36.4467978Z Current runner version: '2.335.1'
+Build Windows (win32)	Set up job	2026-06-13T08:58:36.4524398Z ##[group]Runner Image Provisioner
+Build Windows (win32)	Set up job	2026-06-13T08:58:36.4525565Z Hosted Compute Agent
+Build Windows (win32)	Set up job	2026-06-13T08:58:36.4526129Z Version: 20260527.539
+Build Windows (win32)	Set up job	2026-06-13T08:58:36.4526768Z Commit: a891dd388383b896fa6ac04a82c0b75cec981078
+Build Windows (win32)	Set up job	2026-06-13T08:58:36.4527462Z Build Date: 2026-05-27T21:39:57Z
+Build Windows (win32)	Set up job	2026-06-13T08:58:36.4528108Z Worker ID: {78a0bd6e-6e97-410c-af69-4cdfd0d3aa25}
+Build Windows (win32)	Set up job	2026-06-13T08:58:36.4528811Z Azure Region: northcentralus
+Build Windows (win32)	Set up job	2026-06-13T08:58:36.4529380Z ##[endgroup]
+Build Windows (win32)	Set up job	2026-06-13T08:58:36.4530751Z ##[group]Operating System
+Build Windows (win32)	Set up job	2026-06-13T08:58:36.4531383Z Microsoft Windows Server 2025
+Build Windows (win32)	Set up job	2026-06-13T08:58:36.4531951Z 10.0.26100
+Build Windows (win32)	Set up job	2026-06-13T08:58:36.4532465Z Datacenter
+Build Windows (win32)	Set up job	2026-06-13T08:58:36.4532949Z ##[endgroup]
+Build Windows (win32)	Set up job	2026-06-13T08:58:36.4533488Z ##[group]Runner Image
+Build Windows (win32)	Set up job	2026-06-13T08:58:36.4534063Z Image: windows-2025-vs2026
+Build Windows (win32)	Set up job	2026-06-13T08:58:36.4534655Z Version: 20260608.135.2
+Build Windows (win32)	Set up job	2026-06-13T08:58:36.4535748Z Included Software: https://github.com/actions/runner-images/blob/win25-vs2026/20260608.135/images/windows/Windows2025-VS2026-Readme.md
+Build Windows (win32)	Set up job	2026-06-13T08:58:36.4537780Z Image Release: https://github.com/actions/runner-images/releases/tag/win25-vs2026%2F20260608.135
+Build Windows (win32)	Set up job	2026-06-13T08:58:36.4538805Z ##[endgroup]
+Build Windows (win32)	Set up job	2026-06-13T08:58:36.4539857Z ##[group]GITHUB_TOKEN Permissions
+Build Windows (win32)	Set up job	2026-06-13T08:58:36.4541850Z Contents: read
+Build Windows (win32)	Set up job	2026-06-13T08:58:36.4542426Z Metadata: read
+Build Windows (win32)	Set up job	2026-06-13T08:58:36.4543011Z ##[endgroup]
+Build Windows (win32)	Set up job	2026-06-13T08:58:36.4544978Z Secret source: None
+Build Windows (win32)	Set up job	2026-06-13T08:58:36.4546059Z Prepare workflow directory
+Build Windows (win32)	Set up job	2026-06-13T08:58:36.5062557Z Prepare all required actions
+Build Windows (win32)	Set up job	2026-06-13T08:58:36.5102492Z Getting action download info
+Build Windows (win32)	Set up job	2026-06-13T08:58:36.7436908Z Download action repository 'actions/checkout@v6' (SHA:df4cb1c069e1874edd31b4311f1884172cec0e10)
+Build Windows (win32)	Set up job	2026-06-13T08:58:37.0695233Z Download action repository 'actions/upload-artifact@v7' (SHA:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a)
+Build Windows (win32)	Set up job	2026-06-13T08:58:37.2771616Z Complete job name: Build Windows (win32)
+Build Windows (win32)	Checkout repository	﻿2026-06-13T08:58:37.4047959Z ##[group]Run actions/checkout@v6
+Build Windows (win32)	Checkout repository	2026-06-13T08:58:37.4049220Z with:
+Build Windows (win32)	Checkout repository	2026-06-13T08:58:37.4049861Z   repository: Jhon-Crow/Multichannel-Panorama-VST-plugin
+Build Windows (win32)	Checkout repository	2026-06-13T08:58:37.4055257Z   token: ***
+Build Windows (win32)	Checkout repository	2026-06-13T08:58:37.4055656Z   ssh-strict: true
+Build Windows (win32)	Checkout repository	2026-06-13T08:58:37.4056073Z   ssh-user: git
+Build Windows (win32)	Checkout repository	2026-06-13T08:58:37.4056486Z   persist-credentials: true
+Build Windows (win32)	Checkout repository	2026-06-13T08:58:37.4056942Z   clean: true
+Build Windows (win32)	Checkout repository	2026-06-13T08:58:37.4057350Z   sparse-checkout-cone-mode: true
+Build Windows (win32)	Checkout repository	2026-06-13T08:58:37.4057839Z   fetch-depth: 1
+Build Windows (win32)	Checkout repository	2026-06-13T08:58:37.4058241Z   fetch-tags: false
+Build Windows (win32)	Checkout repository	2026-06-13T08:58:37.4058656Z   show-progress: true
+Build Windows (win32)	Checkout repository	2026-06-13T08:58:37.4059071Z   lfs: false
+Build Windows (win32)	Checkout repository	2026-06-13T08:58:37.4059453Z   submodules: false
+Build Windows (win32)	Checkout repository	2026-06-13T08:58:37.4059867Z   set-safe-directory: true
+Build Windows (win32)	Checkout repository	2026-06-13T08:58:37.4060512Z env:
+Build Windows (win32)	Checkout repository	2026-06-13T08:58:37.4061004Z   VST2_SDK_REPO: https://github.com/R-Tur/VST_SDK_2.4.git
+Build Windows (win32)	Checkout repository	2026-06-13T08:58:37.4061609Z ##[endgroup]
+Build Windows (win32)	Checkout repository	2026-06-13T08:58:37.5646514Z Syncing repository: Jhon-Crow/Multichannel-Panorama-VST-plugin
+Build Windows (win32)	Checkout repository	2026-06-13T08:58:37.5650035Z ##[group]Getting Git version info
+Build Windows (win32)	Checkout repository	2026-06-13T08:58:37.5651930Z Working directory is 'D:\a\Multichannel-Panorama-VST-plugin\Multichannel-Panorama-VST-plugin'
+Build Windows (win32)	Checkout repository	2026-06-13T08:58:37.6439892Z [command]"C:\Program Files\Git\bin\git.exe" version
+Build Windows (win32)	Checkout repository	2026-06-13T08:58:37.7913611Z git version 2.54.0.windows.1
+Build Windows (win32)	Checkout repository	2026-06-13T08:58:37.7968380Z ##[endgroup]
+Build Windows (win32)	Checkout repository	2026-06-13T08:58:37.7992525Z Temporarily overriding HOME='D:\a\_temp\14676b51-537f-4c41-8b87-ea43300a0d3b' before making global git config changes
+Build Windows (win32)	Checkout repository	2026-06-13T08:58:37.7995003Z Adding repository directory to the temporary git global config as a safe directory
+Build Windows (win32)	Checkout repository	2026-06-13T08:58:37.8005818Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\Multichannel-Panorama-VST-plugin\Multichannel-Panorama-VST-plugin
+Build Windows (win32)	Checkout repository	2026-06-13T08:58:37.8300670Z Deleting the contents of 'D:\a\Multichannel-Panorama-VST-plugin\Multichannel-Panorama-VST-plugin'
+Build Windows (win32)	Checkout repository	2026-06-13T08:58:37.8306773Z ##[group]Determining repository object format
+Build Windows (win32)	Checkout repository	2026-06-13T08:58:37.8311030Z ##[endgroup]
+Build Windows (win32)	Checkout repository	2026-06-13T08:58:37.8311844Z ##[group]Initializing the repository
+Build Windows (win32)	Checkout repository	2026-06-13T08:58:37.8318684Z [command]"C:\Program Files\Git\bin\git.exe" init D:\a\Multichannel-Panorama-VST-plugin\Multichannel-Panorama-VST-plugin
+Build Windows (win32)	Checkout repository	2026-06-13T08:58:37.8778232Z Initialized empty Git repository in D:/a/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/.git/
+Build Windows (win32)	Checkout repository	2026-06-13T08:58:37.8820402Z [command]"C:\Program Files\Git\bin\git.exe" remote add origin https://github.com/Jhon-Crow/Multichannel-Panorama-VST-plugin
+Build Windows (win32)	Checkout repository	2026-06-13T08:58:37.9128836Z ##[endgroup]
+Build Windows (win32)	Checkout repository	2026-06-13T08:58:37.9130726Z ##[group]Disabling automatic garbage collection
+Build Windows (win32)	Checkout repository	2026-06-13T08:58:37.9136634Z [command]"C:\Program Files\Git\bin\git.exe" config --local gc.auto 0
+Build Windows (win32)	Checkout repository	2026-06-13T08:58:37.9471405Z ##[endgroup]
+Build Windows (win32)	Checkout repository	2026-06-13T08:58:37.9473260Z ##[group]Setting up auth
+Build Windows (win32)	Checkout repository	2026-06-13T08:58:37.9474608Z Removing SSH command configuration
+Build Windows (win32)	Checkout repository	2026-06-13T08:58:37.9484434Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+Build Windows (win32)	Checkout repository	2026-06-13T08:58:37.9776046Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+Build Windows (win32)	Checkout repository	2026-06-13T08:58:38.7769460Z Removing HTTP extra header
+Build Windows (win32)	Checkout repository	2026-06-13T08:58:38.7779604Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Build Windows (win32)	Checkout repository	2026-06-13T08:58:38.8070059Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+Build Windows (win32)	Checkout repository	2026-06-13T08:58:39.3434388Z Removing includeIf entries pointing to credentials config files
+Build Windows (win32)	Checkout repository	2026-06-13T08:58:39.3446480Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+Build Windows (win32)	Checkout repository	2026-06-13T08:58:39.3748602Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+Build Windows (win32)	Checkout repository	2026-06-13T08:58:39.9038084Z [command]"C:\Program Files\Git\bin\git.exe" config --file D:\a\_temp\git-credentials-b79e75be-57ce-49a0-960a-3e8ef0a7b200.config http.https://github.com/.extraheader "AUTHORIZATION: basic ***"
+Build Windows (win32)	Checkout repository	2026-06-13T08:58:39.9332919Z [command]"C:\Program Files\Git\bin\git.exe" config --local includeIf.gitdir:D:/a/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/.git.path D:\a\_temp\git-credentials-b79e75be-57ce-49a0-960a-3e8ef0a7b200.config
+Build Windows (win32)	Checkout repository	2026-06-13T08:58:39.9629469Z [command]"C:\Program Files\Git\bin\git.exe" config --local includeIf.gitdir:D:/a/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/.git/worktrees/*.path D:\a\_temp\git-credentials-b79e75be-57ce-49a0-960a-3e8ef0a7b200.config
+Build Windows (win32)	Checkout repository	2026-06-13T08:58:39.9933318Z [command]"C:\Program Files\Git\bin\git.exe" config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-b79e75be-57ce-49a0-960a-3e8ef0a7b200.config
+Build Windows (win32)	Checkout repository	2026-06-13T08:58:40.0246634Z [command]"C:\Program Files\Git\bin\git.exe" config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-b79e75be-57ce-49a0-960a-3e8ef0a7b200.config
+Build Windows (win32)	Checkout repository	2026-06-13T08:58:40.0573080Z ##[endgroup]
+Build Windows (win32)	Checkout repository	2026-06-13T08:58:40.0573737Z ##[group]Fetching the repository
+Build Windows (win32)	Checkout repository	2026-06-13T08:58:40.0587907Z [command]"C:\Program Files\Git\bin\git.exe" -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +51f6d9b5014e36c7a31b4abe036e49bccf169cbd:refs/remotes/pull/6/merge
+Build Windows (win32)	Checkout repository	2026-06-13T08:58:40.6065207Z From https://github.com/Jhon-Crow/Multichannel-Panorama-VST-plugin
+Build Windows (win32)	Checkout repository	2026-06-13T08:58:40.6066735Z  * [new ref]         51f6d9b5014e36c7a31b4abe036e49bccf169cbd -> pull/6/merge
+Build Windows (win32)	Checkout repository	2026-06-13T08:58:40.6278283Z ##[endgroup]
+Build Windows (win32)	Checkout repository	2026-06-13T08:58:40.6278716Z ##[group]Determining the checkout info
+Build Windows (win32)	Checkout repository	2026-06-13T08:58:40.6280360Z ##[endgroup]
+Build Windows (win32)	Checkout repository	2026-06-13T08:58:40.6294193Z [command]"C:\Program Files\Git\bin\git.exe" sparse-checkout disable
+Build Windows (win32)	Checkout repository	2026-06-13T08:58:40.6636920Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset-all extensions.worktreeConfig
+Build Windows (win32)	Checkout repository	2026-06-13T08:58:40.6928759Z ##[group]Checking out the ref
+Build Windows (win32)	Checkout repository	2026-06-13T08:58:40.6937668Z [command]"C:\Program Files\Git\bin\git.exe" checkout --progress --force refs/remotes/pull/6/merge
+Build Windows (win32)	Checkout repository	2026-06-13T08:58:40.7359588Z Note: switching to 'refs/remotes/pull/6/merge'.
+Build Windows (win32)	Checkout repository	2026-06-13T08:58:40.7360092Z 
+Build Windows (win32)	Checkout repository	2026-06-13T08:58:40.7360462Z You are in 'detached HEAD' state. You can look around, make experimental
+Build Windows (win32)	Checkout repository	2026-06-13T08:58:40.7361372Z changes and commit them, and you can discard any commits you make in this
+Build Windows (win32)	Checkout repository	2026-06-13T08:58:40.7362238Z state without impacting any branches by switching back to a branch.
+Build Windows (win32)	Checkout repository	2026-06-13T08:58:40.7362771Z 
+Build Windows (win32)	Checkout repository	2026-06-13T08:58:40.7363099Z If you want to create a new branch to retain commits you create, you may
+Build Windows (win32)	Checkout repository	2026-06-13T08:58:40.7363883Z do so (now or later) by using -c with the switch command. Example:
+Build Windows (win32)	Checkout repository	2026-06-13T08:58:40.7364406Z 
+Build Windows (win32)	Checkout repository	2026-06-13T08:58:40.7364600Z   git switch -c <new-branch-name>
+Build Windows (win32)	Checkout repository	2026-06-13T08:58:40.7364913Z 
+Build Windows (win32)	Checkout repository	2026-06-13T08:58:40.7365075Z Or undo this operation with:
+Build Windows (win32)	Checkout repository	2026-06-13T08:58:40.7365360Z 
+Build Windows (win32)	Checkout repository	2026-06-13T08:58:40.7365489Z   git switch -
+Build Windows (win32)	Checkout repository	2026-06-13T08:58:40.7365713Z 
+Build Windows (win32)	Checkout repository	2026-06-13T08:58:40.7366078Z Turn off this advice by setting config variable advice.detachedHead to false
+Build Windows (win32)	Checkout repository	2026-06-13T08:58:40.7366650Z 
+Build Windows (win32)	Checkout repository	2026-06-13T08:58:40.7367277Z HEAD is now at 51f6d9b Merge 97bdc6b013da7ceb28f13a8bee93f17d159bbd68 into 118b3055310eb27220d1496816a3eeb2dfac9781
+Build Windows (win32)	Checkout repository	2026-06-13T08:58:40.7736406Z ##[endgroup]
+Build Windows (win32)	Checkout repository	2026-06-13T08:58:40.7745003Z [command]"C:\Program Files\Git\bin\git.exe" log -1 --format=%H
+Build Windows (win32)	Checkout repository	2026-06-13T08:58:40.8013772Z 51f6d9b5014e36c7a31b4abe036e49bccf169cbd
+Build Windows (win32)	Fetch VST2 SDK headers	﻿2026-06-13T08:58:40.8431917Z ##[group]Run $repo = if ("") { "" } else { "https://github.com/R-Tur/VST_SDK_2.4.git" }
+Build Windows (win32)	Fetch VST2 SDK headers	2026-06-13T08:58:40.8432594Z ^[[36;1m$repo = if ("") { "" } else { "https://github.com/R-Tur/VST_SDK_2.4.git" }^[[0m
+Build Windows (win32)	Fetch VST2 SDK headers	2026-06-13T08:58:40.8433008Z ^[[36;1m$sdk = "D:/vst2sdk"^[[0m
+Build Windows (win32)	Fetch VST2 SDK headers	2026-06-13T08:58:40.8433281Z ^[[36;1mgit clone --depth 1 $repo $sdk^[[0m
+Build Windows (win32)	Fetch VST2 SDK headers	2026-06-13T08:58:40.8433635Z ^[[36;1mif (-not (Test-Path "$sdk/pluginterfaces/vst2.x/aeffect.h")) {^[[0m
+Build Windows (win32)	Fetch VST2 SDK headers	2026-06-13T08:58:40.8434173Z ^[[36;1m  throw "VST2 SDK header pluginterfaces/vst2.x/aeffect.h not found after cloning $repo"^[[0m
+Build Windows (win32)	Fetch VST2 SDK headers	2026-06-13T08:58:40.8434592Z ^[[36;1m}^[[0m
+Build Windows (win32)	Fetch VST2 SDK headers	2026-06-13T08:58:40.8434907Z ^[[36;1m"VST2_SDK_PATH=$sdk" | Out-File -FilePath $env:GITHUB_ENV -Append -Encoding utf8^[[0m
+Build Windows (win32)	Fetch VST2 SDK headers	2026-06-13T08:58:40.8569775Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+Build Windows (win32)	Fetch VST2 SDK headers	2026-06-13T08:58:40.8570142Z env:
+Build Windows (win32)	Fetch VST2 SDK headers	2026-06-13T08:58:40.8570491Z   VST2_SDK_REPO: https://github.com/R-Tur/VST_SDK_2.4.git
+Build Windows (win32)	Fetch VST2 SDK headers	2026-06-13T08:58:40.8570976Z ##[endgroup]
+Build Windows (win32)	Fetch VST2 SDK headers	2026-06-13T08:58:45.5906698Z Cloning into 'D:/vst2sdk'...
+Build Windows (win32)	Configure CMake	﻿2026-06-13T08:58:46.4210767Z ##[group]Run cmake -S . -B "D:/b/win32" -G "Visual Studio 17 2022" -A "Win32" -DCMAKE_BUILD_TYPE=Release -DMULTICHANNEL_PANORAMA_VST2_SDK_PATH="$env:VST2_SDK_PATH"
+Build Windows (win32)	Configure CMake	2026-06-13T08:58:46.4211917Z ^[[36;1mcmake -S . -B "D:/b/win32" -G "Visual Studio 17 2022" -A "Win32" -DCMAKE_BUILD_TYPE=Release -DMULTICHANNEL_PANORAMA_VST2_SDK_PATH="$env:VST2_SDK_PATH"^[[0m
+Build Windows (win32)	Configure CMake	2026-06-13T08:58:46.4273618Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+Build Windows (win32)	Configure CMake	2026-06-13T08:58:46.4273956Z env:
+Build Windows (win32)	Configure CMake	2026-06-13T08:58:46.4274192Z   VST2_SDK_REPO: https://github.com/R-Tur/VST_SDK_2.4.git
+Build Windows (win32)	Configure CMake	2026-06-13T08:58:46.4274517Z   VST2_SDK_PATH: D:/vst2sdk
+Build Windows (win32)	Configure CMake	2026-06-13T08:58:46.4274730Z ##[endgroup]
+Build Windows (win32)	Configure CMake	2026-06-13T08:58:47.3952323Z CMake Error at CMakeLists.txt:3 (project):
+Build Windows (win32)	Configure CMake	2026-06-13T08:58:47.3952993Z   Generator
+Build Windows (win32)	Configure CMake	2026-06-13T08:58:47.3953127Z 
+Build Windows (win32)	Configure CMake	2026-06-13T08:58:47.3953227Z     Visual Studio 17 2022
+Build Windows (win32)	Configure CMake	2026-06-13T08:58:47.3953399Z 
+Build Windows (win32)	Configure CMake	2026-06-13T08:58:47.3953538Z   could not find any instance of Visual Studio.
+Build Windows (win32)	Configure CMake	2026-06-13T08:58:47.3953784Z 
+Build Windows (win32)	Configure CMake	2026-06-13T08:58:47.3953873Z 
+Build Windows (win32)	Configure CMake	2026-06-13T08:58:47.3953883Z 
+Build Windows (win32)	Configure CMake	2026-06-13T08:58:47.3959234Z -- Configuring incomplete, errors occurred!
+Build Windows (win32)	Configure CMake	2026-06-13T08:58:47.5167736Z ##[error]Process completed with exit code 1.
+Build Windows (win32)	Post Checkout repository	﻿2026-06-13T08:58:47.5417847Z Post job cleanup.
+Build Windows (win32)	Post Checkout repository	2026-06-13T08:58:47.7615396Z [command]"C:\Program Files\Git\bin\git.exe" version
+Build Windows (win32)	Post Checkout repository	2026-06-13T08:58:47.7882704Z git version 2.54.0.windows.1
+Build Windows (win32)	Post Checkout repository	2026-06-13T08:58:47.7946904Z Temporarily overriding HOME='D:\a\_temp\60860a7e-3622-4b0d-a94d-7fc324507620' before making global git config changes
+Build Windows (win32)	Post Checkout repository	2026-06-13T08:58:47.7948090Z Adding repository directory to the temporary git global config as a safe directory
+Build Windows (win32)	Post Checkout repository	2026-06-13T08:58:47.7957698Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\Multichannel-Panorama-VST-plugin\Multichannel-Panorama-VST-plugin
+Build Windows (win32)	Post Checkout repository	2026-06-13T08:58:47.8248665Z Removing SSH command configuration
+Build Windows (win32)	Post Checkout repository	2026-06-13T08:58:47.8259016Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+Build Windows (win32)	Post Checkout repository	2026-06-13T08:58:47.8562429Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+Build Windows (win32)	Post Checkout repository	2026-06-13T08:58:48.3762261Z Removing HTTP extra header
+Build Windows (win32)	Post Checkout repository	2026-06-13T08:58:48.3772781Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Build Windows (win32)	Post Checkout repository	2026-06-13T08:58:48.4075105Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+Build Windows (win32)	Post Checkout repository	2026-06-13T08:58:48.9175088Z Removing includeIf entries pointing to credentials config files
+Build Windows (win32)	Post Checkout repository	2026-06-13T08:58:48.9186883Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+Build Windows (win32)	Post Checkout repository	2026-06-13T08:58:48.9443358Z includeif.gitdir:D:/a/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/.git.path
+Build Windows (win32)	Post Checkout repository	2026-06-13T08:58:48.9444268Z includeif.gitdir:D:/a/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/.git/worktrees/*.path
+Build Windows (win32)	Post Checkout repository	2026-06-13T08:58:48.9445370Z includeif.gitdir:/github/workspace/.git.path
+Build Windows (win32)	Post Checkout repository	2026-06-13T08:58:48.9445878Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+Build Windows (win32)	Post Checkout repository	2026-06-13T08:58:48.9483440Z [command]"C:\Program Files\Git\bin\git.exe" config --local --get-all includeif.gitdir:D:/a/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/.git.path
+Build Windows (win32)	Post Checkout repository	2026-06-13T08:58:48.9739155Z D:\a\_temp\git-credentials-b79e75be-57ce-49a0-960a-3e8ef0a7b200.config
+Build Windows (win32)	Post Checkout repository	2026-06-13T08:58:48.9781119Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset includeif.gitdir:D:/a/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/.git.path D:\a\_temp\git-credentials-b79e75be-57ce-49a0-960a-3e8ef0a7b200.config
+Build Windows (win32)	Post Checkout repository	2026-06-13T08:58:49.0083776Z [command]"C:\Program Files\Git\bin\git.exe" config --local --get-all includeif.gitdir:D:/a/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/.git/worktrees/*.path
+Build Windows (win32)	Post Checkout repository	2026-06-13T08:58:49.0337914Z D:\a\_temp\git-credentials-b79e75be-57ce-49a0-960a-3e8ef0a7b200.config
+Build Windows (win32)	Post Checkout repository	2026-06-13T08:58:49.0379906Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset includeif.gitdir:D:/a/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/.git/worktrees/*.path D:\a\_temp\git-credentials-b79e75be-57ce-49a0-960a-3e8ef0a7b200.config
+Build Windows (win32)	Post Checkout repository	2026-06-13T08:58:49.0683667Z [command]"C:\Program Files\Git\bin\git.exe" config --local --get-all includeif.gitdir:/github/workspace/.git.path
+Build Windows (win32)	Post Checkout repository	2026-06-13T08:58:49.0941061Z /github/runner_temp/git-credentials-b79e75be-57ce-49a0-960a-3e8ef0a7b200.config
+Build Windows (win32)	Post Checkout repository	2026-06-13T08:58:49.0980366Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset includeif.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-b79e75be-57ce-49a0-960a-3e8ef0a7b200.config
+Build Windows (win32)	Post Checkout repository	2026-06-13T08:58:49.1275765Z [command]"C:\Program Files\Git\bin\git.exe" config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+Build Windows (win32)	Post Checkout repository	2026-06-13T08:58:49.1530273Z /github/runner_temp/git-credentials-b79e75be-57ce-49a0-960a-3e8ef0a7b200.config
+Build Windows (win32)	Post Checkout repository	2026-06-13T08:58:49.1571326Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-b79e75be-57ce-49a0-960a-3e8ef0a7b200.config
+Build Windows (win32)	Post Checkout repository	2026-06-13T08:58:49.1865035Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+Build Windows (win32)	Post Checkout repository	2026-06-13T08:58:49.7061660Z Removing credentials config 'D:\a\_temp\git-credentials-b79e75be-57ce-49a0-960a-3e8ef0a7b200.config'
+Build Windows (win32)	Complete job	﻿2026-06-13T08:58:49.7249849Z Cleaning up orphan processes

@@ -71,7 +71,6 @@ jobs:
         shell: pwsh
         run: >
           cmake -S . -B "${{ matrix.build_dir }}"
-          -G "Visual Studio 17 2022"
           -A "${{ matrix.cmake_arch }}"
           -DCMAKE_BUILD_TYPE=Release
           -DMULTICHANNEL_PANORAMA_VST2_SDK_PATH="$env:VST2_SDK_PATH"

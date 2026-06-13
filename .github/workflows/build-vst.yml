@@ -32,7 +32,12 @@ jobs:
         run: bash scripts/validate-preparation.sh
 
       - name: Configure CMake without plugin dependency fetch
-        run: cmake -S . -B build/prepare-smoke -DMULTICHANNEL_PANORAMA_BUILD_PLUGIN=OFF
+        run: cmake -S . -B build/prepare-smoke -DMULTICHANNEL_PANORAMA_BUILD_PLUGIN=OFF -DMULTICHANNEL_PANORAMA_BUILD_TESTS=ON
+
+      - name: Run lightweight tests
+        run: |
+          cmake --build build/prepare-smoke --target SourceChannelMappingTests
+          ctest --test-dir build/prepare-smoke --output-on-failure
 
   build-windows:
     name: Build Windows (${{ matrix.label }})

@@ -1,5 +1,6 @@
 #include "PluginProcessor.h"
 #include "PluginEditor.h"
+#include "SourceChannelMapping.h"
 
 static constexpr int maxSupportedChannels = 64;
 static constexpr float positionRange = 30.0f;
@@ -159,10 +160,13 @@ void MultichannelPanoramaAudioProcessor::processBlock (juce::AudioBuffer<float>&
         if (!sceneAtomics.sources[i].active.load())
             continue;
 
+        const int inputCh = Panorama::sourceInputChannelFor (i, numInputChannels);
+        if (inputCh == Panorama::noInputChannel)
+            continue;
+
         // Per-source bypass: pass this channel straight through to output L/R equally
         if (sceneAtomics.sources[i].bypass.load())
         {
-            const int inputCh = i < numInputChannels ? i : 0;
             const float* src = buffer.getReadPointer (inputCh);
             float* outL = mixBuf.getWritePointer (0);
             float* outR = mixBuf.getWritePointer (1);
@@ -174,8 +178,6 @@ void MultichannelPanoramaAudioProcessor::processBlock (juce::AudioBuffer<float>&
             }
             continue;
         }
-
-        const int inputCh = i < numInputChannels ? i : 0;
 
         const Panorama::Vec3 srcPos {
             sceneAtomics.sources[i].x.load(),

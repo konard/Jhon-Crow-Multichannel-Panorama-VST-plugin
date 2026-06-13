@@ -6,6 +6,7 @@ project(MultichannelPanoramaVST
     LANGUAGES C CXX)
 
 option(MULTICHANNEL_PANORAMA_BUILD_PLUGIN "Build the JUCE VST plugin" ON)
+option(MULTICHANNEL_PANORAMA_BUILD_TESTS "Build lightweight repository tests" OFF)
 set(MULTICHANNEL_PANORAMA_JUCE_TAG "8.0.13" CACHE STRING "JUCE release tag used by FetchContent")
 
 # Path to a VST2 SDK (a directory that contains pluginterfaces/vst2.x/aeffect.h).
@@ -18,6 +19,19 @@ set(MULTICHANNEL_PANORAMA_VST2_SDK_PATH "" CACHE PATH "Path to a VST2 SDK root (
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
+
+if (MULTICHANNEL_PANORAMA_BUILD_TESTS)
+    enable_testing()
+
+    add_executable(SourceChannelMappingTests
+        tests/SourceChannelMappingTests.cpp)
+
+    target_include_directories(SourceChannelMappingTests
+        PRIVATE
+            source)
+
+    add_test(NAME SourceChannelMappingTests COMMAND SourceChannelMappingTests)
+endif()
 
 if (NOT MULTICHANNEL_PANORAMA_BUILD_PLUGIN)
     return()

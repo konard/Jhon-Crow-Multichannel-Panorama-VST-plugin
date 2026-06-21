@@ -31,6 +31,15 @@ if (MULTICHANNEL_PANORAMA_BUILD_TESTS)
             source)
 
     add_test(NAME SourceChannelMappingTests COMMAND SourceChannelMappingTests)
+
+    add_executable(DistanceGainTests
+        tests/DistanceGainTests.cpp)
+
+    target_include_directories(DistanceGainTests
+        PRIVATE
+            source)
+
+    add_test(NAME DistanceGainTests COMMAND DistanceGainTests)
 endif()
 
 if (NOT MULTICHANNEL_PANORAMA_BUILD_PLUGIN)

@@ -1,5 +1,6 @@
 #pragma once
 
+#include "DistanceModel.h"
 #include <juce_audio_processors/juce_audio_processors.h>
 #include <array>
 #include <atomic>
@@ -63,14 +64,6 @@ struct SceneAtomics
     AtomicListenerData listener;
     std::array<AtomicSourceData, maxSources> sources;
 };
-
-// Compute gain (linear) from distance with an inverse-square roll-off.
-// Reference distance: 1 m gives 0 dB gain (linear 1.0).
-inline float distanceToLinearGain (float distanceMetres) noexcept
-{
-    const float dist = std::max (distanceMetres, 0.01f);
-    return 1.0f / dist;
-}
 
 // Compute left/right gain from a relative XZ angle.
 // relX: source X relative to listener (positive = right)

@@ -36,7 +36,7 @@ jobs:
 
       - name: Run lightweight tests
         run: |
-          cmake --build build/prepare-smoke --target SourceChannelMappingTests
+          cmake --build build/prepare-smoke
           ctest --test-dir build/prepare-smoke --output-on-failure
 
   build-windows:

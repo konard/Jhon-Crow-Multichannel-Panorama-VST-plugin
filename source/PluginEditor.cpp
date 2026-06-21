@@ -97,11 +97,15 @@ std::vector<SpatialPad::DotInfo> SpatialPad::buildDots() const
         const float horiz = (viewPlane == ViewPlane::XZ) ? sx : sx;
         const float vert  = (viewPlane == ViewPlane::XZ) ? sz : sy;
 
+        const bool bypassed = at.sources[i].bypass.load();
+
         DotInfo dot;
         dot.centre      = sceneToScreen (horiz, vert);
-        dot.colour      = Colors::forSource (i);
+        dot.colour      = bypassed ? Colors::forSource (i).withAlpha (0.35f)
+                                   : Colors::forSource (i);
         dot.label       = juce::String (i + 1);
         dot.sourceIndex = i;
+        dot.isBypassed  = bypassed;
         dots.push_back (dot);
     }
 
@@ -158,10 +162,11 @@ void SpatialPad::paint (juce::Graphics& g)
         g.setColour (juce::Colours::white.withAlpha (0.6f));
         g.drawEllipse (c.x - r, c.y - r, r * 2.0f, r * 2.0f, 1.5f);
 
-        // Label
+        // Label (show "B" indicator for bypassed sources)
         g.setColour (juce::Colours::white);
         g.setFont (juce::Font (juce::FontOptions().withHeight (10.0f).withStyle ("Bold")));
-        g.drawText (dot.label,
+        const juce::String displayLabel = dot.isBypassed ? (dot.label + "b") : dot.label;
+        g.drawText (displayLabel,
                     (int)(c.x - r), (int)(c.y - r),
                     (int)(r * 2.0f), (int)(r * 2.0f),
                     juce::Justification::centred);
@@ -265,6 +270,9 @@ SourceControlStrip::SourceControlStrip (MultichannelPanoramaAudioProcessor& p)
     setupSlider (zSlider, zLabel, "Z (m)");
     setupSlider (gainSlider, gainLabel, "Gain (dB)");
 
+    bypassButton.setColour (juce::ToggleButton::textColourId, juce::Colours::lightgrey);
+    addAndMakeVisible (bypassButton);
+
     setSelectedSource (0);
 }
 
@@ -275,27 +283,33 @@ void SourceControlStrip::setSelectedSource (int index)
     yAtt.reset();
     zAtt.reset();
     gainAtt.reset();
+    bypassAtt.reset();
 
     auto& tree = proc.getParameterTree();
 
     if (index == -1)
     {
         titleLabel.setText ("Listener", juce::dontSendNotification);
-        xAtt   = std::make_unique<Attachment> (tree, ParameterIDs::listenerX, xSlider);
-        yAtt   = std::make_unique<Attachment> (tree, ParameterIDs::listenerY, ySlider);
-        zAtt   = std::make_unique<Attachment> (tree, ParameterIDs::listenerZ, zSlider);
+        xAtt   = std::make_unique<SliderAttachment> (tree, ParameterIDs::listenerX, xSlider);
+        yAtt   = std::make_unique<SliderAttachment> (tree, ParameterIDs::listenerY, ySlider);
+        zAtt   = std::make_unique<SliderAttachment> (tree, ParameterIDs::listenerZ, zSlider);
         gainSlider.setEnabled (false);
         gainLabel.setEnabled (false);
+        bypassButton.setEnabled (false);
+        bypassButton.setVisible (false);
     }
     else
     {
         titleLabel.setText ("Source " + juce::String (index + 1), juce::dontSendNotification);
-        xAtt   = std::make_unique<Attachment> (tree, ParameterIDs::sourceX (index),    xSlider);
-        yAtt   = std::make_unique<Attachment> (tree, ParameterIDs::sourceY (index),    ySlider);
-        zAtt   = std::make_unique<Attachment> (tree, ParameterIDs::sourceZ (index),    zSlider);
-        gainAtt = std::make_unique<Attachment> (tree, ParameterIDs::sourceGain (index), gainSlider);
+        xAtt    = std::make_unique<SliderAttachment> (tree, ParameterIDs::sourceX (index),    xSlider);
+        yAtt    = std::make_unique<SliderAttachment> (tree, ParameterIDs::sourceY (index),    ySlider);
+        zAtt    = std::make_unique<SliderAttachment> (tree, ParameterIDs::sourceZ (index),    zSlider);
+        gainAtt = std::make_unique<SliderAttachment> (tree, ParameterIDs::sourceGain (index), gainSlider);
+        bypassAtt = std::make_unique<ButtonAttachment> (tree, ParameterIDs::sourceBypass (index), bypassButton);
         gainSlider.setEnabled (true);
         gainLabel.setEnabled (true);
+        bypassButton.setEnabled (true);
+        bypassButton.setVisible (true);
     }
 }
 
@@ -320,6 +334,9 @@ void SourceControlStrip::resized()
     placeRow (yLabel, ySlider);
     placeRow (zLabel, zSlider);
     placeRow (gainLabel, gainSlider);
+
+    area.removeFromTop (4);
+    bypassButton.setBounds (area.removeFromTop (24));
 }
 
 //==============================================================================
@@ -350,15 +367,21 @@ MultichannelPanoramaEditor::MultichannelPanoramaEditor (MultichannelPanoramaAudi
     addAndMakeVisible (viewXZButton);
     addAndMakeVisible (viewXYButton);
 
-    // Source selector buttons
+    // Source selector buttons and per-source bypass toggles
     listenerButton.onClick = [this] { selectSource (-1); };
     addAndMakeVisible (listenerButton);
 
+    auto& tree = audioProc.getParameterTree();
     for (int i = 0; i < Panorama::maxSources; ++i)
     {
         sourceButtons[i].setButtonText (juce::String (i + 1));
         sourceButtons[i].onClick = [this, i] { selectSource (i); };
         addAndMakeVisible (sourceButtons[i]);
+
+        bypassButtons[i].setButtonText ("B");
+        bypassButtons[i].setTooltip ("Bypass source " + juce::String (i + 1));
+        addAndMakeVisible (bypassButtons[i]);
+        bypassAtts[i] = std::make_unique<ButtonAttachment> (tree, ParameterIDs::sourceBypass (i), bypassButtons[i]);
     }
 
     addAndMakeVisible (spatialPad);
@@ -405,15 +428,20 @@ void MultichannelPanoramaEditor::resized()
 
     area.removeFromTop (6);
 
-    // Source selector strip
+    // Source selector strip: each source gets a select button + a small bypass toggle
+    // Layout: [Listener] [1][B] [2][B] ... [8][B]
     auto selectorRow = area.removeFromTop (28);
     listenerButton.setBounds (selectorRow.removeFromLeft (70));
     selectorRow.removeFromLeft (4);
-    const int btnW = 32;
+    const int srcBtnW  = 28;
+    const int bypBtnW  = 18;
+    const int gap      = 2;
     for (int i = 0; i < Panorama::maxSources; ++i)
     {
-        sourceButtons[i].setBounds (selectorRow.removeFromLeft (btnW));
-        selectorRow.removeFromLeft (2);
+        sourceButtons[i].setBounds (selectorRow.removeFromLeft (srcBtnW));
+        selectorRow.removeFromLeft (1);
+        bypassButtons[i].setBounds (selectorRow.removeFromLeft (bypBtnW));
+        selectorRow.removeFromLeft (gap);
     }
 
     area.removeFromTop (6);

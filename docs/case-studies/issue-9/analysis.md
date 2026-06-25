@@ -1,21 +1,48 @@
-# Case Study: Issue #9 – Distance Change Is Not Noticeable
+# Case Study: Issue #9 - Distance Change Is Not Noticeable
 
 ## Issue Summary
 
-**Title (Russian):** "изменение дальности не заметно"
-**Translation:** "Change in distance is not noticeable"
+Issue: https://github.com/Jhon-Crow/Multichannel-Panorama-VST-plugin/issues/9
 
-**Reporter's description (Russian):**
-> "разница заметна только если поднести источник звука в упор. сделай чтоб можно было точно различать дальность и каждый отдельный источник звука."
+Reporter text:
 
-**Translation:**
-> "The difference is only noticeable if you bring the sound source very close. Make it possible to clearly distinguish distance and each individual sound source."
+> изменение дальности не заметно
 
----
+Translation:
 
-## Evidence and Code Analysis
+> Change in distance is not noticeable.
 
-### Current `distanceToLinearGain` implementation (`source/SceneState.h`)
+The reporter clarified that the difference is noticeable only when the sound source is moved very close to the listener, and asked for distance and each individual source to be clearly distinguishable.
+
+## Collected Evidence
+
+This folder preserves the data used for the reconstruction:
+
+- `issue.json` - issue title, body, author, timestamps, and comments.
+- `issue-comments.json` - paginated issue comments.
+- `pr-10.json` - PR title, body, draft state, comments, reviews, and timestamps.
+- `pr-10.diff` - full PR diff at the time of analysis.
+- `branch-commits.tsv` - branch commits with ISO timestamps.
+- `ci-runs.json` - five most recent workflow runs on `issue-9-45bb00f49c9a`.
+- `ci-run-27894856634.log` - failed CI run for commit `608b232`.
+- `ci-run-27894879036.log` - passing CI run for commit `d0affd2`.
+- `ci-run-27895043747.log` - passing CI run for commit `7756f09`.
+- `pr-comment-release-type-missing.png` - reviewer screenshot showing the missing manual release-type selector.
+
+The reviewer screenshot was downloaded from GitHub user attachments and verified as a PNG by checking its file signature.
+
+## Timeline
+
+- 2026-06-21 05:28 UTC - Initial preparation commit ran CI successfully.
+- 2026-06-21 05:35 UTC - Commit `608b232` added the distance-gain fix and test, but CI failed because the workflow built only `SourceChannelMappingTests` before running all registered CTest tests.
+- 2026-06-21 05:36 UTC - Commit `d0affd2` changed the smoke-test job to build all lightweight test targets before `ctest`; CI passed.
+- 2026-06-21 05:44 UTC - Commit `7756f09` reverted the temporary task-details commit; CI passed again.
+- 2026-06-25 15:37 UTC - Owner review comment reported that after reset there was no release-type choice in the newly added workflow stage and requested a complete issue case study with logs/data.
+- 2026-06-25 - The workflow was updated to declare a `workflow_dispatch` `release_type` choice input and this case study was expanded with issue, PR, CI, screenshot, and diff artifacts.
+
+## Audio Root Cause
+
+The original distance model in `source/SceneState.h` was:
 
 ```cpp
 inline float distanceToLinearGain (float distanceMetres) noexcept
@@ -25,95 +52,101 @@ inline float distanceToLinearGain (float distanceMetres) noexcept
 }
 ```
 
-The function returns `1/dist`. With no clamping at 1.0, it can return values **greater than 1.0** for distances < 1 m. The gain table:
+This is an inverse-distance pressure law, but it was not normalized to a reference distance and it allowed gain above unity for sources closer than 1 m. Close-range values were extreme:
 
-| Distance (m) | gain = 1/dist | dB     |
-|:---:|:---:|:---:|
-| 0.01 | 100.0 | +40 dB |
-| 0.5 | 2.0 | +6 dB |
-| 1.0 | 1.0 | 0 dB |
-| 2.0 | 0.5 | −6 dB |
-| 5.0 | 0.2 | −14 dB |
-| 10.0 | 0.1 | −20 dB |
-| 20.0 | 0.05 | −26 dB |
-| 30.0 | 0.033 | −29.5 dB |
+| Distance | Old gain | Old dB |
+|---:|---:|---:|
+| 0.01 m | 100.0 | +40.0 dB |
+| 0.5 m | 2.0 | +6.0 dB |
+| 1.0 m | 1.0 | 0.0 dB |
+| 2.0 m | 0.5 | -6.0 dB |
+| 30.0 m | 0.033 | -29.5 dB |
 
-**The problem:** The default listener position is (0, 0, 0) and the default source position for source 0 is Z=2m. The gain starts at 0.5 (−6 dB). Moving the source from 2m to 30m gives a range of only −23.5 dB — not enough for clear distance perception when all the perceptually "interesting" close-range variation is squashed by the high gain at <1m distances, which also saturates/clips the mix.
+The issue was not that inverse distance is inherently wrong. The issue was that the model treated 1 m as an accidental unity point and allowed distances below that point to amplify above 0 dB. In a summed multichannel mix, near sources could clip or dominate the mix, masking practical distance changes between ordinary positions.
 
-Additionally, `1/dist` is the **pressure** law, giving −6 dB per distance doubling. This is correct for modeling the natural behaviour of sound in free space, but the gain must be **normalized** so that the reference distance yields gain = 1.0 (0 dB), and values must be **clamped** so close sources don't amplify above 0 dB.
-
----
-
-## Psychoacoustics Research
-
-### Key facts
-
-- **Inverse-square law**: Sound intensity drops with 1/r², corresponding to −6 dB pressure (SPL) per distance doubling. This matches the perceptual experience of sound in free space. (Source: Sengpielaudio; Kolarik et al. 2016, PMC4744263)
-- **Just Noticeable Difference (JND)** for loudness is ~0.4 dB broadband / 1–2 dB sinewaves, meaning distance changes as small as 6–25% of reference can be detected. (PMC4744263)
-- **Practical VST range**: 20–40 dB of attenuation span covers realistic near-to-far transitions (1m–30m = 5 doublings = 30 dB). (PubMed 38350176, PMC auditory distance review)
-- **OpenAL default model** (`AL_INVERSE_DISTANCE_CLAMPED`): clamps distance to [referenceDistance, maxDistance] and normalizes gain so `referenceDistance → gain = 1.0`. (OpenAL 1.1 Specification)
-- **FMOD Inverse mode**: `gain = minDist / max(distance, minDist)` — equivalent to clamped inverse law normalized at minDist.
-
-### Why the current code sounds flat
-
-1. At source Z=2m (default), gain = 0.5. All sources start already attenuated.
-2. Moving a source from 2m to 30m spans only −23.5 dB.
-3. Closer than 1m, gain exceeds 1.0, causing amplitude clipping in the mix which masks the effect perceptually.
-4. There is **no normalization at a reference distance** — the level at any given position is arbitrary and depends on raw distance in meters.
-
----
-
-## Proposed Solutions
-
-### Solution A (Implemented): Clamped inverse law, normalized at reference distance
-
-Reference distance = 1m (gain = 1.0 at 1m, 0 dB). Sources closer than 1m are held at gain = 1.0.
+The implemented model extracts the function to `source/DistanceModel.h` and clamps at a 1 m reference distance:
 
 ```cpp
 inline float distanceToLinearGain (float distanceMetres) noexcept
 {
-    const float refDist = 1.0f;
+    constexpr float refDist = 1.0f;
     const float dist = std::max (distanceMetres, refDist);
     return refDist / dist;
 }
 ```
 
-Result: gain is always in [0, 1.0]. At 1m: 0 dB. At 30m: −29.5 dB. Full 29.5 dB dynamic range without clipping.
+This keeps gain in `[0, 1]`, preserves the expected -6 dB per distance doubling, and provides about 30 dB of usable distance contrast between 1 m and 30 m without close-range overload.
 
-### Solution B: Inverse-square law (more dramatic, 60 dB range)
+## CI Root Cause
 
-```cpp
-inline float distanceToLinearGain (float distanceMetres) noexcept
-{
-    const float refDist = 1.0f;
-    const float dist = std::max (distanceMetres, refDist);
-    return (refDist * refDist) / (dist * dist);
-}
+The failed CI run `27894856634` shows:
+
+- `SourceChannelMappingTests` was built successfully.
+- CTest then tried to run `DistanceGainTests`.
+- The executable did not exist in `build/prepare-smoke`.
+- CTest failed with `50% tests passed, 1 tests failed out of 2`.
+
+The workflow step had built a single explicit target while CMake had registered multiple tests. The fix was to run:
+
+```bash
+cmake --build build/prepare-smoke
+ctest --test-dir build/prepare-smoke --output-on-failure
 ```
 
-At 30m: −59 dB. Very dramatic. This is used in game engines with `rolloffFactor=2.0` in the OpenAL exponent model.
+The next two CI runs, `27894879036` and `27895043747`, both passed and show `SourceChannelMappingTests` and `DistanceGainTests` passing.
 
-### Solution C: Linear rolloff
+## Workflow UI Root Cause
 
-Predictable per-meter rolloff reaching silence at maxDistance. Non-physical but gives a defined endpoint.
+The reviewer screenshot showed that the manual workflow run UI did not offer a release-type selector. The workflow had:
 
----
+```yaml
+workflow_dispatch:
+```
 
-## Chosen Approach
+with no inputs. GitHub Actions only renders manual-run controls when `workflow_dispatch.inputs` are declared. GitHub supports typed manual inputs including `choice`, so the workflow now declares:
 
-**Solution A** (clamped inverse law) was chosen because:
-1. It matches the physical model of sound pressure in free space (the same model that human hearing is calibrated for).
-2. It normalizes the reference level correctly: gain = 1.0 at 1m.
-3. It prevents clipping from sources closer than 1m.
-4. It provides ~30 dB of perceptually significant range from 1m to 30m (5 doublings × 6 dB).
-5. It matches the approach used by OpenAL and FMOD for their default inverse-distance models.
+```yaml
+workflow_dispatch:
+  inputs:
+    release_type:
+      description: Release type for manual builds
+      required: true
+      default: reset
+      type: choice
+      options:
+        - reset
+        - patch
+        - minor
+        - major
+```
 
----
+This restores the visible release-type choice after reset while leaving push and pull-request builds unchanged.
 
-## Online References
+## Online Research
 
-- Kolarik et al. (2016). "Auditory distance perception in humans: a review of cues, development, neuronal bases, and effects of sensory loss." *Attention, Perception, & Psychophysics* — https://pmc.ncbi.nlm.nih.gov/articles/PMC4744263/
-- Sengpielaudio — Inverse Square Law Calculator: https://sengpielaudio.com/calculator-squarelaw.htm
-- OpenAL 1.1 Specification: https://www.openal.org/documentation/openal-1.1-specification.pdf
-- FMOD Distance Attenuation Reference: https://www.fmod.com/docs/2.03/studio/effect-reference.html
-- Audio University — Inverse Square Law: https://audiouniversityonline.com/inverse-square-law-of-sound/
+- GitHub Actions supports `workflow_dispatch` inputs, and typed manual inputs include `choice`, `boolean`, and `environment`: https://github.blog/changelog/2021-11-10-github-actions-input-types-for-manual-workflows/
+- GitHub workflow syntax documents that `workflow_dispatch` can specify inputs passed to manually triggered workflows: https://docs.github.com/en/enterprise-cloud@latest/actions/reference/workflows-and-actions/workflow-syntax#onworkflow_dispatch
+- OpenAL 1.1 defines `AL_INVERSE_DISTANCE_CLAMPED`, where `AL_REFERENCE_DISTANCE` indicates both the reference distance and the distance below which gain is clamped: https://www.openal.org/documentation/openal-1.1-specification.pdf
+- FMOD documents distance attenuation using min/max distance ranges and inverse rolloff behavior: https://www.fmod.com/docs/2.03/studio/effect-reference.html
+- Kolarik et al. review auditory distance cues and describe level as a major distance cue in free-field listening: https://pmc.ncbi.nlm.nih.gov/articles/PMC4744263/
+
+## Solution Options
+
+1. Clamped inverse pressure law, normalized at 1 m.
+   This is the implemented fix. It preserves familiar physical behavior, prevents gain above unity, and makes the distance range clearly audible.
+
+2. Inverse-square gain law.
+   This would create a much stronger rolloff, about -60 dB at 30 m. It may be useful as a future optional mode, but it is aggressive as a default.
+
+3. Linear rolloff to a configured maximum distance.
+   This is predictable for UI control and game-style sound design, but less physically natural than inverse pressure attenuation.
+
+4. User-selectable distance model.
+   A future enhancement could expose inverse, inverse-square, and linear models in the UI. That would solve multiple creative-use cases but is broader than the bug report.
+
+## Verification
+
+- `tests/DistanceGainTests.cpp` verifies that distance gain is clamped to unity below the reference distance, follows inverse-distance ratios above it, and never exceeds `1.0`.
+- Local CMake/CTest verifies `SourceChannelMappingTests` and `DistanceGainTests`.
+- CI runs `27894879036` and `27895043747` verify the corrected workflow builds all lightweight test targets before running CTest.
+- The manual workflow declaration now includes a typed release selector, addressing the reviewer screenshot.

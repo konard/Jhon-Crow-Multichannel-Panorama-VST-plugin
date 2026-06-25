@@ -1,0 +1,4 @@
+7756f0911a4bac6455d1da99d26133b33677f54a	2026-06-21T05:44:16+00:00	Revert "Initial commit with task details"
+d0affd284a5683e17bf2baa3c9d834be2bc43a4c	2026-06-21T05:36:16+00:00	ci: build all lightweight tests before running ctest
+608b232fb76d46382f912c5efa2ccace6f1f19a7	2026-06-21T05:35:06+00:00	fix: normalize distance gain at 1m reference to make distance changes clearly audible
+73421569e33aa0e53047cdcd55dc650f5eccf93e	2026-06-21T05:28:05+00:00	Initial commit with task details

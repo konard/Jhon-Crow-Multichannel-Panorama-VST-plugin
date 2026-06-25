@@ -1,0 +1,334 @@
+diff --git a/.github/workflows/build-vst.yml b/.github/workflows/build-vst.yml
+index 45b3278..641e364 100644
+--- a/.github/workflows/build-vst.yml
++++ b/.github/workflows/build-vst.yml
+@@ -36,7 +36,7 @@ jobs:
+ 
+       - name: Run lightweight tests
+         run: |
+-          cmake --build build/prepare-smoke --target SourceChannelMappingTests
++          cmake --build build/prepare-smoke
+           ctest --test-dir build/prepare-smoke --output-on-failure
+ 
+   build-windows:
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 0abf1c5..03f8f0e 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -31,6 +31,15 @@ if (MULTICHANNEL_PANORAMA_BUILD_TESTS)
+             source)
+ 
+     add_test(NAME SourceChannelMappingTests COMMAND SourceChannelMappingTests)
++
++    add_executable(DistanceGainTests
++        tests/DistanceGainTests.cpp)
++
++    target_include_directories(DistanceGainTests
++        PRIVATE
++            source)
++
++    add_test(NAME DistanceGainTests COMMAND DistanceGainTests)
+ endif()
+ 
+ if (NOT MULTICHANNEL_PANORAMA_BUILD_PLUGIN)
+diff --git a/docs/case-studies/issue-9/analysis.md b/docs/case-studies/issue-9/analysis.md
+new file mode 100644
+index 0000000..5db0a4c
+--- /dev/null
++++ b/docs/case-studies/issue-9/analysis.md
+@@ -0,0 +1,119 @@
++# Case Study: Issue #9 – Distance Change Is Not Noticeable
++
++## Issue Summary
++
++**Title (Russian):** "изменение дальности не заметно"
++**Translation:** "Change in distance is not noticeable"
++
++**Reporter's description (Russian):**
++> "разница заметна только если поднести источник звука в упор. сделай чтоб можно было точно различать дальность и каждый отдельный источник звука."
++
++**Translation:**
++> "The difference is only noticeable if you bring the sound source very close. Make it possible to clearly distinguish distance and each individual sound source."
++
++---
++
++## Evidence and Code Analysis
++
++### Current `distanceToLinearGain` implementation (`source/SceneState.h`)
++
++```cpp
++inline float distanceToLinearGain (float distanceMetres) noexcept
++{
++    const float dist = std::max (distanceMetres, 0.01f);
++    return 1.0f / dist;
++}
++```
++
++The function returns `1/dist`. With no clamping at 1.0, it can return values **greater than 1.0** for distances < 1 m. The gain table:
++
++| Distance (m) | gain = 1/dist | dB     |
++|:---:|:---:|:---:|
++| 0.01 | 100.0 | +40 dB |
++| 0.5 | 2.0 | +6 dB |
++| 1.0 | 1.0 | 0 dB |
++| 2.0 | 0.5 | −6 dB |
++| 5.0 | 0.2 | −14 dB |
++| 10.0 | 0.1 | −20 dB |
++| 20.0 | 0.05 | −26 dB |
++| 30.0 | 0.033 | −29.5 dB |
++
++**The problem:** The default listener position is (0, 0, 0) and the default source position for source 0 is Z=2m. The gain starts at 0.5 (−6 dB). Moving the source from 2m to 30m gives a range of only −23.5 dB — not enough for clear distance perception when all the perceptually "interesting" close-range variation is squashed by the high gain at <1m distances, which also saturates/clips the mix.
++
++Additionally, `1/dist` is the **pressure** law, giving −6 dB per distance doubling. This is correct for modeling the natural behaviour of sound in free space, but the gain must be **normalized** so that the reference distance yields gain = 1.0 (0 dB), and values must be **clamped** so close sources don't amplify above 0 dB.
++
++---
++
++## Psychoacoustics Research
++
++### Key facts
++
++- **Inverse-square law**: Sound intensity drops with 1/r², corresponding to −6 dB pressure (SPL) per distance doubling. This matches the perceptual experience of sound in free space. (Source: Sengpielaudio; Kolarik et al. 2016, PMC4744263)
++- **Just Noticeable Difference (JND)** for loudness is ~0.4 dB broadband / 1–2 dB sinewaves, meaning distance changes as small as 6–25% of reference can be detected. (PMC4744263)
++- **Practical VST range**: 20–40 dB of attenuation span covers realistic near-to-far transitions (1m–30m = 5 doublings = 30 dB). (PubMed 38350176, PMC auditory distance review)
++- **OpenAL default model** (`AL_INVERSE_DISTANCE_CLAMPED`): clamps distance to [referenceDistance, maxDistance] and normalizes gain so `referenceDistance → gain = 1.0`. (OpenAL 1.1 Specification)
++- **FMOD Inverse mode**: `gain = minDist / max(distance, minDist)` — equivalent to clamped inverse law normalized at minDist.
++
++### Why the current code sounds flat
++
++1. At source Z=2m (default), gain = 0.5. All sources start already attenuated.
++2. Moving a source from 2m to 30m spans only −23.5 dB.
++3. Closer than 1m, gain exceeds 1.0, causing amplitude clipping in the mix which masks the effect perceptually.
++4. There is **no normalization at a reference distance** — the level at any given position is arbitrary and depends on raw distance in meters.
++
++---
++
++## Proposed Solutions
++
++### Solution A (Implemented): Clamped inverse law, normalized at reference distance
++
++Reference distance = 1m (gain = 1.0 at 1m, 0 dB). Sources closer than 1m are held at gain = 1.0.
++
++```cpp
++inline float distanceToLinearGain (float distanceMetres) noexcept
++{
++    const float refDist = 1.0f;
++    const float dist = std::max (distanceMetres, refDist);
++    return refDist / dist;
++}
++```
++
++Result: gain is always in [0, 1.0]. At 1m: 0 dB. At 30m: −29.5 dB. Full 29.5 dB dynamic range without clipping.
++
++### Solution B: Inverse-square law (more dramatic, 60 dB range)
++
++```cpp
++inline float distanceToLinearGain (float distanceMetres) noexcept
++{
++    const float refDist = 1.0f;
++    const float dist = std::max (distanceMetres, refDist);
++    return (refDist * refDist) / (dist * dist);
++}
++```
++
++At 30m: −59 dB. Very dramatic. This is used in game engines with `rolloffFactor=2.0` in the OpenAL exponent model.
++
++### Solution C: Linear rolloff
++
++Predictable per-meter rolloff reaching silence at maxDistance. Non-physical but gives a defined endpoint.
++
++---
++
++## Chosen Approach
++
++**Solution A** (clamped inverse law) was chosen because:
++1. It matches the physical model of sound pressure in free space (the same model that human hearing is calibrated for).
++2. It normalizes the reference level correctly: gain = 1.0 at 1m.
++3. It prevents clipping from sources closer than 1m.
++4. It provides ~30 dB of perceptually significant range from 1m to 30m (5 doublings × 6 dB).
++5. It matches the approach used by OpenAL and FMOD for their default inverse-distance models.
++
++---
++
++## Online References
++
++- Kolarik et al. (2016). "Auditory distance perception in humans: a review of cues, development, neuronal bases, and effects of sensory loss." *Attention, Perception, & Psychophysics* — https://pmc.ncbi.nlm.nih.gov/articles/PMC4744263/
++- Sengpielaudio — Inverse Square Law Calculator: https://sengpielaudio.com/calculator-squarelaw.htm
++- OpenAL 1.1 Specification: https://www.openal.org/documentation/openal-1.1-specification.pdf
++- FMOD Distance Attenuation Reference: https://www.fmod.com/docs/2.03/studio/effect-reference.html
++- Audio University — Inverse Square Law: https://audiouniversityonline.com/inverse-square-law-of-sound/
+diff --git a/source/DistanceModel.h b/source/DistanceModel.h
+new file mode 100644
+index 0000000..096bf2a
+--- /dev/null
++++ b/source/DistanceModel.h
+@@ -0,0 +1,20 @@
++#pragma once
++
++#include <algorithm>
++#include <cmath>
++
++namespace Panorama
++{
++
++// Compute gain (linear) from distance using the inverse distance law.
++// Reference distance: 1 m gives 0 dB gain (linear 1.0).
++// Sources closer than 1 m are held at unity gain to prevent clipping.
++// Gain = refDist/dist, giving ~30 dB range across 1–30 m (6 dB per doubling).
++inline float distanceToLinearGain (float distanceMetres) noexcept
++{
++    constexpr float refDist = 1.0f;
++    const float dist = std::max (distanceMetres, refDist);
++    return refDist / dist;
++}
++
++} // namespace Panorama
+diff --git a/source/SceneState.h b/source/SceneState.h
+index 82a2b38..65eb906 100644
+--- a/source/SceneState.h
++++ b/source/SceneState.h
+@@ -1,5 +1,6 @@
+ #pragma once
+ 
++#include "DistanceModel.h"
+ #include <juce_audio_processors/juce_audio_processors.h>
+ #include <array>
+ #include <atomic>
+@@ -64,14 +65,6 @@ struct SceneAtomics
+     std::array<AtomicSourceData, maxSources> sources;
+ };
+ 
+-// Compute gain (linear) from distance with an inverse-square roll-off.
+-// Reference distance: 1 m gives 0 dB gain (linear 1.0).
+-inline float distanceToLinearGain (float distanceMetres) noexcept
+-{
+-    const float dist = std::max (distanceMetres, 0.01f);
+-    return 1.0f / dist;
+-}
+-
+ // Compute left/right gain from a relative XZ angle.
+ // relX: source X relative to listener (positive = right)
+ // relZ: source Z relative to listener (positive = front)
+diff --git a/tests/DistanceGainTests.cpp b/tests/DistanceGainTests.cpp
+new file mode 100644
+index 0000000..6ade412
+--- /dev/null
++++ b/tests/DistanceGainTests.cpp
+@@ -0,0 +1,118 @@
++#include "DistanceModel.h"
++
++#include <cmath>
++#include <cstdlib>
++#include <iostream>
++
++namespace
++{
++void expectGainInRange (float distanceM, float minGain, float maxGain)
++{
++    const float gain = Panorama::distanceToLinearGain (distanceM);
++
++    if (gain < minGain || gain > maxGain)
++    {
++        std::cerr << "distanceToLinearGain (" << distanceM << ") = " << gain
++                  << ", expected in [" << minGain << ", " << maxGain << "]\n";
++        std::exit (1);
++    }
++}
++
++void expectGainApprox (float distanceM, float expected, float toleranceRatio = 0.01f)
++{
++    const float gain = Panorama::distanceToLinearGain (distanceM);
++    const float delta = std::abs (gain - expected);
++
++    if (delta > toleranceRatio * expected + 1e-6f)
++    {
++        std::cerr << "distanceToLinearGain (" << distanceM << ") = " << gain
++                  << ", expected ~" << expected << " (tolerance " << toleranceRatio * 100 << "%)\n";
++        std::exit (1);
++    }
++}
++
++void expectGainLessOrEqual (float distanceM, float maxGain)
++{
++    const float gain = Panorama::distanceToLinearGain (distanceM);
++
++    if (gain > maxGain + 1e-6f)
++    {
++        std::cerr << "distanceToLinearGain (" << distanceM << ") = " << gain
++                  << ", expected <= " << maxGain << " (gain must not exceed reference)\n";
++        std::exit (1);
++    }
++}
++
++void expectGainDecreasing (float nearDist, float farDist)
++{
++    const float nearGain = Panorama::distanceToLinearGain (nearDist);
++    const float farGain  = Panorama::distanceToLinearGain (farDist);
++
++    if (farGain >= nearGain)
++    {
++        std::cerr << "distanceToLinearGain (" << farDist << ") = " << farGain
++                  << " is not less than distanceToLinearGain (" << nearDist << ") = " << nearGain
++                  << " (farther sources must be quieter)\n";
++        std::exit (1);
++    }
++}
++}
++
++int main()
++{
++    // Reference distance (1 m) must yield unity gain (0 dB) so the mix is not clipped
++    expectGainApprox (1.0f, 1.0f);
++
++    // Sources closer than reference must NOT exceed unity gain (this was the pre-fix bug:
++    // 1/dist returned >1 for dist<1m, causing clipping and making distance changes inaudible)
++    expectGainLessOrEqual (0.5f,  1.0f);
++    expectGainLessOrEqual (0.1f,  1.0f);
++    expectGainLessOrEqual (0.01f, 1.0f);
++
++    // Distance doubling must give -6 dB (gain halves)
++    {
++        const float g1  = Panorama::distanceToLinearGain (1.0f);
++        const float g2  = Panorama::distanceToLinearGain (2.0f);
++        const float g4  = Panorama::distanceToLinearGain (4.0f);
++        const float g8  = Panorama::distanceToLinearGain (8.0f);
++        const float g16 = Panorama::distanceToLinearGain (16.0f);
++
++        const float tol = 0.02f;
++        auto approxEqual = [tol] (float a, float b) { return std::abs (a - b) <= tol * b + 1e-6f; };
++
++        if (!approxEqual (g2,  g1  * 0.5f)) { std::cerr << "2m gain not half of 1m\n"; return 1; }
++        if (!approxEqual (g4,  g2  * 0.5f)) { std::cerr << "4m gain not half of 2m\n"; return 1; }
++        if (!approxEqual (g8,  g4  * 0.5f)) { std::cerr << "8m gain not half of 4m\n"; return 1; }
++        if (!approxEqual (g16, g8  * 0.5f)) { std::cerr << "16m gain not half of 8m\n"; return 1; }
++    }
++
++    // Moving farther must always reduce gain (issue #9: distance change must be perceptible)
++    expectGainDecreasing (1.0f, 2.0f);
++    expectGainDecreasing (2.0f, 5.0f);
++    expectGainDecreasing (5.0f, 10.0f);
++    expectGainDecreasing (10.0f, 20.0f);
++    expectGainDecreasing (20.0f, 30.0f);
++
++    // At maximum scene distance (30 m) gain must be well below unity — distance clearly audible
++    // 1/30 ≈ 0.033, roughly -29.5 dB — clearly audible as "far away"
++    expectGainInRange (30.0f, 0.01f, 0.05f);
++
++    // The gain at 30 m must be significantly lower than at 2 m (default source Z)
++    // This ensures the user can clearly distinguish near from far
++    {
++        const float gainNear = Panorama::distanceToLinearGain (2.0f);
++        const float gainFar  = Panorama::distanceToLinearGain (30.0f);
++        const float ratio    = gainNear / gainFar;
++
++        // Ratio must be at least 10 (20 dB difference) to be perceptually clear
++        if (ratio < 10.0f)
++        {
++            std::cerr << "near/far gain ratio = " << ratio
++                      << " (gain at 2m=" << gainNear << ", at 30m=" << gainFar
++                      << "); expected at least 10x (20 dB) difference for perceptible distance\n";
++            return 1;
++        }
++    }
++
++    return 0;
++}

@@ -1,0 +1,1013 @@
+Validate repository preparation	UNKNOWN STEP	﻿2026-06-21T05:44:24.8385178Z Current runner version: '2.335.1'
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:24.8413274Z ##[group]Runner Image Provisioner
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:24.8414381Z Hosted Compute Agent
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:24.8415016Z Version: 20260611.554
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:24.8415716Z Commit: 5e0782fdc9014723d3be820dd114dd31555c2bd1
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:24.8416576Z Build Date: 2026-06-11T21:40:46Z
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:24.8417292Z Worker ID: {d4a89e3a-8a80-4573-9854-a5966ff70ab2}
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:24.8418267Z Azure Region: eastus2
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:24.8419076Z ##[endgroup]
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:24.8420821Z ##[group]Operating System
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:24.8421588Z Ubuntu
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:24.8422150Z 24.04.4
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:24.8422684Z LTS
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:24.8423303Z ##[endgroup]
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:24.8423916Z ##[group]Runner Image
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:24.8424563Z Image: ubuntu-24.04
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:24.8425182Z Version: 20260615.205.1
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:24.8426594Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260615.205/images/ubuntu/Ubuntu2404-Readme.md
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:24.8428166Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260615.205
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:24.8429200Z ##[endgroup]
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:24.8430554Z ##[group]GITHUB_TOKEN Permissions
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:24.8432870Z Contents: read
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:24.8433564Z Metadata: read
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:24.8434153Z ##[endgroup]
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:24.8436424Z Secret source: None
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:24.8437620Z Prepare workflow directory
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:24.8828234Z Prepare all required actions
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:24.8867007Z Getting action download info
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.0894935Z Download action repository 'actions/checkout@v6' (SHA:df4cb1c069e1874edd31b4311f1884172cec0e10)
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.2555578Z Complete job name: Validate repository preparation
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.3319549Z ##[group]Run actions/checkout@v6
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.3320767Z with:
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.3321343Z   repository: Jhon-Crow/Multichannel-Panorama-VST-plugin
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.3325963Z   token: ***
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.3326449Z   ssh-strict: true
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.3326910Z   ssh-user: git
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.3327377Z   persist-credentials: true
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.3327884Z   clean: true
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.3328357Z   sparse-checkout-cone-mode: true
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.3328884Z   fetch-depth: 1
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.3329327Z   fetch-tags: false
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.3329782Z   show-progress: true
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.3330541Z   lfs: false
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.3330980Z   submodules: false
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.3331444Z   set-safe-directory: true
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.3332165Z env:
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.3332726Z   VST2_SDK_REPO: https://github.com/R-Tur/VST_SDK_2.4.git
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.3333369Z ##[endgroup]
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.4342406Z Syncing repository: Jhon-Crow/Multichannel-Panorama-VST-plugin
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.4344429Z ##[group]Getting Git version info
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.4345437Z Working directory is '/home/runner/work/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin'
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.4346780Z [command]/usr/bin/git version
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.4404167Z git version 2.54.0
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.4426228Z ##[endgroup]
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.4441330Z Temporarily overriding HOME='/home/runner/work/_temp/2542c803-7cb1-4ffd-a012-16c6587d6f45' before making global git config changes
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.4443530Z Adding repository directory to the temporary git global config as a safe directory
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.4447600Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.4497842Z Deleting the contents of '/home/runner/work/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin'
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.4501984Z ##[group]Determining repository object format
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.4504306Z ##[endgroup]
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.4505485Z ##[group]Initializing the repository
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.4510938Z [command]/usr/bin/git init /home/runner/work/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.4612614Z hint: Using 'master' as the name for the initial branch. This default branch name
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.4614413Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.4616308Z hint: to use in all of your new repositories, which will suppress this warning,
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.4617750Z hint: call:
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.4618796Z hint:
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.4619752Z hint: 	git config --global init.defaultBranch <name>
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.4620964Z hint:
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.4621931Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.4623429Z hint: 'development'. The just-created branch can be renamed via this command:
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.4624611Z hint:
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.4625334Z hint: 	git branch -m <name>
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.4626128Z hint:
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.4627112Z hint: Disable this message with "git config set advice.defaultBranchName false"
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.4629186Z Initialized empty Git repository in /home/runner/work/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/.git/
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.4633099Z [command]/usr/bin/git remote add origin https://github.com/Jhon-Crow/Multichannel-Panorama-VST-plugin
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.4677283Z ##[endgroup]
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.4678453Z ##[group]Disabling automatic garbage collection
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.4680985Z [command]/usr/bin/git config --local gc.auto 0
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.4713689Z ##[endgroup]
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.4714768Z ##[group]Setting up auth
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.4715568Z Removing SSH command configuration
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.4720416Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.4756875Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.5102527Z Removing HTTP extra header
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.5108944Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.5142617Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.5374922Z Removing includeIf entries pointing to credentials config files
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.5382267Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.5416446Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.5659356Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-daf0f6a6-63f6-4a44-843e-977f1a977123.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.5698549Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/.git.path /home/runner/work/_temp/git-credentials-daf0f6a6-63f6-4a44-843e-977f1a977123.config
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.5728984Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-daf0f6a6-63f6-4a44-843e-977f1a977123.config
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.5761612Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-daf0f6a6-63f6-4a44-843e-977f1a977123.config
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.5801217Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-daf0f6a6-63f6-4a44-843e-977f1a977123.config
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.5829603Z ##[endgroup]
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.5830585Z ##[group]Fetching the repository
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.5838868Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +7d43ddc27a7802e23be5d4438de3646179cfb4e5:refs/remotes/pull/10/merge
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.8078064Z From https://github.com/Jhon-Crow/Multichannel-Panorama-VST-plugin
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.8080390Z  * [new ref]         7d43ddc27a7802e23be5d4438de3646179cfb4e5 -> pull/10/merge
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.8124976Z ##[endgroup]
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.8126252Z ##[group]Determining the checkout info
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.8134654Z ##[endgroup]
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.8144029Z [command]/usr/bin/git sparse-checkout disable
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.8187827Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.8221689Z ##[group]Checking out the ref
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.8226058Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/10/merge
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.8312426Z Note: switching to 'refs/remotes/pull/10/merge'.
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.8313251Z 
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.8313698Z You are in 'detached HEAD' state. You can look around, make experimental
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.8314708Z changes and commit them, and you can discard any commits you make in this
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.8316318Z state without impacting any branches by switching back to a branch.
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.8317320Z 
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.8317954Z If you want to create a new branch to retain commits you create, you may
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.8319372Z do so (now or later) by using -c with the switch command. Example:
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.8320468Z 
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.8320856Z   git switch -c <new-branch-name>
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.8321449Z 
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.8321847Z Or undo this operation with:
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.8322420Z 
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.8322750Z   git switch -
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.8323330Z 
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.8324445Z Turn off this advice by setting config variable advice.detachedHead to false
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.8325494Z 
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.8326695Z HEAD is now at 7d43ddc Merge 7756f0911a4bac6455d1da99d26133b33677f54a into e12eb4bb6f6a7498bd17937d19e2f6a0d1eaaecd
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.8330492Z ##[endgroup]
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.8371533Z [command]/usr/bin/git log -1 --format=%H
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.8402349Z 7d43ddc27a7802e23be5d4438de3646179cfb4e5
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.8656016Z ##[group]Run bash scripts/validate-preparation.sh
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.8656937Z ^[[36;1mbash scripts/validate-preparation.sh^[[0m
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.8822090Z shell: /usr/bin/bash -e {0}
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.8822746Z env:
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.8823354Z   VST2_SDK_REPO: https://github.com/R-Tur/VST_SDK_2.4.git
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.8824069Z ##[endgroup]
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.9042552Z Preparation files and workflow markers are present.
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.9101947Z ##[group]Run cmake -S . -B build/prepare-smoke -DMULTICHANNEL_PANORAMA_BUILD_PLUGIN=OFF -DMULTICHANNEL_PANORAMA_BUILD_TESTS=ON
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.9103751Z ^[[36;1mcmake -S . -B build/prepare-smoke -DMULTICHANNEL_PANORAMA_BUILD_PLUGIN=OFF -DMULTICHANNEL_PANORAMA_BUILD_TESTS=ON^[[0m
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.9139407Z shell: /usr/bin/bash -e {0}
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.9140260Z env:
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.9140854Z   VST2_SDK_REPO: https://github.com/R-Tur/VST_SDK_2.4.git
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:25.9141592Z ##[endgroup]
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:26.6813874Z -- The C compiler identification is GNU 13.3.0
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:26.8392377Z -- The CXX compiler identification is GNU 13.3.0
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:26.9443718Z -- Detecting C compiler ABI info
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:27.1401874Z -- Detecting C compiler ABI info - done
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:27.1578509Z -- Check for working C compiler: /usr/bin/cc - skipped
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:27.1628302Z -- Detecting C compile features
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:27.1673767Z -- Detecting C compile features - done
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:27.2018297Z -- Detecting CXX compiler ABI info
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:27.2831857Z -- Detecting CXX compiler ABI info - done
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:27.3012304Z -- Check for working CXX compiler: /usr/bin/c++ - skipped
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:27.3015161Z -- Detecting CXX compile features
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:27.3022614Z -- Detecting CXX compile features - done
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:27.3146535Z -- Configuring done (1.0s)
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:27.3197904Z -- Generating done (0.0s)
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:27.3202930Z -- Build files have been written to: /home/runner/work/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/build/prepare-smoke
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:27.3403745Z ##[group]Run cmake --build build/prepare-smoke
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:27.3405316Z ^[[36;1mcmake --build build/prepare-smoke^[[0m
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:27.3406993Z ^[[36;1mctest --test-dir build/prepare-smoke --output-on-failure^[[0m
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:27.3448468Z shell: /usr/bin/bash -e {0}
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:27.3449645Z env:
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:27.3451126Z   VST2_SDK_REPO: https://github.com/R-Tur/VST_SDK_2.4.git
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:27.3452656Z ##[endgroup]
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:27.3699779Z [ 25%] Building CXX object CMakeFiles/SourceChannelMappingTests.dir/tests/SourceChannelMappingTests.cpp.o
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:27.6804129Z [ 50%] Linking CXX executable SourceChannelMappingTests
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:27.7417320Z [ 50%] Built target SourceChannelMappingTests
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:27.7497148Z [ 75%] Building CXX object CMakeFiles/DistanceGainTests.dir/tests/DistanceGainTests.cpp.o
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:28.1067398Z [100%] Linking CXX executable DistanceGainTests
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:28.1624080Z [100%] Built target DistanceGainTests
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:28.8678860Z Internal ctest changing into directory: /home/runner/work/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/build/prepare-smoke
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:28.9575395Z Test project /home/runner/work/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/build/prepare-smoke
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:29.0297531Z     Start 1: SourceChannelMappingTests
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:29.0415750Z 1/2 Test #1: SourceChannelMappingTests ........   Passed    0.00 sec
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:29.0697643Z     Start 2: DistanceGainTests
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:29.0717789Z 2/2 Test #2: DistanceGainTests ................   Passed    0.00 sec
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:29.0721102Z 
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:29.0721433Z 100% tests passed, 0 tests failed out of 2
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:29.0721968Z 
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:29.0722129Z Total Test time (real) =   0.11 sec
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:29.1198486Z Post job cleanup.
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:29.2056419Z [command]/usr/bin/git version
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:29.2095259Z git version 2.54.0
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:29.2136859Z Temporarily overriding HOME='/home/runner/work/_temp/760bc3dd-400d-45a8-94bb-48b37a605754' before making global git config changes
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:29.2138123Z Adding repository directory to the temporary git global config as a safe directory
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:29.2141825Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:29.2174547Z Removing SSH command configuration
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:29.2182159Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:29.2220759Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:29.2463107Z Removing HTTP extra header
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:29.2471137Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:29.2519339Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:29.2775540Z Removing includeIf entries pointing to credentials config files
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:29.2776415Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:29.2804911Z includeif.gitdir:/home/runner/work/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/.git.path
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:29.2805887Z includeif.gitdir:/home/runner/work/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/.git/worktrees/*.path
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:29.2806552Z includeif.gitdir:/github/workspace/.git.path
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:29.2806973Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:29.2814229Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/.git.path
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:29.2868656Z /home/runner/work/_temp/git-credentials-daf0f6a6-63f6-4a44-843e-977f1a977123.config
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:29.2880591Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/.git.path /home/runner/work/_temp/git-credentials-daf0f6a6-63f6-4a44-843e-977f1a977123.config
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:29.2918369Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/.git/worktrees/*.path
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:29.2942190Z /home/runner/work/_temp/git-credentials-daf0f6a6-63f6-4a44-843e-977f1a977123.config
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:29.2952388Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-daf0f6a6-63f6-4a44-843e-977f1a977123.config
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:29.2985772Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:29.3008486Z /github/runner_temp/git-credentials-daf0f6a6-63f6-4a44-843e-977f1a977123.config
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:29.3016056Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-daf0f6a6-63f6-4a44-843e-977f1a977123.config
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:29.3048776Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:29.3070683Z /github/runner_temp/git-credentials-daf0f6a6-63f6-4a44-843e-977f1a977123.config
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:29.3079436Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-daf0f6a6-63f6-4a44-843e-977f1a977123.config
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:29.3113308Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:29.3343505Z Removing credentials config '/home/runner/work/_temp/git-credentials-daf0f6a6-63f6-4a44-843e-977f1a977123.config'
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:44:29.3493303Z Cleaning up orphan processes
+Build Windows (win64)	UNKNOWN STEP	﻿2026-06-21T05:44:34.7108233Z Current runner version: '2.335.1'
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:34.7134619Z ##[group]Runner Image Provisioner
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:34.7135767Z Hosted Compute Agent
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:34.7136354Z Version: 20260611.554
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:34.7136966Z Commit: 5e0782fdc9014723d3be820dd114dd31555c2bd1
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:34.7137642Z Build Date: 2026-06-11T21:40:46Z
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:34.7138436Z Worker ID: {bf957961-5dee-4ba5-8a69-74b7d3f14d37}
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:34.7139248Z Azure Region: westcentralus
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:34.7139838Z ##[endgroup]
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:34.7141307Z ##[group]Operating System
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:34.7141933Z Microsoft Windows Server 2025
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:34.7142615Z 10.0.26100
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:34.7143109Z Datacenter
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:34.7143613Z ##[endgroup]
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:34.7144139Z ##[group]Runner Image
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:34.7144686Z Image: windows-2025-vs2026
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:34.7145257Z Version: 20260614.141.1
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:34.7146832Z Included Software: https://github.com/actions/runner-images/blob/win25-vs2026/20260614.141/images/windows/Windows2025-VS2026-Readme.md
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:34.7148541Z Image Release: https://github.com/actions/runner-images/releases/tag/win25-vs2026%2F20260614.141
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:34.7149465Z ##[endgroup]
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:34.7150507Z ##[group]GITHUB_TOKEN Permissions
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:34.7152320Z Contents: read
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:34.7152847Z Metadata: read
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:34.7153395Z ##[endgroup]
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:34.7155757Z Secret source: None
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:34.7156417Z Prepare workflow directory
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:34.7600929Z Prepare all required actions
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:34.7639586Z Getting action download info
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:35.0158245Z Download action repository 'actions/checkout@v6' (SHA:df4cb1c069e1874edd31b4311f1884172cec0e10)
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:35.1362864Z Download action repository 'actions/upload-artifact@v7' (SHA:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a)
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:35.3481190Z Complete job name: Build Windows (win64)
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:35.4705421Z ##[group]Run actions/checkout@v6
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:35.4706507Z with:
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:35.4707041Z   repository: Jhon-Crow/Multichannel-Panorama-VST-plugin
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:35.4711691Z   token: ***
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:35.4712088Z   ssh-strict: true
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:35.4712503Z   ssh-user: git
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:35.4712909Z   persist-credentials: true
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:35.4713355Z   clean: true
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:35.4713761Z   sparse-checkout-cone-mode: true
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:35.4714602Z   fetch-depth: 1
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:35.4715061Z   fetch-tags: false
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:35.4715470Z   show-progress: true
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:35.4715885Z   lfs: false
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:35.4716255Z   submodules: false
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:35.4716664Z   set-safe-directory: true
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:35.4717338Z env:
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:35.4717796Z   VST2_SDK_REPO: https://github.com/R-Tur/VST_SDK_2.4.git
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:35.4718392Z ##[endgroup]
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:35.6143524Z Syncing repository: Jhon-Crow/Multichannel-Panorama-VST-plugin
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:35.6145389Z ##[group]Getting Git version info
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:35.6146269Z Working directory is 'D:\a\Multichannel-Panorama-VST-plugin\Multichannel-Panorama-VST-plugin'
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:35.6905956Z [command]"C:\Program Files\Git\bin\git.exe" version
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:36.0343211Z git version 2.54.0.windows.1
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:36.0400116Z ##[endgroup]
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:36.0419146Z Temporarily overriding HOME='D:\a\_temp\873f178c-c568-49c6-bb19-2ec6c2048791' before making global git config changes
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:36.0430051Z Adding repository directory to the temporary git global config as a safe directory
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:36.0432457Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\Multichannel-Panorama-VST-plugin\Multichannel-Panorama-VST-plugin
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:36.1086613Z Deleting the contents of 'D:\a\Multichannel-Panorama-VST-plugin\Multichannel-Panorama-VST-plugin'
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:36.1093518Z ##[group]Determining repository object format
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:36.1098162Z ##[endgroup]
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:36.1099166Z ##[group]Initializing the repository
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:36.1107658Z [command]"C:\Program Files\Git\bin\git.exe" init D:\a\Multichannel-Panorama-VST-plugin\Multichannel-Panorama-VST-plugin
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:36.2043809Z Initialized empty Git repository in D:/a/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/.git/
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:36.2095033Z [command]"C:\Program Files\Git\bin\git.exe" remote add origin https://github.com/Jhon-Crow/Multichannel-Panorama-VST-plugin
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:36.2589228Z ##[endgroup]
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:36.2590004Z ##[group]Disabling automatic garbage collection
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:36.2599673Z [command]"C:\Program Files\Git\bin\git.exe" config --local gc.auto 0
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:36.2911348Z ##[endgroup]
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:36.2912866Z ##[group]Setting up auth
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:36.2913604Z Removing SSH command configuration
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:36.2924350Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:36.3242011Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:37.5986851Z Removing HTTP extra header
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:37.5997739Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:37.6314112Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:38.2062557Z Removing includeIf entries pointing to credentials config files
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:38.2077480Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:38.2397021Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:38.7828319Z [command]"C:\Program Files\Git\bin\git.exe" config --file D:\a\_temp\git-credentials-4f7c03e6-5ab2-46a6-8c38-1f96e7f3d6d5.config http.https://github.com/.extraheader "AUTHORIZATION: basic ***"
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:38.8156748Z [command]"C:\Program Files\Git\bin\git.exe" config --local includeIf.gitdir:D:/a/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/.git.path D:\a\_temp\git-credentials-4f7c03e6-5ab2-46a6-8c38-1f96e7f3d6d5.config
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:38.8472860Z [command]"C:\Program Files\Git\bin\git.exe" config --local includeIf.gitdir:D:/a/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/.git/worktrees/*.path D:\a\_temp\git-credentials-4f7c03e6-5ab2-46a6-8c38-1f96e7f3d6d5.config
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:38.8827452Z [command]"C:\Program Files\Git\bin\git.exe" config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-4f7c03e6-5ab2-46a6-8c38-1f96e7f3d6d5.config
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:38.9155360Z [command]"C:\Program Files\Git\bin\git.exe" config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-4f7c03e6-5ab2-46a6-8c38-1f96e7f3d6d5.config
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:38.9462703Z ##[endgroup]
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:38.9463241Z ##[group]Fetching the repository
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:38.9476352Z [command]"C:\Program Files\Git\bin\git.exe" -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +7d43ddc27a7802e23be5d4438de3646179cfb4e5:refs/remotes/pull/10/merge
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:40.0383145Z From https://github.com/Jhon-Crow/Multichannel-Panorama-VST-plugin
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:40.0384213Z  * [new ref]         7d43ddc27a7802e23be5d4438de3646179cfb4e5 -> pull/10/merge
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:40.0770568Z ##[endgroup]
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:40.0771093Z ##[group]Determining the checkout info
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:40.0772146Z ##[endgroup]
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:40.0782233Z [command]"C:\Program Files\Git\bin\git.exe" sparse-checkout disable
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:40.1225697Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset-all extensions.worktreeConfig
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:40.1538649Z ##[group]Checking out the ref
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:40.1547720Z [command]"C:\Program Files\Git\bin\git.exe" checkout --progress --force refs/remotes/pull/10/merge
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:40.2143984Z Note: switching to 'refs/remotes/pull/10/merge'.
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:40.2145069Z 
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:40.2145525Z You are in 'detached HEAD' state. You can look around, make experimental
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:40.2146131Z changes and commit them, and you can discard any commits you make in this
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:40.2146632Z state without impacting any branches by switching back to a branch.
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:40.2146931Z 
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:40.2147204Z If you want to create a new branch to retain commits you create, you may
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:40.2147755Z do so (now or later) by using -c with the switch command. Example:
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:40.2148073Z 
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:40.2148246Z   git switch -c <new-branch-name>
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:40.2148476Z 
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:40.2148591Z Or undo this operation with:
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:40.2148801Z 
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:40.2148907Z   git switch -
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:40.2149070Z 
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:40.2149299Z Turn off this advice by setting config variable advice.detachedHead to false
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:40.2149609Z 
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:40.2150035Z HEAD is now at 7d43ddc Merge 7756f0911a4bac6455d1da99d26133b33677f54a into e12eb4bb6f6a7498bd17937d19e2f6a0d1eaaecd
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:40.2255959Z ##[endgroup]
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:40.2678530Z [command]"C:\Program Files\Git\bin\git.exe" log -1 --format=%H
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:40.2960200Z 7d43ddc27a7802e23be5d4438de3646179cfb4e5
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:40.3392897Z ##[group]Run $repo = if ("") { "" } else { "https://github.com/R-Tur/VST_SDK_2.4.git" }
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:40.3393671Z ^[[36;1m$repo = if ("") { "" } else { "https://github.com/R-Tur/VST_SDK_2.4.git" }^[[0m
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:40.3394172Z ^[[36;1m$sdk = "D:/vst2sdk"^[[0m
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:40.3394480Z ^[[36;1mgit clone --depth 1 $repo $sdk^[[0m
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:40.3394879Z ^[[36;1mif (-not (Test-Path "$sdk/pluginterfaces/vst2.x/aeffect.h")) {^[[0m
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:40.3395439Z ^[[36;1m  throw "VST2 SDK header pluginterfaces/vst2.x/aeffect.h not found after cloning $repo"^[[0m
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:40.3395888Z ^[[36;1m}^[[0m
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:40.3396251Z ^[[36;1m"VST2_SDK_PATH=$sdk" | Out-File -FilePath $env:GITHUB_ENV -Append -Encoding utf8^[[0m
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:40.4012284Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:40.4012765Z env:
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:40.4013107Z   VST2_SDK_REPO: https://github.com/R-Tur/VST_SDK_2.4.git
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:40.4013538Z ##[endgroup]
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:45.5748037Z Cloning into 'D:/vst2sdk'...
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:46.9316768Z ##[group]Run cmake -S . -B "D:/b/win64" -A "x64" -DCMAKE_BUILD_TYPE=Release -DMULTICHANNEL_PANORAMA_VST2_SDK_PATH="$env:VST2_SDK_PATH"
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:46.9317813Z ^[[36;1mcmake -S . -B "D:/b/win64" -A "x64" -DCMAKE_BUILD_TYPE=Release -DMULTICHANNEL_PANORAMA_VST2_SDK_PATH="$env:VST2_SDK_PATH"^[[0m
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:46.9378777Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:46.9379139Z env:
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:46.9379404Z   VST2_SDK_REPO: https://github.com/R-Tur/VST_SDK_2.4.git
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:46.9379748Z   VST2_SDK_PATH: D:/vst2sdk
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:46.9379981Z ##[endgroup]
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:56.4940766Z -- Building for: Visual Studio 18 2026
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:56.4941777Z -- The C compiler identification is MSVC 19.51.36247.0
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:57.8096343Z -- The CXX compiler identification is MSVC 19.51.36247.0
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:57.9080365Z -- Detecting C compiler ABI info
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:58.9031407Z -- Detecting C compiler ABI info - done
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:58.9270864Z -- Check for working C compiler: C:/Program Files/Microsoft Visual Studio/18/Enterprise/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/cl.exe - skipped
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:58.9280230Z -- Detecting C compile features
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:58.9290694Z -- Detecting C compile features - done
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:58.9702051Z -- Detecting CXX compiler ABI info
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:59.6699230Z -- Detecting CXX compiler ABI info - done
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:59.6885589Z -- Check for working CXX compiler: C:/Program Files/Microsoft Visual Studio/18/Enterprise/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/cl.exe - skipped
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:59.6889758Z -- Detecting CXX compile features
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:44:59.6898947Z -- Detecting CXX compile features - done
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:45:21.2780901Z -- Configuring juceaide
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:45:25.2375741Z -- Building juceaide
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:46:56.3343788Z -- Exporting juceaide
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:46:56.3349435Z -- Testing juceaide
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:46:56.3778602Z -- Finished setting up juceaide
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:46:56.3821959Z -- VST2 SDK found at D:/vst2sdk; enabling VST2 (.dll) build
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:46:56.3970857Z -- Configuring done (127.5s)
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:46:56.5137778Z CMake Warning:
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:46:56.5139311Z   Manually-specified variables were not used by the project:
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:46:56.5139864Z 
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:46:56.5139988Z     CMAKE_BUILD_TYPE
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:46:56.5140193Z 
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:46:56.5140201Z 
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:46:56.5140345Z -- Generating done (0.1s)
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:46:56.5149490Z -- Build files have been written to: D:/b/win64
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:46:56.6412729Z ##[group]Run cmake --build "D:/b/win64" --config Release --target MultichannelPanorama_VST3
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:46:56.6413457Z ^[[36;1mcmake --build "D:/b/win64" --config Release --target MultichannelPanorama_VST3^[[0m
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:46:56.6474352Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:46:56.6474703Z env:
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:46:56.6474978Z   VST2_SDK_REPO: https://github.com/R-Tur/VST_SDK_2.4.git
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:46:56.6475311Z   VST2_SDK_PATH: D:/vst2sdk
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:46:56.6475544Z ##[endgroup]
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:46:57.0490009Z MSBuild version 18.7.1+024f5b037 for .NET Framework
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:46:57.1026678Z 
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:46:57.3127931Z   Checking File Globs
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:46:57.4966186Z   1>Checking Build System
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:46:57.6320947Z   Generating MultichannelPanorama_artefacts/JuceLibraryCode/MultichannelPanorama_resources.rc
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:46:57.6586743Z   Building Custom Rule D:/a/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/CMakeLists.txt
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:46:57.9235607Z   MultichannelPanorama_rc_lib.vcxproj -> D:\b\win64\MultichannelPanorama_rc_lib.dir\Release\MultichannelPanorama_rc_lib.lib
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:46:57.9884805Z   Building VST3 manifest helper for MultichannelPanorama
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:46:59.1250744Z   -- The C compiler identification is MSVC 19.51.36247.0
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:46:59.8266363Z   -- The CXX compiler identification is MSVC 19.51.36247.0
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:46:59.8386060Z   -- Detecting C compiler ABI info
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:47:00.5335146Z   -- Detecting C compiler ABI info - done
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:47:00.5521785Z   -- Check for working C compiler: C:/Program Files/Microsoft Visual Studio/18/Enterprise/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/cl.exe - skipped
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:47:00.5526499Z   -- Detecting C compile features
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:47:00.5533791Z   -- Detecting C compile features - done
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:47:00.5629863Z   -- Detecting CXX compiler ABI info
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:47:01.2649869Z   -- Detecting CXX compiler ABI info - done
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:47:01.2840689Z   -- Check for working CXX compiler: C:/Program Files/Microsoft Visual Studio/18/Enterprise/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/cl.exe - skipped
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:47:01.2844747Z   -- Detecting CXX compile features
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:47:01.2854885Z   -- Detecting CXX compile features - done
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:47:01.2892062Z   -- Configuring done (3.3s)
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:47:01.3126162Z   -- Generating done (0.0s)
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:47:01.3136009Z   -- Build files have been written to: D:/b/win64/MultichannelPanorama_artefacts/JuceLibraryCode/vst3_helper
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:47:01.4350107Z   MSBuild version 18.7.1+024f5b037 for .NET Framework
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:47:01.4723520Z   
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:47:01.7547261Z     1>Checking Build System
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:47:01.8901931Z     Building Custom Rule D:/b/win64/_deps/juce-src/extras/Build/CMake/juce_vst3_helper/CMakeLists.txt
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:47:02.0570555Z     juce_VST3ManifestHelper.cpp
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:47:04.5210850Z     vst3_helper.vcxproj -> D:\b\win64\MultichannelPanorama_artefacts\JuceLibraryCode\vst3_helper\vst3_helper.exe
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:47:04.5726792Z     Building Custom Rule D:/b/win64/_deps/juce-src/extras/Build/CMake/juce_vst3_helper/CMakeLists.txt
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:47:04.6392506Z   Building Custom Rule D:/a/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/CMakeLists.txt
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:47:04.7390806Z   Building Custom Rule D:/a/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/CMakeLists.txt
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:47:04.9007553Z   PluginProcessor.cpp
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:47:04.9038597Z   PluginEditor.cpp
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:47:04.9044936Z   juce_audio_processors.cpp
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:47:04.9045365Z   juce_gui_extra.cpp
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:47:09.3653601Z   juce_gui_basics.cpp
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:47:09.4130045Z   juce_gui_basics_2.cpp
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:47:10.3929774Z   juce_gui_basics_3.cpp
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:47:10.9638481Z   juce_gui_basics_4.cpp
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:47:13.5120680Z   juce_gui_basics_5.cpp
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:47:15.7637945Z   juce_graphics.cpp
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:47:17.2831762Z   juce_graphics_Harfbuzz.cpp
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:47:18.0471342Z   juce_events.cpp
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:47:18.3076463Z   juce_core.cpp
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:47:21.3966268Z   juce_core_CompilationTime.cpp
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:47:21.4317775Z   juce_data_structures.cpp
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:47:23.0846096Z   juce_audio_processors_headless.cpp
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:47:23.8369341Z   juce_audio_processors_headless_ara.cpp
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:47:23.8777299Z   juce_audio_processors_headless_lv2_libs.cpp
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:47:23.9128273Z   juce_audio_basics.cpp
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:47:26.7713505Z   juce_dsp.cpp
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:47:27.9309218Z   juce_audio_formats.cpp
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:47:32.0806236Z   juce_graphics_Sheenbidi.c
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:47:33.8610571Z   MultichannelPanorama.vcxproj -> D:\b\win64\MultichannelPanorama_artefacts\Release\Multichannel Panorama_SharedCode.lib
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:47:33.9076108Z   Building Custom Rule D:/a/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/CMakeLists.txt
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:47:34.0213950Z   juce_audio_plugin_client_AAX.cpp
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:47:34.0313592Z   juce_audio_plugin_client_AAX_utils.cpp
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:47:34.0314441Z   juce_audio_plugin_client_ARA.cpp
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:47:34.0318421Z   juce_audio_plugin_client_LV2.cpp
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:47:34.0696831Z   juce_audio_plugin_client_Standalone.cpp
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:47:34.0699231Z   juce_audio_plugin_client_Unity.cpp
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:47:34.0700571Z   juce_audio_plugin_client_VST2.cpp
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:47:34.0739370Z   juce_audio_plugin_client_VST3.cpp
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:47:41.2301418Z      Creating library D:/b/win64/MultichannelPanorama_artefacts/Release/VST3/Multichannel Panorama.lib and object D:/b/win64/MultichannelPanorama_artefacts/Release/VST3/Multichannel Panorama.exp
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:47:41.2669287Z   Generating code
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:49:07.1488330Z   Finished generating code
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:49:08.0542756Z   MultichannelPanorama_VST3.vcxproj -> D:\b\win64\MultichannelPanorama_artefacts\Release\VST3\Multichannel Panorama.vst3\Contents\x86_64-win\Multichannel Panorama.vst3
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:49:08.1060681Z   removing moduleinfo.json
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:49:08.1488468Z   creating D:/b/win64/MultichannelPanorama_artefacts/Release/VST3/Multichannel Panorama.vst3/Contents/Resources/moduleinfo.json
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:49:08.4946471Z   -- Installing: D:/b/win64/artifacts/vst3/Multichannel Panorama.vst3
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:49:08.4949884Z   -- Installing: D:/b/win64/artifacts/vst3/Multichannel Panorama.vst3/Contents
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:49:08.4954325Z   -- Installing: D:/b/win64/artifacts/vst3/Multichannel Panorama.vst3/Contents/Resources
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:49:08.4959553Z   -- Installing: D:/b/win64/artifacts/vst3/Multichannel Panorama.vst3/Contents/Resources/moduleinfo.json
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:49:08.4966105Z   -- Installing: D:/b/win64/artifacts/vst3/Multichannel Panorama.vst3/Contents/x86_64-win
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:49:08.4970505Z   -- Installing: D:/b/win64/artifacts/vst3/Multichannel Panorama.vst3/Contents/x86_64-win/Multichannel Panorama.vst3
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:49:08.6739399Z ##[group]Run cmake --build "D:/b/win64" --config Release --target MultichannelPanorama_VST
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:49:08.6740179Z ^[[36;1mcmake --build "D:/b/win64" --config Release --target MultichannelPanorama_VST^[[0m
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:49:08.6800921Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:49:08.6801348Z env:
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:49:08.6801683Z   VST2_SDK_REPO: https://github.com/R-Tur/VST_SDK_2.4.git
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:49:08.6802076Z   VST2_SDK_PATH: D:/vst2sdk
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:49:08.6802363Z ##[endgroup]
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:49:09.1104634Z MSBuild version 18.7.1+024f5b037 for .NET Framework
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:49:09.1526624Z 
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:49:09.3615930Z   Checking File Globs
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:49:09.5900736Z   MultichannelPanorama_rc_lib.vcxproj -> D:\b\win64\MultichannelPanorama_rc_lib.dir\Release\MultichannelPanorama_rc_lib.lib
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:49:09.7613527Z   MultichannelPanorama.vcxproj -> D:\b\win64\MultichannelPanorama_artefacts\Release\Multichannel Panorama_SharedCode.lib
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:49:09.8518737Z   Building Custom Rule D:/a/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/CMakeLists.txt
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:49:09.9877767Z   juce_audio_plugin_client_AAX.cpp
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:49:09.9879856Z   juce_audio_plugin_client_AAX_utils.cpp
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:49:09.9880419Z   juce_audio_plugin_client_ARA.cpp
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:49:09.9880902Z   juce_audio_plugin_client_LV2.cpp
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:49:10.0482205Z   juce_audio_plugin_client_Standalone.cpp
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:49:10.0483254Z   juce_audio_plugin_client_Unity.cpp
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:49:10.0484034Z   juce_audio_plugin_client_VST2.cpp
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:49:10.0484537Z   juce_audio_plugin_client_VST3.cpp
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:49:15.1848973Z      Creating library D:/b/win64/MultichannelPanorama_artefacts/Release/VST/Multichannel Panorama.lib and object D:/b/win64/MultichannelPanorama_artefacts/Release/VST/Multichannel Panorama.exp
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:49:15.2218121Z   Generating code
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:34.4375718Z   Finished generating code
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:35.3273294Z   MultichannelPanorama_VST.vcxproj -> D:\b\win64\MultichannelPanorama_artefacts\Release\VST\Multichannel Panorama.dll
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:35.3753415Z   -- Installing: D:/b/win64/artifacts/vst2/Multichannel Panorama.dll
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:35.5449604Z ##[group]Run $stage = "dist/MultichannelPanorama-win64"
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:35.5450271Z ^[[36;1m$stage = "dist/MultichannelPanorama-win64"^[[0m
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:35.5450791Z ^[[36;1mNew-Item -ItemType Directory -Force -Path "$stage/VST2" | Out-Null^[[0m
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:35.5451331Z ^[[36;1mNew-Item -ItemType Directory -Force -Path "$stage/VST3" | Out-Null^[[0m
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:35.5451934Z ^[[36;1mCopy-Item -Path "D:/b/win64/artifacts/vst2/*" -Destination "$stage/VST2" -Recurse -Force^[[0m
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:35.5452647Z ^[[36;1mCopy-Item -Path "D:/b/win64/artifacts/vst3/*" -Destination "$stage/VST3" -Recurse -Force^[[0m
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:35.5453262Z ^[[36;1mif (-not (Get-ChildItem -Path "$stage/VST2" -Recurse -Filter *.dll)) {^[[0m
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:35.5453745Z ^[[36;1m  throw "No .dll produced for the VST2 build"^[[0m
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:35.5454127Z ^[[36;1m}^[[0m
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:35.5454411Z ^[[36;1mGet-ChildItem -Path $stage -Recurse^[[0m
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:35.5514544Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:35.5514964Z env:
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:35.5515317Z   VST2_SDK_REPO: https://github.com/R-Tur/VST_SDK_2.4.git
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:35.5515712Z   VST2_SDK_PATH: D:/vst2sdk
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:35.5516000Z ##[endgroup]
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:36.0306011Z 
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:36.0315231Z     Directory: D:\a\Multichannel-Panorama-VST-plugin\Multichannel-Panorama-VST-plugin\dist\MultichannelPanorama-win64
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:36.0316410Z 
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:36.0317928Z ^[[32;1mMode   ^[[0m^[[32;1m              LastWriteTime^[[0m ^[[32;1;3m        Length^[[0m^[[32;1m Name^[[0m
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:36.0318929Z ^[[32;1m----   ^[[0m ^[[32;1m             -------------^[[0m ^[[32;1m        ------^[[0m ^[[32;1m----^[[0m
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:36.0617898Z d----           6/21/2026  5:50 AM                ^[[44;1mVST2^[[0m
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:36.0625876Z d----           6/21/2026  5:50 AM                ^[[44;1mVST3^[[0m
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:36.0676361Z 
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:36.0680151Z     Directory: 
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:36.0681154Z D:\a\Multichannel-Panorama-VST-plugin\Multichannel-Panorama-VST-plugin\dist\MultichannelPanorama-win64\VST2
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:36.0681919Z 
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:36.0682862Z ^[[32;1mMode   ^[[0m^[[32;1m              LastWriteTime^[[0m ^[[32;1;3m        Length^[[0m^[[32;1m Name^[[0m
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:36.0683782Z ^[[32;1m----   ^[[0m ^[[32;1m             -------------^[[0m ^[[32;1m        ------^[[0m ^[[32;1m----^[[0m
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:36.0684511Z -a---           6/21/2026  5:50 AM        5371392 Multichannel Panorama.dll
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:36.0689044Z 
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:36.0691274Z     Directory: 
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:36.0692116Z D:\a\Multichannel-Panorama-VST-plugin\Multichannel-Panorama-VST-plugin\dist\MultichannelPanorama-win64\VST3
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:36.0692886Z 
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:36.0693455Z ^[[32;1mMode   ^[[0m^[[32;1m              LastWriteTime^[[0m ^[[32;1;3m        Length^[[0m^[[32;1m Name^[[0m
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:36.0694191Z ^[[32;1m----   ^[[0m ^[[32;1m             -------------^[[0m ^[[32;1m        ------^[[0m ^[[32;1m----^[[0m
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:36.0717892Z d----           6/21/2026  5:50 AM                ^[[44;1mMultichannel Panorama.vst3^[[0m
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:36.0723829Z 
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:36.0727459Z     Directory: D:\a\Multichannel-Panorama-VST-plugin\Multichannel-Panorama-VST-plugin\dist\MultichannelPanorama-win64\V
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:36.0728426Z ST3\Multichannel Panorama.vst3
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:36.0728709Z 
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:36.0729217Z ^[[32;1mMode   ^[[0m^[[32;1m              LastWriteTime^[[0m ^[[32;1;3m        Length^[[0m^[[32;1m Name^[[0m
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:36.0765765Z ^[[32;1m----   ^[[0m ^[[32;1m             -------------^[[0m ^[[32;1m        ------^[[0m ^[[32;1m----^[[0m
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:36.0766897Z d----           6/21/2026  5:50 AM                ^[[44;1mContents^[[0m
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:36.0767263Z 
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:36.0767900Z     Directory: D:\a\Multichannel-Panorama-VST-plugin\Multichannel-Panorama-VST-plugin\dist\MultichannelPanorama-win64\V
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:36.0768889Z ST3\Multichannel Panorama.vst3\Contents
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:36.0772030Z 
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:36.0772541Z ^[[32;1mMode   ^[[0m^[[32;1m              LastWriteTime^[[0m ^[[32;1;3m        Length^[[0m^[[32;1m Name^[[0m
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:36.0773209Z ^[[32;1m----   ^[[0m ^[[32;1m             -------------^[[0m ^[[32;1m        ------^[[0m ^[[32;1m----^[[0m
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:36.0773792Z d----           6/21/2026  5:50 AM                ^[[44;1mResources^[[0m
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:36.0774298Z d----           6/21/2026  5:50 AM                ^[[44;1mx86_64-win^[[0m
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:36.0774592Z 
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:36.0775045Z     Directory: D:\a\Multichannel-Panorama-VST-plugin\Multichannel-Panorama-VST-plugin\dist\MultichannelPanorama-win64\V
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:36.0776067Z ST3\Multichannel Panorama.vst3\Contents\Resources
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:36.0776332Z 
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:36.0776689Z ^[[32;1mMode   ^[[0m^[[32;1m              LastWriteTime^[[0m ^[[32;1;3m        Length^[[0m^[[32;1m Name^[[0m
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:36.0777304Z ^[[32;1m----   ^[[0m ^[[32;1m             -------------^[[0m ^[[32;1m        ------^[[0m ^[[32;1m----^[[0m
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:36.0777775Z -a---           6/21/2026  5:49 AM           1134 moduleinfo.json
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:36.0778008Z 
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:36.0778396Z     Directory: D:\a\Multichannel-Panorama-VST-plugin\Multichannel-Panorama-VST-plugin\dist\MultichannelPanorama-win64\V
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:36.0779020Z ST3\Multichannel Panorama.vst3\Contents\x86_64-win
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:36.0779531Z 
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:36.0779867Z ^[[32;1mMode   ^[[0m^[[32;1m              LastWriteTime^[[0m ^[[32;1;3m        Length^[[0m^[[32;1m Name^[[0m
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:36.0780781Z ^[[32;1m----   ^[[0m ^[[32;1m             -------------^[[0m ^[[32;1m        ------^[[0m ^[[32;1m----^[[0m
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:36.0781266Z -a---           6/21/2026  5:49 AM        5565952 Multichannel Panorama.vst3
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:36.0793819Z 
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:36.1490833Z ##[group]Run actions/upload-artifact@v7
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:36.1491516Z with:
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:36.1491808Z   name: MultichannelPanorama-win64
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:36.1492170Z   path: dist/MultichannelPanorama-win64
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:36.1492516Z   if-no-files-found: error
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:36.1492804Z   retention-days: 14
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:36.1493083Z   compression-level: 6
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:36.1493366Z   overwrite: false
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:36.1493753Z   include-hidden-files: false
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:36.1494141Z   archive: true
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:36.1494431Z env:
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:36.1494761Z   VST2_SDK_REPO: https://github.com/R-Tur/VST_SDK_2.4.git
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:36.1495177Z   VST2_SDK_PATH: D:/vst2sdk
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:36.1495466Z ##[endgroup]
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:36.3388151Z With the provided path, there will be 3 files uploaded
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:36.3393541Z Artifact name is valid!
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:36.3395261Z Root directory input is valid!
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:36.6500565Z Uploading artifact: MultichannelPanorama-win64.zip
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:36.6549213Z Beginning upload of artifact content to blob storage
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:37.9617088Z Uploaded bytes 4966147
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:38.0379810Z Finished uploading artifact content to blob storage!
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:38.0382552Z SHA256 digest of uploaded artifact is d3b16383885dbd37a2122ffec475270c733d45e1dabc6027c0050b5fe0071676
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:38.0383633Z Finalizing artifact upload
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:38.3380136Z Artifact MultichannelPanorama-win64 successfully finalized. Artifact ID 7772321436
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:38.3381590Z Artifact MultichannelPanorama-win64 has been successfully uploaded! Final size is 4966147 bytes. Artifact ID is 7772321436
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:38.3390066Z Artifact download URL: https://github.com/Jhon-Crow/Multichannel-Panorama-VST-plugin/actions/runs/27895043747/artifacts/7772321436
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:38.3757711Z Post job cleanup.
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:38.5462786Z [command]"C:\Program Files\Git\bin\git.exe" version
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:38.5756345Z git version 2.54.0.windows.1
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:38.5840205Z Temporarily overriding HOME='D:\a\_temp\c84043b9-2c8a-4a60-a7f2-185ab8b54e60' before making global git config changes
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:38.5841516Z Adding repository directory to the temporary git global config as a safe directory
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:38.5852442Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\Multichannel-Panorama-VST-plugin\Multichannel-Panorama-VST-plugin
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:38.6250858Z Removing SSH command configuration
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:38.6264433Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:38.6684993Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:39.2452090Z Removing HTTP extra header
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:39.2463521Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:39.2806246Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:39.8540854Z Removing includeIf entries pointing to credentials config files
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:39.8554835Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:39.8840346Z includeif.gitdir:D:/a/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/.git.path
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:39.8842125Z includeif.gitdir:D:/a/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/.git/worktrees/*.path
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:39.8843019Z includeif.gitdir:/github/workspace/.git.path
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:39.8843638Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:39.8888635Z [command]"C:\Program Files\Git\bin\git.exe" config --local --get-all includeif.gitdir:D:/a/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/.git.path
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:39.9170334Z D:\a\_temp\git-credentials-4f7c03e6-5ab2-46a6-8c38-1f96e7f3d6d5.config
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:39.9221630Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset includeif.gitdir:D:/a/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/.git.path D:\a\_temp\git-credentials-4f7c03e6-5ab2-46a6-8c38-1f96e7f3d6d5.config
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:39.9545667Z [command]"C:\Program Files\Git\bin\git.exe" config --local --get-all includeif.gitdir:D:/a/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/.git/worktrees/*.path
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:39.9826745Z D:\a\_temp\git-credentials-4f7c03e6-5ab2-46a6-8c38-1f96e7f3d6d5.config
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:39.9875535Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset includeif.gitdir:D:/a/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/.git/worktrees/*.path D:\a\_temp\git-credentials-4f7c03e6-5ab2-46a6-8c38-1f96e7f3d6d5.config
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:40.0199972Z [command]"C:\Program Files\Git\bin\git.exe" config --local --get-all includeif.gitdir:/github/workspace/.git.path
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:40.0476695Z /github/runner_temp/git-credentials-4f7c03e6-5ab2-46a6-8c38-1f96e7f3d6d5.config
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:40.0523052Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset includeif.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-4f7c03e6-5ab2-46a6-8c38-1f96e7f3d6d5.config
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:40.0856170Z [command]"C:\Program Files\Git\bin\git.exe" config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:40.1136296Z /github/runner_temp/git-credentials-4f7c03e6-5ab2-46a6-8c38-1f96e7f3d6d5.config
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:40.1181758Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-4f7c03e6-5ab2-46a6-8c38-1f96e7f3d6d5.config
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:40.1510412Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:40.7082488Z Removing credentials config 'D:\a\_temp\git-credentials-4f7c03e6-5ab2-46a6-8c38-1f96e7f3d6d5.config'
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:40.7298344Z Cleaning up orphan processes
+Build Windows (win64)	UNKNOWN STEP	2026-06-21T05:50:40.7843504Z Terminate orphan process: pid (8080) (vctip)
+Build Windows (win32)	UNKNOWN STEP	﻿2026-06-21T05:44:33.8760205Z Current runner version: '2.335.1'
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:33.8786360Z ##[group]Runner Image Provisioner
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:33.8787155Z Hosted Compute Agent
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:33.8787734Z Version: 20260611.554
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:33.8788307Z Commit: 5e0782fdc9014723d3be820dd114dd31555c2bd1
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:33.8788971Z Build Date: 2026-06-11T21:40:46Z
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:33.8789611Z Worker ID: {bebc3fa9-46c6-4e7b-b231-e80e94c77874}
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:33.8790259Z Azure Region: westus3
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:33.8790778Z ##[endgroup]
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:33.8792063Z ##[group]Operating System
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:33.8792684Z Microsoft Windows Server 2025
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:33.8793287Z 10.0.26100
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:33.8793749Z Datacenter
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:33.8794220Z ##[endgroup]
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:33.8794711Z ##[group]Runner Image
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:33.8795266Z Image: windows-2025-vs2026
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:33.8796454Z Version: 20260614.141.1
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:33.8797979Z Included Software: https://github.com/actions/runner-images/blob/win25-vs2026/20260614.141/images/windows/Windows2025-VS2026-Readme.md
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:33.8799669Z Image Release: https://github.com/actions/runner-images/releases/tag/win25-vs2026%2F20260614.141
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:33.8800574Z ##[endgroup]
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:33.8801581Z ##[group]GITHUB_TOKEN Permissions
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:33.8803448Z Contents: read
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:33.8804044Z Metadata: read
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:33.8804607Z ##[endgroup]
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:33.8806649Z Secret source: None
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:33.8807368Z Prepare workflow directory
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:33.9238156Z Prepare all required actions
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:33.9276763Z Getting action download info
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:34.3074802Z Download action repository 'actions/checkout@v6' (SHA:df4cb1c069e1874edd31b4311f1884172cec0e10)
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:34.4356856Z Download action repository 'actions/upload-artifact@v7' (SHA:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a)
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:34.6510570Z Complete job name: Build Windows (win32)
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:34.7785965Z ##[group]Run actions/checkout@v6
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:34.7787065Z with:
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:34.7787637Z   repository: Jhon-Crow/Multichannel-Panorama-VST-plugin
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:34.7792750Z   token: ***
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:34.7793179Z   ssh-strict: true
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:34.7793615Z   ssh-user: git
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:34.7794061Z   persist-credentials: true
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:34.7794541Z   clean: true
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:34.7794983Z   sparse-checkout-cone-mode: true
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:34.7795508Z   fetch-depth: 1
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:34.7795939Z   fetch-tags: false
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:34.7796382Z   show-progress: true
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:34.7796834Z   lfs: false
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:34.7797234Z   submodules: false
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:34.7797672Z   set-safe-directory: true
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:34.7798371Z env:
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:34.7798891Z   VST2_SDK_REPO: https://github.com/R-Tur/VST_SDK_2.4.git
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:34.7799529Z ##[endgroup]
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:34.9257590Z Syncing repository: Jhon-Crow/Multichannel-Panorama-VST-plugin
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:34.9261749Z ##[group]Getting Git version info
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:34.9264202Z Working directory is 'D:\a\Multichannel-Panorama-VST-plugin\Multichannel-Panorama-VST-plugin'
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:35.0341350Z [command]"C:\Program Files\Git\bin\git.exe" version
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:35.3749917Z git version 2.54.0.windows.1
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:35.3808162Z ##[endgroup]
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:35.3828743Z Temporarily overriding HOME='D:\a\_temp\525c454f-83c8-49a3-893f-a2ca8f388590' before making global git config changes
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:35.3830195Z Adding repository directory to the temporary git global config as a safe directory
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:35.3839615Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\Multichannel-Panorama-VST-plugin\Multichannel-Panorama-VST-plugin
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:35.4422069Z Deleting the contents of 'D:\a\Multichannel-Panorama-VST-plugin\Multichannel-Panorama-VST-plugin'
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:35.4429461Z ##[group]Determining repository object format
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:35.4433548Z ##[endgroup]
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:35.4434290Z ##[group]Initializing the repository
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:35.4441682Z [command]"C:\Program Files\Git\bin\git.exe" init D:\a\Multichannel-Panorama-VST-plugin\Multichannel-Panorama-VST-plugin
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:35.5227989Z Initialized empty Git repository in D:/a/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/.git/
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:35.5278705Z [command]"C:\Program Files\Git\bin\git.exe" remote add origin https://github.com/Jhon-Crow/Multichannel-Panorama-VST-plugin
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:35.5753453Z ##[endgroup]
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:35.5754792Z ##[group]Disabling automatic garbage collection
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:35.5764715Z [command]"C:\Program Files\Git\bin\git.exe" config --local gc.auto 0
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:35.6110673Z ##[endgroup]
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:35.6111788Z ##[group]Setting up auth
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:35.6112554Z Removing SSH command configuration
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:35.6121512Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:35.6435382Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:36.9340174Z Removing HTTP extra header
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:36.9350968Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:36.9668110Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:37.5077607Z Removing includeIf entries pointing to credentials config files
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:37.5081125Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:37.5413067Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:38.1062037Z [command]"C:\Program Files\Git\bin\git.exe" config --file D:\a\_temp\git-credentials-5443e045-8aa1-4889-b554-11bd390fbdd9.config http.https://github.com/.extraheader "AUTHORIZATION: basic ***"
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:38.1393998Z [command]"C:\Program Files\Git\bin\git.exe" config --local includeIf.gitdir:D:/a/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/.git.path D:\a\_temp\git-credentials-5443e045-8aa1-4889-b554-11bd390fbdd9.config
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:38.1720437Z [command]"C:\Program Files\Git\bin\git.exe" config --local includeIf.gitdir:D:/a/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/.git/worktrees/*.path D:\a\_temp\git-credentials-5443e045-8aa1-4889-b554-11bd390fbdd9.config
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:38.2069785Z [command]"C:\Program Files\Git\bin\git.exe" config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-5443e045-8aa1-4889-b554-11bd390fbdd9.config
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:38.2397636Z [command]"C:\Program Files\Git\bin\git.exe" config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-5443e045-8aa1-4889-b554-11bd390fbdd9.config
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:38.2715739Z ##[endgroup]
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:38.2716441Z ##[group]Fetching the repository
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:38.2730786Z [command]"C:\Program Files\Git\bin\git.exe" -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +7d43ddc27a7802e23be5d4438de3646179cfb4e5:refs/remotes/pull/10/merge
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:39.4578602Z From https://github.com/Jhon-Crow/Multichannel-Panorama-VST-plugin
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:39.4579954Z  * [new ref]         7d43ddc27a7802e23be5d4438de3646179cfb4e5 -> pull/10/merge
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:39.4936521Z ##[endgroup]
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:39.4937263Z ##[group]Determining the checkout info
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:39.4938361Z ##[endgroup]
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:39.4949089Z [command]"C:\Program Files\Git\bin\git.exe" sparse-checkout disable
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:39.5406550Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset-all extensions.worktreeConfig
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:39.5718573Z ##[group]Checking out the ref
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:39.5733030Z [command]"C:\Program Files\Git\bin\git.exe" checkout --progress --force refs/remotes/pull/10/merge
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:39.6336135Z Note: switching to 'refs/remotes/pull/10/merge'.
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:39.6336594Z 
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:39.6336945Z You are in 'detached HEAD' state. You can look around, make experimental
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:39.6337722Z changes and commit them, and you can discard any commits you make in this
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:39.6338501Z state without impacting any branches by switching back to a branch.
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:39.6338984Z 
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:39.6339341Z If you want to create a new branch to retain commits you create, you may
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:39.6340210Z do so (now or later) by using -c with the switch command. Example:
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:39.6340736Z 
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:39.6341349Z   git switch -c <new-branch-name>
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:39.6341715Z 
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:39.6341877Z Or undo this operation with:
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:39.6342148Z 
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:39.6342281Z   git switch -
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:39.6342472Z 
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:39.6342840Z Turn off this advice by setting config variable advice.detachedHead to false
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:39.6343411Z 
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:39.6344088Z HEAD is now at 7d43ddc Merge 7756f0911a4bac6455d1da99d26133b33677f54a into e12eb4bb6f6a7498bd17937d19e2f6a0d1eaaecd
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:39.6449620Z ##[endgroup]
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:39.6857561Z [command]"C:\Program Files\Git\bin\git.exe" log -1 --format=%H
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:39.7139321Z 7d43ddc27a7802e23be5d4438de3646179cfb4e5
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:39.7569431Z ##[group]Run $repo = if ("") { "" } else { "https://github.com/R-Tur/VST_SDK_2.4.git" }
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:39.7570120Z ^[[36;1m$repo = if ("") { "" } else { "https://github.com/R-Tur/VST_SDK_2.4.git" }^[[0m
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:39.7570832Z ^[[36;1m$sdk = "D:/vst2sdk"^[[0m
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:39.7571198Z ^[[36;1mgit clone --depth 1 $repo $sdk^[[0m
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:39.7571702Z ^[[36;1mif (-not (Test-Path "$sdk/pluginterfaces/vst2.x/aeffect.h")) {^[[0m
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:39.7572271Z ^[[36;1m  throw "VST2 SDK header pluginterfaces/vst2.x/aeffect.h not found after cloning $repo"^[[0m
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:39.7572701Z ^[[36;1m}^[[0m
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:39.7573028Z ^[[36;1m"VST2_SDK_PATH=$sdk" | Out-File -FilePath $env:GITHUB_ENV -Append -Encoding utf8^[[0m
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:39.8281432Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:39.8281879Z env:
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:39.8282207Z   VST2_SDK_REPO: https://github.com/R-Tur/VST_SDK_2.4.git
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:39.8282656Z ##[endgroup]
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:44.1655313Z Cloning into 'D:/vst2sdk'...
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:45.6932316Z ##[group]Run cmake -S . -B "D:/b/win32" -A "Win32" -DCMAKE_BUILD_TYPE=Release -DMULTICHANNEL_PANORAMA_VST2_SDK_PATH="$env:VST2_SDK_PATH"
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:45.6933330Z ^[[36;1mcmake -S . -B "D:/b/win32" -A "Win32" -DCMAKE_BUILD_TYPE=Release -DMULTICHANNEL_PANORAMA_VST2_SDK_PATH="$env:VST2_SDK_PATH"^[[0m
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:45.6992855Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:45.6993206Z env:
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:45.6993460Z   VST2_SDK_REPO: https://github.com/R-Tur/VST_SDK_2.4.git
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:45.6993778Z   VST2_SDK_PATH: D:/vst2sdk
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:45.6993996Z ##[endgroup]
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:54.3027925Z -- Building for: Visual Studio 18 2026
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:54.3028708Z -- The C compiler identification is MSVC 19.51.36247.0
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:55.5822855Z -- The CXX compiler identification is MSVC 19.51.36247.0
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:55.6825169Z -- Detecting C compiler ABI info
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:56.6398761Z -- Detecting C compiler ABI info - done
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:56.6671539Z -- Check for working C compiler: C:/Program Files/Microsoft Visual Studio/18/Enterprise/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x86/cl.exe - skipped
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:56.6685323Z -- Detecting C compile features
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:56.6697163Z -- Detecting C compile features - done
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:56.7155532Z -- Detecting CXX compiler ABI info
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:57.4480613Z -- Detecting CXX compiler ABI info - done
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:57.4669954Z -- Check for working CXX compiler: C:/Program Files/Microsoft Visual Studio/18/Enterprise/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x86/cl.exe - skipped
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:57.4674535Z -- Detecting CXX compile features
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:44:57.4686579Z -- Detecting CXX compile features - done
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:45:19.0656389Z -- Configuring juceaide
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:45:25.3394862Z -- Building juceaide
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:46:58.7430512Z -- Exporting juceaide
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:46:58.7437518Z -- Testing juceaide
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:46:58.7898548Z -- Finished setting up juceaide
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:46:58.7939745Z -- VST2 SDK found at D:/vst2sdk; enabling VST2 (.dll) build
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:46:58.8086463Z -- Configuring done (132.2s)
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:46:58.9316510Z CMake Warning:
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:46:58.9316971Z   Manually-specified variables were not used by the project:
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:46:58.9317426Z 
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:46:58.9317556Z     CMAKE_BUILD_TYPE
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:46:58.9317848Z 
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:46:58.9317854Z 
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:46:58.9318019Z -- Generating done (0.1s)
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:46:58.9329170Z -- Build files have been written to: D:/b/win32
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:46:59.0508037Z ##[group]Run cmake --build "D:/b/win32" --config Release --target MultichannelPanorama_VST3
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:46:59.0508735Z ^[[36;1mcmake --build "D:/b/win32" --config Release --target MultichannelPanorama_VST3^[[0m
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:46:59.0567987Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:46:59.0568344Z env:
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:46:59.0569083Z   VST2_SDK_REPO: https://github.com/R-Tur/VST_SDK_2.4.git
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:46:59.0569427Z   VST2_SDK_PATH: D:/vst2sdk
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:46:59.0569649Z ##[endgroup]
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:46:59.4310985Z MSBuild version 18.7.1+024f5b037 for .NET Framework
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:46:59.4660660Z 
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:46:59.6623957Z   Checking File Globs
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:46:59.8437853Z   1>Checking Build System
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:46:59.9769485Z   Generating MultichannelPanorama_artefacts/JuceLibraryCode/MultichannelPanorama_resources.rc
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:47:00.0063212Z   Building Custom Rule D:/a/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/CMakeLists.txt
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:47:00.2724751Z   MultichannelPanorama_rc_lib.vcxproj -> D:\b\win32\MultichannelPanorama_rc_lib.dir\Release\MultichannelPanorama_rc_lib.lib
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:47:00.3390470Z   Building VST3 manifest helper for MultichannelPanorama
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:47:01.4180880Z   -- The C compiler identification is MSVC 19.51.36247.0
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:47:02.1121104Z   -- The CXX compiler identification is MSVC 19.51.36247.0
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:47:02.1245816Z   -- Detecting C compiler ABI info
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:47:02.7942152Z   -- Detecting C compiler ABI info - done
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:47:02.8126499Z   -- Check for working C compiler: C:/Program Files/Microsoft Visual Studio/18/Enterprise/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/cl.exe - skipped
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:47:02.8130487Z   -- Detecting C compile features
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:47:02.8138491Z   -- Detecting C compile features - done
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:47:02.8236268Z   -- Detecting CXX compiler ABI info
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:47:03.5166382Z   -- Detecting CXX compiler ABI info - done
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:47:03.5355446Z   -- Check for working CXX compiler: C:/Program Files/Microsoft Visual Studio/18/Enterprise/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/cl.exe - skipped
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:47:03.5359619Z   -- Detecting CXX compile features
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:47:03.5368470Z   -- Detecting CXX compile features - done
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:47:03.5407349Z   -- Configuring done (3.2s)
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:47:03.5661893Z   -- Generating done (0.0s)
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:47:03.5672734Z   -- Build files have been written to: D:/b/win32/MultichannelPanorama_artefacts/JuceLibraryCode/vst3_helper
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:47:03.6848191Z   MSBuild version 18.7.1+024f5b037 for .NET Framework
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:47:03.7188787Z   
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:47:03.9957516Z     1>Checking Build System
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:47:04.1299342Z     Building Custom Rule D:/b/win32/_deps/juce-src/extras/Build/CMake/juce_vst3_helper/CMakeLists.txt
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:47:04.2931404Z     juce_VST3ManifestHelper.cpp
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:47:06.8015678Z     vst3_helper.vcxproj -> D:\b\win32\MultichannelPanorama_artefacts\JuceLibraryCode\vst3_helper\vst3_helper.exe
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:47:06.8564203Z     Building Custom Rule D:/b/win32/_deps/juce-src/extras/Build/CMake/juce_vst3_helper/CMakeLists.txt
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:47:06.9195172Z   Building Custom Rule D:/a/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/CMakeLists.txt
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:47:07.0172774Z   Building Custom Rule D:/a/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/CMakeLists.txt
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:47:07.1782795Z   PluginProcessor.cpp
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:47:07.1783236Z   PluginEditor.cpp
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:47:07.1784008Z   juce_audio_processors.cpp
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:47:07.1784425Z   juce_gui_extra.cpp
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:47:12.4474577Z   juce_gui_basics.cpp
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:47:12.4475696Z   juce_gui_basics_2.cpp
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:47:13.1487647Z   juce_gui_basics_3.cpp
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:47:13.8264711Z   juce_gui_basics_4.cpp
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:47:17.0593766Z   juce_gui_basics_5.cpp
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:47:19.2448787Z   juce_graphics.cpp
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:47:20.8749924Z   juce_graphics_Harfbuzz.cpp
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:47:22.1935660Z   juce_events.cpp
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:47:22.4865706Z   juce_core.cpp
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:47:25.9688638Z   juce_core_CompilationTime.cpp
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:47:26.0126486Z   juce_data_structures.cpp
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:47:27.8094878Z   juce_audio_processors_headless.cpp
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:47:28.7099792Z   juce_audio_processors_headless_ara.cpp
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:47:28.7522874Z   juce_audio_processors_headless_lv2_libs.cpp
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:47:28.8523431Z   juce_audio_basics.cpp
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:47:32.2284727Z   juce_dsp.cpp
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:47:34.3220913Z   juce_audio_formats.cpp
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:47:38.8164092Z   juce_graphics_Sheenbidi.c
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:47:40.5359650Z   MultichannelPanorama.vcxproj -> D:\b\win32\MultichannelPanorama_artefacts\Release\Multichannel Panorama_SharedCode.lib
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:47:40.5848396Z   Building Custom Rule D:/a/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/CMakeLists.txt
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:47:40.6982430Z   juce_audio_plugin_client_AAX.cpp
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:47:40.7039314Z   juce_audio_plugin_client_AAX_utils.cpp
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:47:40.7097856Z   juce_audio_plugin_client_ARA.cpp
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:47:40.7099600Z   juce_audio_plugin_client_LV2.cpp
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:47:40.7504577Z   juce_audio_plugin_client_Standalone.cpp
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:47:40.7520262Z   juce_audio_plugin_client_Unity.cpp
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:47:40.7578578Z   juce_audio_plugin_client_VST2.cpp
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:47:40.7809446Z   juce_audio_plugin_client_VST3.cpp
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:47:49.4113636Z      Creating library D:/b/win32/MultichannelPanorama_artefacts/Release/VST3/Multichannel Panorama.lib and object D:/b/win32/MultichannelPanorama_artefacts/Release/VST3/Multichannel Panorama.exp
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:47:49.4509886Z   Generating code
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:48:45.4755621Z   Finished generating code
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:48:46.0713486Z   MultichannelPanorama_VST3.vcxproj -> D:\b\win32\MultichannelPanorama_artefacts\Release\VST3\Multichannel Panorama.vst3\Contents\x86-win\Multichannel Panorama.vst3
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:48:46.1208643Z   removing moduleinfo.json
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:48:46.1637581Z   creating D:/b/win32/MultichannelPanorama_artefacts/Release/VST3/Multichannel Panorama.vst3/Contents/Resources/moduleinfo.json
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:48:46.5108234Z   -- Installing: D:/b/win32/artifacts/vst3/Multichannel Panorama.vst3
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:48:46.5113473Z   -- Installing: D:/b/win32/artifacts/vst3/Multichannel Panorama.vst3/Contents
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:48:46.5119431Z   -- Installing: D:/b/win32/artifacts/vst3/Multichannel Panorama.vst3/Contents/Resources
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:48:46.5125438Z   -- Installing: D:/b/win32/artifacts/vst3/Multichannel Panorama.vst3/Contents/Resources/moduleinfo.json
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:48:46.5131923Z   -- Installing: D:/b/win32/artifacts/vst3/Multichannel Panorama.vst3/Contents/x86-win
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:48:46.5137782Z   -- Installing: D:/b/win32/artifacts/vst3/Multichannel Panorama.vst3/Contents/x86-win/Multichannel Panorama.vst3
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:48:46.6789985Z ##[group]Run cmake --build "D:/b/win32" --config Release --target MultichannelPanorama_VST
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:48:46.6790989Z ^[[36;1mcmake --build "D:/b/win32" --config Release --target MultichannelPanorama_VST^[[0m
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:48:46.6855344Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:48:46.6855809Z env:
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:48:46.6856188Z   VST2_SDK_REPO: https://github.com/R-Tur/VST_SDK_2.4.git
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:48:46.6856632Z   VST2_SDK_PATH: D:/vst2sdk
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:48:46.6857003Z ##[endgroup]
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:48:47.0828290Z MSBuild version 18.7.1+024f5b037 for .NET Framework
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:48:47.1191093Z 
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:48:47.3270030Z   Checking File Globs
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:48:47.5657899Z   MultichannelPanorama_rc_lib.vcxproj -> D:\b\win32\MultichannelPanorama_rc_lib.dir\Release\MultichannelPanorama_rc_lib.lib
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:48:47.7294109Z   MultichannelPanorama.vcxproj -> D:\b\win32\MultichannelPanorama_artefacts\Release\Multichannel Panorama_SharedCode.lib
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:48:47.8149086Z   Building Custom Rule D:/a/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/CMakeLists.txt
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:48:47.9365919Z   juce_audio_plugin_client_AAX.cpp
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:48:47.9372642Z   juce_audio_plugin_client_AAX_utils.cpp
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:48:47.9374284Z   juce_audio_plugin_client_ARA.cpp
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:48:47.9375687Z   juce_audio_plugin_client_LV2.cpp
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:48:47.9954146Z   juce_audio_plugin_client_Standalone.cpp
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:48:47.9955898Z   juce_audio_plugin_client_Unity.cpp
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:48:47.9957712Z   juce_audio_plugin_client_VST2.cpp
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:48:47.9958807Z   juce_audio_plugin_client_VST3.cpp
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:48:52.8311509Z      Creating library D:/b/win32/MultichannelPanorama_artefacts/Release/VST/Multichannel Panorama.lib and object D:/b/win32/MultichannelPanorama_artefacts/Release/VST/Multichannel Panorama.exp
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:48:52.8614379Z   Generating code
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:46.4699199Z   Finished generating code
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:47.0255657Z   MultichannelPanorama_VST.vcxproj -> D:\b\win32\MultichannelPanorama_artefacts\Release\VST\Multichannel Panorama.dll
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:47.0746625Z   -- Installing: D:/b/win32/artifacts/vst2/Multichannel Panorama.dll
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:47.2462210Z ##[group]Run $stage = "dist/MultichannelPanorama-win32"
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:47.2463089Z ^[[36;1m$stage = "dist/MultichannelPanorama-win32"^[[0m
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:47.2463916Z ^[[36;1mNew-Item -ItemType Directory -Force -Path "$stage/VST2" | Out-Null^[[0m
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:47.2464853Z ^[[36;1mNew-Item -ItemType Directory -Force -Path "$stage/VST3" | Out-Null^[[0m
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:47.2465909Z ^[[36;1mCopy-Item -Path "D:/b/win32/artifacts/vst2/*" -Destination "$stage/VST2" -Recurse -Force^[[0m
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:47.2467085Z ^[[36;1mCopy-Item -Path "D:/b/win32/artifacts/vst3/*" -Destination "$stage/VST3" -Recurse -Force^[[0m
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:47.2468140Z ^[[36;1mif (-not (Get-ChildItem -Path "$stage/VST2" -Recurse -Filter *.dll)) {^[[0m
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:47.2468957Z ^[[36;1m  throw "No .dll produced for the VST2 build"^[[0m
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:47.2469516Z ^[[36;1m}^[[0m
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:47.2469939Z ^[[36;1mGet-ChildItem -Path $stage -Recurse^[[0m
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:47.2557372Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:47.2558025Z env:
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:47.2558538Z   VST2_SDK_REPO: https://github.com/R-Tur/VST_SDK_2.4.git
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:47.2559243Z   VST2_SDK_PATH: D:/vst2sdk
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:47.2559685Z ##[endgroup]
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:47.6983230Z 
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:47.6994779Z     Directory: D:\a\Multichannel-Panorama-VST-plugin\Multichannel-Panorama-VST-plugin\dist\MultichannelPanorama-win32
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:47.7001691Z 
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:47.7004309Z ^[[32;1mMode   ^[[0m^[[32;1m              LastWriteTime^[[0m ^[[32;1;3m        Length^[[0m^[[32;1m Name^[[0m
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:47.7006017Z ^[[32;1m----   ^[[0m ^[[32;1m             -------------^[[0m ^[[32;1m        ------^[[0m ^[[32;1m----^[[0m
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:47.7328900Z d----           6/21/2026  5:49 AM                ^[[44;1mVST2^[[0m
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:47.7335983Z d----           6/21/2026  5:49 AM                ^[[44;1mVST3^[[0m
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:47.7381537Z 
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:47.7386309Z     Directory: 
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:47.7387340Z D:\a\Multichannel-Panorama-VST-plugin\Multichannel-Panorama-VST-plugin\dist\MultichannelPanorama-win32\VST2
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:47.7388530Z 
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:47.7389152Z ^[[32;1mMode   ^[[0m^[[32;1m              LastWriteTime^[[0m ^[[32;1;3m        Length^[[0m^[[32;1m Name^[[0m
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:47.7389997Z ^[[32;1m----   ^[[0m ^[[32;1m             -------------^[[0m ^[[32;1m        ------^[[0m ^[[32;1m----^[[0m
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:47.7390641Z -a---           6/21/2026  5:49 AM        4236288 Multichannel Panorama.dll
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:47.7393690Z 
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:47.7396902Z     Directory: 
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:47.7398477Z D:\a\Multichannel-Panorama-VST-plugin\Multichannel-Panorama-VST-plugin\dist\MultichannelPanorama-win32\VST3
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:47.7399757Z 
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:47.7400802Z ^[[32;1mMode   ^[[0m^[[32;1m              LastWriteTime^[[0m ^[[32;1;3m        Length^[[0m^[[32;1m Name^[[0m
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:47.7401849Z ^[[32;1m----   ^[[0m ^[[32;1m             -------------^[[0m ^[[32;1m        ------^[[0m ^[[32;1m----^[[0m
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:47.7451423Z d----           6/21/2026  5:49 AM                ^[[44;1mMultichannel Panorama.vst3^[[0m
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:47.7462120Z 
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:47.7471272Z     Directory: D:\a\Multichannel-Panorama-VST-plugin\Multichannel-Panorama-VST-plugin\dist\MultichannelPanorama-win32\V
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:47.7472931Z ST3\Multichannel Panorama.vst3
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:47.7473297Z 
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:47.7474105Z ^[[32;1mMode   ^[[0m^[[32;1m              LastWriteTime^[[0m ^[[32;1;3m        Length^[[0m^[[32;1m Name^[[0m
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:47.7475658Z ^[[32;1m----   ^[[0m ^[[32;1m             -------------^[[0m ^[[32;1m        ------^[[0m ^[[32;1m----^[[0m
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:47.7476296Z d----           6/21/2026  5:49 AM                ^[[44;1mContents^[[0m
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:47.7482478Z 
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:47.7525742Z     Directory: D:\a\Multichannel-Panorama-VST-plugin\Multichannel-Panorama-VST-plugin\dist\MultichannelPanorama-win32\V
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:47.7527255Z ST3\Multichannel Panorama.vst3\Contents
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:47.7530557Z 
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:47.7531290Z ^[[32;1mMode   ^[[0m^[[32;1m              LastWriteTime^[[0m ^[[32;1;3m        Length^[[0m^[[32;1m Name^[[0m
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:47.7532417Z ^[[32;1m----   ^[[0m ^[[32;1m             -------------^[[0m ^[[32;1m        ------^[[0m ^[[32;1m----^[[0m
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:47.7533450Z d----           6/21/2026  5:49 AM                ^[[44;1mResources^[[0m
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:47.7534388Z d----           6/21/2026  5:49 AM                ^[[44;1mx86-win^[[0m
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:47.7534916Z 
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:47.7535652Z     Directory: D:\a\Multichannel-Panorama-VST-plugin\Multichannel-Panorama-VST-plugin\dist\MultichannelPanorama-win32\V
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:47.7536860Z ST3\Multichannel Panorama.vst3\Contents\Resources
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:47.7537307Z 
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:47.7537878Z ^[[32;1mMode   ^[[0m^[[32;1m              LastWriteTime^[[0m ^[[32;1;3m        Length^[[0m^[[32;1m Name^[[0m
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:47.7539012Z ^[[32;1m----   ^[[0m ^[[32;1m             -------------^[[0m ^[[32;1m        ------^[[0m ^[[32;1m----^[[0m
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:47.7539806Z -a---           6/21/2026  5:48 AM           1134 moduleinfo.json
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:47.7540213Z 
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:47.7540926Z     Directory: D:\a\Multichannel-Panorama-VST-plugin\Multichannel-Panorama-VST-plugin\dist\MultichannelPanorama-win32\V
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:47.7542087Z ST3\Multichannel Panorama.vst3\Contents\x86-win
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:47.7542791Z 
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:47.7543803Z ^[[32;1mMode   ^[[0m^[[32;1m              LastWriteTime^[[0m ^[[32;1;3m        Length^[[0m^[[32;1m Name^[[0m
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:47.7545413Z ^[[32;1m----   ^[[0m ^[[32;1m             -------------^[[0m ^[[32;1m        ------^[[0m ^[[32;1m----^[[0m
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:47.7546150Z -a---           6/21/2026  5:48 AM        4377600 Multichannel Panorama.vst3
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:47.7556555Z 
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:47.8320798Z ##[group]Run actions/upload-artifact@v7
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:47.8321255Z with:
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:47.8321538Z   name: MultichannelPanorama-win32
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:47.8321898Z   path: dist/MultichannelPanorama-win32
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:47.8322242Z   if-no-files-found: error
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:47.8322531Z   retention-days: 14
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:47.8322803Z   compression-level: 6
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:47.8323058Z   overwrite: false
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:47.8323324Z   include-hidden-files: false
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:47.8323616Z   archive: true
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:47.8323860Z env:
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:47.8324175Z   VST2_SDK_REPO: https://github.com/R-Tur/VST_SDK_2.4.git
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:47.8324570Z   VST2_SDK_PATH: D:/vst2sdk
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:47.8324875Z ##[endgroup]
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:48.0216124Z With the provided path, there will be 3 files uploaded
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:48.0222889Z Artifact name is valid!
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:48.0224096Z Root directory input is valid!
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:48.3702996Z Uploading artifact: MultichannelPanorama-win32.zip
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:48.3754393Z Beginning upload of artifact content to blob storage
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:49.6628336Z Uploaded bytes 3834041
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:49.7341831Z Finished uploading artifact content to blob storage!
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:49.7343016Z SHA256 digest of uploaded artifact is 512cd19d7c56c53bd3c3b4caa6efa343eb5860df3d71bde5024364908a9e026b
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:49.7344219Z Finalizing artifact upload
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:50.0979383Z Artifact MultichannelPanorama-win32 successfully finalized. Artifact ID 7772315632
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:50.0981183Z Artifact MultichannelPanorama-win32 has been successfully uploaded! Final size is 3834041 bytes. Artifact ID is 7772315632
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:50.0989428Z Artifact download URL: https://github.com/Jhon-Crow/Multichannel-Panorama-VST-plugin/actions/runs/27895043747/artifacts/7772315632
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:50.1373563Z Post job cleanup.
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:50.3730344Z [command]"C:\Program Files\Git\bin\git.exe" version
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:50.4037040Z git version 2.54.0.windows.1
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:50.4130768Z Temporarily overriding HOME='D:\a\_temp\a76850a1-0c28-4bd7-aeed-7c10e7bc5623' before making global git config changes
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:50.4133778Z Adding repository directory to the temporary git global config as a safe directory
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:50.4146697Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\Multichannel-Panorama-VST-plugin\Multichannel-Panorama-VST-plugin
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:50.4502317Z Removing SSH command configuration
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:50.4518400Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:50.4907804Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:51.0730855Z Removing HTTP extra header
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:51.0746003Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:51.1109185Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:51.6774435Z Removing includeIf entries pointing to credentials config files
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:51.6787237Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:51.7065889Z includeif.gitdir:D:/a/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/.git.path
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:51.7067850Z includeif.gitdir:D:/a/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/.git/worktrees/*.path
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:51.7069114Z includeif.gitdir:/github/workspace/.git.path
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:51.7069867Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:51.7111590Z [command]"C:\Program Files\Git\bin\git.exe" config --local --get-all includeif.gitdir:D:/a/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/.git.path
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:51.7379293Z D:\a\_temp\git-credentials-5443e045-8aa1-4889-b554-11bd390fbdd9.config
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:51.7428045Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset includeif.gitdir:D:/a/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/.git.path D:\a\_temp\git-credentials-5443e045-8aa1-4889-b554-11bd390fbdd9.config
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:51.7748687Z [command]"C:\Program Files\Git\bin\git.exe" config --local --get-all includeif.gitdir:D:/a/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/.git/worktrees/*.path
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:51.8021246Z D:\a\_temp\git-credentials-5443e045-8aa1-4889-b554-11bd390fbdd9.config
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:51.8067892Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset includeif.gitdir:D:/a/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/.git/worktrees/*.path D:\a\_temp\git-credentials-5443e045-8aa1-4889-b554-11bd390fbdd9.config
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:51.8390996Z [command]"C:\Program Files\Git\bin\git.exe" config --local --get-all includeif.gitdir:/github/workspace/.git.path
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:51.8662372Z /github/runner_temp/git-credentials-5443e045-8aa1-4889-b554-11bd390fbdd9.config
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:51.8704786Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset includeif.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-5443e045-8aa1-4889-b554-11bd390fbdd9.config
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:51.9028814Z [command]"C:\Program Files\Git\bin\git.exe" config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:51.9295328Z /github/runner_temp/git-credentials-5443e045-8aa1-4889-b554-11bd390fbdd9.config
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:51.9337941Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-5443e045-8aa1-4889-b554-11bd390fbdd9.config
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:51.9656995Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:52.5275385Z Removing credentials config 'D:\a\_temp\git-credentials-5443e045-8aa1-4889-b554-11bd390fbdd9.config'
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:52.5481952Z Cleaning up orphan processes
+Build Windows (win32)	UNKNOWN STEP	2026-06-21T05:49:52.5725564Z Terminate orphan process: pid (6816) (vctip)

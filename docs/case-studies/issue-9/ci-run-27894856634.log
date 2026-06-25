@@ -1,0 +1,246 @@
+Validate repository preparation	UNKNOWN STEP	﻿2026-06-21T05:35:19.8242864Z Current runner version: '2.335.1'
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:19.8278167Z ##[group]Runner Image Provisioner
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:19.8279436Z Hosted Compute Agent
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:19.8280348Z Version: 20260611.554
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:19.8281564Z Commit: 5e0782fdc9014723d3be820dd114dd31555c2bd1
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:19.8282826Z Build Date: 2026-06-11T21:40:46Z
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:19.8284081Z Worker ID: {fdd8d10a-4baf-4187-ae89-c0674a8eada5}
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:19.8285658Z Azure Region: eastus
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:19.8286650Z ##[endgroup]
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:19.8289019Z ##[group]Operating System
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:19.8290037Z Ubuntu
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:19.8291021Z 24.04.4
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:19.8292086Z LTS
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:19.8293010Z ##[endgroup]
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:19.8293965Z ##[group]Runner Image
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:19.8295238Z Image: ubuntu-24.04
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:19.8296437Z Version: 20260615.205.1
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:19.8298539Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260615.205/images/ubuntu/Ubuntu2404-Readme.md
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:19.8301398Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260615.205
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:19.8303184Z ##[endgroup]
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:19.8305337Z ##[group]GITHUB_TOKEN Permissions
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:19.8308116Z Contents: read
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:19.8309136Z Metadata: read
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:19.8310059Z ##[endgroup]
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:19.8313406Z Secret source: None
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:19.8314560Z Prepare workflow directory
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:19.8889532Z Prepare all required actions
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:19.8947057Z Getting action download info
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.1337874Z Download action repository 'actions/checkout@v6' (SHA:df4cb1c069e1874edd31b4311f1884172cec0e10)
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.3158246Z Complete job name: Validate repository preparation
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.3933417Z ##[group]Run actions/checkout@v6
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.3934313Z with:
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.3935078Z   repository: Jhon-Crow/Multichannel-Panorama-VST-plugin
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.3939425Z   token: ***
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.3939878Z   ssh-strict: true
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.3940322Z   ssh-user: git
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.3940777Z   persist-credentials: true
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.3941283Z   clean: true
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.3941730Z   sparse-checkout-cone-mode: true
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.3942254Z   fetch-depth: 1
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.3942677Z   fetch-tags: false
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.3943131Z   show-progress: true
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.3943578Z   lfs: false
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.3943991Z   submodules: false
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.3944438Z   set-safe-directory: true
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.3945327Z env:
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.3945860Z   VST2_SDK_REPO: https://github.com/R-Tur/VST_SDK_2.4.git
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.3946508Z ##[endgroup]
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.4930347Z Syncing repository: Jhon-Crow/Multichannel-Panorama-VST-plugin
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.4932430Z ##[group]Getting Git version info
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.4933508Z Working directory is '/home/runner/work/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin'
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.4935352Z [command]/usr/bin/git version
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.5023536Z git version 2.54.0
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.5079393Z ##[endgroup]
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.5093941Z Temporarily overriding HOME='/home/runner/work/_temp/c4ef7475-39f5-4c28-8c13-79e9ac10e1ff' before making global git config changes
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.5095752Z Adding repository directory to the temporary git global config as a safe directory
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.5100265Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.5165922Z Deleting the contents of '/home/runner/work/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin'
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.5169878Z ##[group]Determining repository object format
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.5172385Z ##[endgroup]
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.5173623Z ##[group]Initializing the repository
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.5178523Z [command]/usr/bin/git init /home/runner/work/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.5303458Z hint: Using 'master' as the name for the initial branch. This default branch name
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.5305710Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.5307474Z hint: to use in all of your new repositories, which will suppress this warning,
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.5309473Z hint: call:
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.5310513Z hint:
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.5311677Z hint: 	git config --global init.defaultBranch <name>
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.5313035Z hint:
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.5314177Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.5316046Z hint: 'development'. The just-created branch can be renamed via this command:
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.5317275Z hint:
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.5318192Z hint: 	git branch -m <name>
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.5319072Z hint:
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.5320137Z hint: Disable this message with "git config set advice.defaultBranchName false"
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.5322226Z Initialized empty Git repository in /home/runner/work/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/.git/
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.5325892Z [command]/usr/bin/git remote add origin https://github.com/Jhon-Crow/Multichannel-Panorama-VST-plugin
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.5372487Z ##[endgroup]
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.5373279Z ##[group]Disabling automatic garbage collection
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.5376647Z [command]/usr/bin/git config --local gc.auto 0
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.5407622Z ##[endgroup]
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.5409118Z ##[group]Setting up auth
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.5410180Z Removing SSH command configuration
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.5414055Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.5449649Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.5845274Z Removing HTTP extra header
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.5851716Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.5883894Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.6097304Z Removing includeIf entries pointing to credentials config files
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.6103090Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.6134294Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.6358495Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-4f2041cc-601a-4e8b-90c5-4ca8e294152c.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.6397086Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/.git.path /home/runner/work/_temp/git-credentials-4f2041cc-601a-4e8b-90c5-4ca8e294152c.config
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.6426461Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-4f2041cc-601a-4e8b-90c5-4ca8e294152c.config
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.6457813Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-4f2041cc-601a-4e8b-90c5-4ca8e294152c.config
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.6489148Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-4f2041cc-601a-4e8b-90c5-4ca8e294152c.config
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.6598976Z ##[endgroup]
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.6599867Z ##[group]Fetching the repository
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.6601975Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +34c9fe51ab506da7c7f5658e5864b8cd549aaf25:refs/remotes/pull/10/merge
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.8547522Z From https://github.com/Jhon-Crow/Multichannel-Panorama-VST-plugin
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.8550846Z  * [new ref]         34c9fe51ab506da7c7f5658e5864b8cd549aaf25 -> pull/10/merge
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.8609323Z ##[endgroup]
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.8611454Z ##[group]Determining the checkout info
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.8613946Z ##[endgroup]
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.8615626Z [command]/usr/bin/git sparse-checkout disable
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.8657899Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.8690320Z ##[group]Checking out the ref
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.8695170Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/10/merge
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.8791367Z Note: switching to 'refs/remotes/pull/10/merge'.
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.8792951Z 
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.8794226Z You are in 'detached HEAD' state. You can look around, make experimental
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.8797258Z changes and commit them, and you can discard any commits you make in this
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.8799602Z state without impacting any branches by switching back to a branch.
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.8801122Z 
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.8802151Z If you want to create a new branch to retain commits you create, you may
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.8804363Z do so (now or later) by using -c with the switch command. Example:
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.8805874Z 
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.8806385Z   git switch -c <new-branch-name>
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.8807436Z 
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.8807919Z Or undo this operation with:
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.8808672Z 
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.8809103Z   git switch -
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.8809672Z 
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.8810845Z Turn off this advice by setting config variable advice.detachedHead to false
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.8812326Z 
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.8813981Z HEAD is now at 34c9fe5 Merge 608b232fb76d46382f912c5efa2ccace6f1f19a7 into e12eb4bb6f6a7498bd17937d19e2f6a0d1eaaecd
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.8819363Z ##[endgroup]
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.8842507Z [command]/usr/bin/git log -1 --format=%H
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.8871958Z 34c9fe51ab506da7c7f5658e5864b8cd549aaf25
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.9147798Z ##[group]Run bash scripts/validate-preparation.sh
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.9149426Z ^[[36;1mbash scripts/validate-preparation.sh^[[0m
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.9363904Z shell: /usr/bin/bash -e {0}
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.9365367Z env:
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.9366517Z   VST2_SDK_REPO: https://github.com/R-Tur/VST_SDK_2.4.git
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.9367945Z ##[endgroup]
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.9568700Z Preparation files and workflow markers are present.
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.9650443Z ##[group]Run cmake -S . -B build/prepare-smoke -DMULTICHANNEL_PANORAMA_BUILD_PLUGIN=OFF -DMULTICHANNEL_PANORAMA_BUILD_TESTS=ON
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.9654184Z ^[[36;1mcmake -S . -B build/prepare-smoke -DMULTICHANNEL_PANORAMA_BUILD_PLUGIN=OFF -DMULTICHANNEL_PANORAMA_BUILD_TESTS=ON^[[0m
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.9689229Z shell: /usr/bin/bash -e {0}
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.9690306Z env:
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.9691461Z   VST2_SDK_REPO: https://github.com/R-Tur/VST_SDK_2.4.git
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:20.9692938Z ##[endgroup]
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:21.8132096Z -- The C compiler identification is GNU 13.3.0
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:21.9972383Z -- The CXX compiler identification is GNU 13.3.0
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:22.0939290Z -- Detecting C compiler ABI info
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:22.3184456Z -- Detecting C compiler ABI info - done
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:22.3362517Z -- Check for working C compiler: /usr/bin/cc - skipped
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:22.3410643Z -- Detecting C compile features
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:22.3453524Z -- Detecting C compile features - done
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:22.3983560Z -- Detecting CXX compiler ABI info
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:22.4845094Z -- Detecting CXX compiler ABI info - done
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:22.5023758Z -- Check for working CXX compiler: /usr/bin/c++ - skipped
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:22.5028685Z -- Detecting CXX compile features
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:22.5039088Z -- Detecting CXX compile features - done
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:22.5144148Z -- Configuring done (1.1s)
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:22.5271453Z -- Generating done (0.0s)
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:22.5273122Z -- Build files have been written to: /home/runner/work/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/build/prepare-smoke
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:22.5342978Z ##[group]Run cmake --build build/prepare-smoke --target SourceChannelMappingTests
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:22.5343658Z ^[[36;1mcmake --build build/prepare-smoke --target SourceChannelMappingTests^[[0m
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:22.5344178Z ^[[36;1mctest --test-dir build/prepare-smoke --output-on-failure^[[0m
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:22.5377593Z shell: /usr/bin/bash -e {0}
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:22.5377877Z env:
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:22.5378172Z   VST2_SDK_REPO: https://github.com/R-Tur/VST_SDK_2.4.git
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:22.5378514Z ##[endgroup]
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:22.5628795Z [ 50%] Building CXX object CMakeFiles/SourceChannelMappingTests.dir/tests/SourceChannelMappingTests.cpp.o
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:23.1115029Z [100%] Linking CXX executable SourceChannelMappingTests
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:23.1632909Z [100%] Built target SourceChannelMappingTests
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:23.9503427Z Internal ctest changing into directory: /home/runner/work/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/build/prepare-smoke
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:24.0370821Z Test project /home/runner/work/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/build/prepare-smoke
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:24.1045551Z     Start 1: SourceChannelMappingTests
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:24.1118315Z 1/2 Test #1: SourceChannelMappingTests ........   Passed    0.00 sec
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:24.1324815Z     Start 2: DistanceGainTests
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:24.1326743Z Could not find executable /home/runner/work/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/build/prepare-smoke/DistanceGainTests
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:24.1328131Z Looked in the following places:
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:24.1329296Z /home/runner/work/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/build/prepare-smoke/DistanceGainTests
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:24.1331309Z /home/runner/work/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/build/prepare-smoke/DistanceGainTests
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:24.1333516Z /home/runner/work/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/build/prepare-smoke/Release/DistanceGainTests
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:24.1336048Z /home/runner/work/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/build/prepare-smoke/Release/DistanceGainTests
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:24.1338060Z /home/runner/work/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/build/prepare-smoke/Debug/DistanceGainTests
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:24.1339925Z /home/runner/work/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/build/prepare-smoke/Debug/DistanceGainTests
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:24.1341752Z /home/runner/work/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/build/prepare-smoke/MinSizeRel/DistanceGainTests
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:24.1343705Z /home/runner/work/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/build/prepare-smoke/MinSizeRel/DistanceGainTests
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:24.1345982Z /home/runner/work/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/build/prepare-smoke/RelWithDebInfo/DistanceGainTests
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:24.1347996Z /home/runner/work/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/build/prepare-smoke/RelWithDebInfo/DistanceGainTests
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:24.1349828Z /home/runner/work/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/build/prepare-smoke/Deployment/DistanceGainTests
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:24.1351633Z /home/runner/work/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/build/prepare-smoke/Deployment/DistanceGainTests
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:24.1353397Z /home/runner/work/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/build/prepare-smoke/Development/DistanceGainTests
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:24.1355457Z /home/runner/work/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/build/prepare-smoke/Development/DistanceGainTests
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:24.1357179Z home/runner/work/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/build/prepare-smoke/DistanceGainTests
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:24.1359374Z home/runner/work/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/build/prepare-smoke/DistanceGainTests
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:24.1361152Z home/runner/work/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/build/prepare-smoke/Release/DistanceGainTests
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:24.1362882Z home/runner/work/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/build/prepare-smoke/Release/DistanceGainTests
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:24.1364601Z home/runner/work/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/build/prepare-smoke/Debug/DistanceGainTests
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:24.1366623Z home/runner/work/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/build/prepare-smoke/Debug/DistanceGainTests
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:24.1368546Z home/runner/work/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/build/prepare-smoke/MinSizeRel/DistanceGainTests
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:24.1370452Z home/runner/work/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/build/prepare-smoke/MinSizeRel/DistanceGainTests
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:24.1372346Z home/runner/work/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/build/prepare-smoke/RelWithDebInfo/DistanceGainTests
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:24.1374249Z home/runner/work/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/build/prepare-smoke/RelWithDebInfo/DistanceGainTests
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:24.1376409Z home/runner/work/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/build/prepare-smoke/Deployment/DistanceGainTests
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:24.1378252Z home/runner/work/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/build/prepare-smoke/Deployment/DistanceGainTests
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:24.1380079Z home/runner/work/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/build/prepare-smoke/Development/DistanceGainTests
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:24.1381915Z home/runner/work/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/build/prepare-smoke/Development/DistanceGainTests
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:24.1383215Z 2/2 Test #2: DistanceGainTests ................***Not Run   0.00 sec
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:24.1384634Z Unable to find executable: /home/runner/work/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/build/prepare-smoke/DistanceGainTests
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:24.1386224Z Errors while running CTest
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:24.1386517Z 
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:24.1386711Z 50% tests passed, 1 tests failed out of 2
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:24.1387068Z 
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:24.1387234Z Total Test time (real) =   0.10 sec
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:24.1387558Z 
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:24.1387723Z The following tests FAILED:
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:24.1388169Z 	  2 - DistanceGainTests (Not Run)
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:24.1745203Z ##[error]Process completed with exit code 8.
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:24.1876319Z Post job cleanup.
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:24.2747859Z [command]/usr/bin/git version
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:24.2789533Z git version 2.54.0
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:24.2835879Z Temporarily overriding HOME='/home/runner/work/_temp/6831088e-c0aa-4230-868e-19e0bede5d8a' before making global git config changes
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:24.2837278Z Adding repository directory to the temporary git global config as a safe directory
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:24.2843108Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:24.2876145Z Removing SSH command configuration
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:24.2882739Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:24.2919171Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:24.3150253Z Removing HTTP extra header
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:24.3156400Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:24.3192079Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:24.3411942Z Removing includeIf entries pointing to credentials config files
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:24.3419317Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:24.3447166Z includeif.gitdir:/home/runner/work/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/.git.path
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:24.3449069Z includeif.gitdir:/home/runner/work/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/.git/worktrees/*.path
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:24.3450470Z includeif.gitdir:/github/workspace/.git.path
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:24.3451353Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:24.3458783Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/.git.path
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:24.3480499Z /home/runner/work/_temp/git-credentials-4f2041cc-601a-4e8b-90c5-4ca8e294152c.config
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:24.3491763Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/.git.path /home/runner/work/_temp/git-credentials-4f2041cc-601a-4e8b-90c5-4ca8e294152c.config
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:24.3528699Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/.git/worktrees/*.path
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:24.3550114Z /home/runner/work/_temp/git-credentials-4f2041cc-601a-4e8b-90c5-4ca8e294152c.config
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:24.3559815Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/Multichannel-Panorama-VST-plugin/Multichannel-Panorama-VST-plugin/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-4f2041cc-601a-4e8b-90c5-4ca8e294152c.config
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:24.3592552Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:24.3613151Z /github/runner_temp/git-credentials-4f2041cc-601a-4e8b-90c5-4ca8e294152c.config
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:24.3622540Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-4f2041cc-601a-4e8b-90c5-4ca8e294152c.config
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:24.3653553Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:24.3674282Z /github/runner_temp/git-credentials-4f2041cc-601a-4e8b-90c5-4ca8e294152c.config
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:24.3683892Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-4f2041cc-601a-4e8b-90c5-4ca8e294152c.config
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:24.3716912Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:24.3958314Z Removing credentials config '/home/runner/work/_temp/git-credentials-4f2041cc-601a-4e8b-90c5-4ca8e294152c.config'
+Validate repository preparation	UNKNOWN STEP	2026-06-21T05:35:24.4116531Z Cleaning up orphan processes
